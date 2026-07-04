@@ -1,0 +1,269 @@
+/* ===================================================
+   CLIENT TESTIMONIALS — Vanilla CSS
+   Faithful translation of the original Tailwind design
+   =================================================== */
+
+/* ── Section wrapper ── */
+.testimonials-section {
+  position: relative;
+  width: 100%;
+  background: var(--color-bg-card);
+  padding: 3.5rem 1.5rem 2rem;
+}
+
+/* ── Header ── */
+.testimonials-header {
+  max-width: 768px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.testimonials-header__title {
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  font-weight: 600;
+  color: #111111;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.testimonials-header__sub {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ── 3-column grid ── */
+.testimonials-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 2.5rem 1rem 1rem;
+}
+
+@media (min-width: 1024px) {
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 2.5rem 2.5rem 1rem;
+  }
+}
+
+/* ── Column ── */
+.tgrid-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+/* ── Base card ── */
+.tcard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  padding: 1.25rem;
+  min-height: 180px;
+}
+
+/* Flex ratio variants — the "big" card (flex 7) is ~70% tall on desktop */
+.tcard--flex7 {
+  flex: 7;
+}
+
+.tcard--flex3 {
+  flex: 3;
+}
+
+/* Color variants */
+.tcard--primary {
+  background: #1E2D3E;         /* Paverasa navy */
+  color: #ffffff;
+}
+
+.tcard--blue {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.tcard--dark {
+  background: #111111;
+  color: #ffffff;
+}
+
+/* ── Grid-line overlay (on primary/navy cards) ── */
+.tcard__grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(79, 79, 79, 0.18) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(79, 79, 79, 0.18) 1px, transparent 1px);
+  background-size: 50px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, #000 70%, transparent 110%);
+  mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, #000 70%, transparent 110%);
+  pointer-events: none;
+}
+
+/* ── Article content (pushed to bottom via margin-top: auto) ── */
+.tcard__article {
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Quote text ── */
+.tcard__quote {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: inherit;
+  opacity: 0.92;
+}
+
+@media (min-width: 1536px) {
+  .tcard__quote {
+    font-size: 1rem;
+  }
+}
+
+/* ── Footer row: person + avatar ── */
+.tcard__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 1.25rem;
+  gap: 0.75rem;
+}
+
+.tcard__person {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.tcard__name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: inherit;
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .tcard__name {
+    font-size: 1.125rem;
+  }
+}
+
+.tcard__title {
+  font-size: 0.8rem;
+  color: inherit;
+  opacity: 0.75;
+}
+
+@media (min-width: 1024px) {
+  .tcard__title {
+    font-size: 0.875rem;
+  }
+}
+
+/* ── Avatar image ── */
+.tcard__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .tcard__avatar {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+/* ── Bottom decorative rule ── */
+.testimonials-rule {
+  position: absolute;
+  bottom: 1rem;
+  left: 5%;
+  right: 5%;
+  height: 4rem;
+  border-bottom: 2px solid #e6e6e6;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .testimonials-rule {
+    left: 0;
+    right: 0;
+  }
+}
+
+.testimonials-rule__inner {
+  max-width: var(--container-max, 1200px);
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Corner squares — ::before left, ::after right */
+.testimonials-rule__inner::before,
+.testimonials-rule__inner::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  width: 16px;
+  height: 16px;
+  background: var(--color-bg-card);
+  border: 1px solid #d1d5db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.testimonials-rule__inner::before {
+  left: -8px;
+}
+
+.testimonials-rule__inner::after {
+  right: -8px;
+}
+
+/* ── Responsive stacking ── */
+@media (max-width: 1023px) {
+  .tcard--flex7,
+  .tcard--flex3 {
+    flex: none;
+    min-height: 160px;
+  }
+
+  /* Stack the col into a horizontal duo on md screens */
+  .tgrid-col:first-child,
+  .tgrid-col:last-child {
+    flex-direction: row;
+  }
+
+  .tgrid-col:first-child .tcard,
+  .tgrid-col:last-child .tcard {
+    flex: 1;
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tgrid-col:first-child,
+  .tgrid-col:last-child {
+    flex-direction: column;
+  }
+
+  .testimonials-section {
+    padding-bottom: 3.5rem;
+  }
+}

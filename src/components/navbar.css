@@ -1,0 +1,231 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0;
+  transition: all var(--transition-base);
+  background: transparent;
+}
+
+.navbar--scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 20px rgb(0 0 0 / 0.05);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  gap: var(--space-8);
+}
+
+/* Logo */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar__logo-svg {
+  height: 24px;
+  width: auto;
+  color: var(--color-text);
+  transition: color var(--transition-base);
+}
+
+/* Nav Links */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar__link {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.navbar__link:hover {
+  color: var(--color-text);
+  background: var(--color-bg-subtle);
+}
+
+.navbar__link--active {
+  color: var(--color-primary-hover);
+  font-weight: 600;
+  background: var(--color-primary-light);
+}
+
+/* Actions */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+/* ── Let's Talk — Uiverse.io ripple button ── */
+.navbar__cta {
+  position: relative;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 0.65em 1.75em;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  border-radius: 6em;
+  border: none;
+  color: var(--color-navy);
+  background-color: var(--color-primary);
+  box-shadow: 0 4px 15px rgba(var(--color-primary-rgb), 0.35);
+
+  /* base transition */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+
+  /* Ensure stacking context for ::after */
+  isolation: isolate;
+  z-index: 1;
+}
+
+.navbar__cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(var(--color-primary-rgb), 0.45);
+  background-color: var(--color-primary-hover);
+  color: white;
+}
+
+.navbar__cta:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(var(--color-primary-rgb), 0.35);
+}
+
+/* Ripple glow ring */
+.navbar__cta::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 6em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--color-primary);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease;
+}
+
+.navbar__cta:hover::after {
+  transform: scaleX(1.45) scaleY(1.7);
+  opacity: 0;
+}
+
+
+.navbar__hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  transition: background var(--transition-fast);
+}
+
+.navbar__hamburger:hover {
+  background: var(--color-bg-subtle);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 999;
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition-base);
+  overflow-y: auto;
+}
+
+.mobile-menu--open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu__links {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6);
+  gap: var(--space-2);
+}
+
+.mobile-menu__link {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-text);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  transition: background var(--transition-fast);
+}
+
+.mobile-menu__link:hover,
+.mobile-menu__link--active {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.mobile-menu__cta {
+  margin-top: var(--space-6);
+  justify-content: center;
+  font-size: var(--text-base);
+  padding: var(--space-4);
+}
+
+@media (max-width: 1024px) {
+  .navbar__links {
+    gap: 0;
+  }
+  .navbar__link {
+    padding: var(--space-2);
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar__links {
+    display: none;
+  }
+  .navbar__hamburger {
+    display: flex;
+  }
+}
