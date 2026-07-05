@@ -209,16 +209,7 @@ export default function Home() {
                 View Products
               </Link>
             </div>
-            <div className="hero__social-proof mt-8">
-              <div className="hero__avatars">
-                {['SM', 'KO', 'AD', 'JK'].map((init, i) => (
-                  <div key={i} className="hero__avatar" style={{ left: i * 24 }}>
-                    {init}
-                  </div>
-                ))}
-              </div>
-              <p>Trusted by <strong>80+ clients</strong> worldwide</p>
-            </div>
+
           </div>
         </BeamsBackground>
       </section>
@@ -226,7 +217,7 @@ export default function Home() {
       {/* ─────────── TRUSTED BY ─────────── */}
       <section className="trusted-by">
         <div className="container">
-          <p className="trusted-by__label eyebrow">Trusted by forward-thinking companies</p>
+          <p className="trusted-by__label eyebrow">Trusted support partners</p>
         </div>
         <div className="logo-strip">
           <div className="logo-strip__track">
@@ -262,22 +253,7 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal delay={150}>
               <div className="who-we-are__visual">
-                <div className="who-we-are__card">
-                  <div className="who-we-are__card-item">
-                    <div className="who-we-are__card-num">120+</div>
-                    <div className="who-we-are__card-label">Projects Shipped</div>
-                  </div>
-                  <div className="who-we-are__card-divider" />
-                  <div className="who-we-are__card-item">
-                    <div className="who-we-are__card-num">4</div>
-                    <div className="who-we-are__card-label">Years of Innovation</div>
-                  </div>
-                  <div className="who-we-are__card-divider" />
-                  <div className="who-we-are__card-item">
-                    <div className="who-we-are__card-num">25</div>
-                    <div className="who-we-are__card-label">Expert Engineers</div>
-                  </div>
-                </div>
+
                 <div className="who-we-are__values">
                   {['Mission-Driven', 'Student-Friendly', 'Innovation-First', 'People-Centered'].map(v => (
                     <span key={v} className="who-we-are__tag">{v}</span>

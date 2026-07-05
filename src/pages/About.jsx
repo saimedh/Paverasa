@@ -107,24 +107,7 @@ export default function About() {
                   </div>
                 </div>
 
-                {/* Stats bar */}
-                <div className="msv-stats">
-                  <div className="msv-stat">
-                    <div className="msv-stat__icon"><Users2 size={22} /></div>
-                    <span className="msv-stat__num">80+</span>
-                    <span className="msv-stat__label">Clients Served</span>
-                  </div>
-                  <div className="msv-stat">
-                    <div className="msv-stat__icon"><Users size={22} /></div>
-                    <span className="msv-stat__num">25</span>
-                    <span className="msv-stat__label">Team Members</span>
-                  </div>
-                  <div className="msv-stat">
-                    <div className="msv-stat__icon"><ShieldCheck size={22} /></div>
-                    <span className="msv-stat__num">3+</span>
-                    <span className="msv-stat__label">Years Building</span>
-                  </div>
-                </div>
+
 
                 {/* Trusted by */}
                 <div className="msv-trusted">

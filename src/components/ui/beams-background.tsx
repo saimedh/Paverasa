@@ -169,9 +169,10 @@ export function BeamsBackground({
     return (
         <div
             className={cn(
-                "relative w-full overflow-hidden bg-neutral-950",
+                "relative w-full overflow-hidden",
                 className
             )}
+            style={{ background: 'var(--gradient-navy)' }}
         >
             <canvas
                 ref={canvasRef}
