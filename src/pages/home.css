@@ -89,7 +89,7 @@
   font-weight: 900;
   letter-spacing: -0.045em;
   line-height: 1.02;
-  color: #FFFFFF;
+  color: var(--color-navy);
   margin-bottom: var(--space-6);
   max-width: 800px;
 }
@@ -102,8 +102,9 @@
 }
 
 .hero__tagline {
+  font-family: 'Google Sans', sans-serif;
   font-size: var(--text-xl);
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-muted);
   line-height: 1.7;
   max-width: 600px;
   margin-bottom: var(--space-10);
@@ -2004,8 +2005,7 @@
 /* "differently," italic green accent */
 .why-us__title-accent {
   font-style: italic;
-  color: var(--color-primary);
-  font-style: italic;
+  color: var(--color-accent);
 }
 
 /* Green underline bar under title */

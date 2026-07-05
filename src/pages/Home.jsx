@@ -4,6 +4,10 @@ import {
   Cloud, GraduationCap, Lightbulb, ShieldCheck, Zap, Star,
   CheckCircle2, ChevronRight
 } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Button } from '../components/ui/button';
+import { DotPattern } from '../components/ui/dot-pattern';
+import { cn } from '../lib/utils';
 import { BeamsBackground } from '../components/ui/beams-background';
 import { 
   HoverSlider, 
@@ -11,6 +15,7 @@ import {
   HoverSliderImageWrap, 
   TextStaggerHover 
 } from '../components/ui/animated-slideshow';
+import { AnimatedTooltip } from '../components/ui/animated-tooltip';
 import ScrollReveal from '../components/ScrollReveal';
 import CountUp from '../components/CountUp';
 import { ExpandingCards } from '../components/ExpandingCards';
@@ -188,30 +193,79 @@ export default function Home() {
   return (
     <div className="home">
       {/* ─────────── HERO ─────────── */}
-      <section id="top">
-        <BeamsBackground className="w-full min-h-screen flex flex-col items-center justify-center">
-          <div className="container hero__content z-10 pt-24 pb-12">
-            <h1 className="hero__headline">
-              Build Software<br />
-              <span className="hero__headline-accent">That Moves</span><br />
-              the World
-            </h1>
-            <p className="hero__tagline">
-              Paverasa engineers world-class digital products — from AI-powered platforms
-              to student innovation hubs. We build with purpose, ship with precision,
-              and grow with you.
-            </p>
-            <div className="hero__actions">
-              <Link to="/services" className="btn btn-primary btn-lg">
-                Explore Services <ArrowRight size={18} />
-              </Link>
-              <Link to="/products" className="btn btn-secondary btn-lg">
-                View Products
-              </Link>
-            </div>
+      <section id="top" className="relative w-full min-h-[100vh] flex flex-col items-center justify-center px-6 py-24 overflow-hidden bg-gradient-to-br from-background to-muted/30">
+        <DotPattern className={cn(
+          "[mask-image:radial-gradient(50vw_circle_at_center,white,transparent)]",
+        )} />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.6 }}
+          animate={{ opacity: 0.4, scale: 1 }}
+          transition={{ duration: 1.4 }}
+          className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-primary/30 blur-[120px] rounded-full z-0"
+        />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.6 }}
+          animate={{ opacity: 0.3, scale: 1 }}
+          transition={{ duration: 1.6, delay: 0.3 }}
+          className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-secondary/20 blur-[160px] rounded-full z-0"
+        />
 
-          </div>
-        </BeamsBackground>
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          {Array.from({ length: 30 }).map((_, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 0 }}
+              animate={{ opacity: 0.2, y: [0, -20, 0] }}
+              transition={{
+                duration: 5 + Math.random() * 5,
+                repeat: Infinity,
+                delay: Math.random() * 5,
+              }}
+              className="absolute w-1 h-1 bg-muted-foreground/30 rounded-full"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="relative z-10 w-full max-w-3xl mx-auto px-4 text-center hero__content">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="hero__headline mx-auto text-center"
+          >
+            Build Software<br />
+            <span className="hero__headline-accent">That Moves</span><br />
+            the World
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="hero__tagline mx-auto text-center"
+          >
+            Paverasa engineers world-class digital products — from AI-powered platforms
+            to student innovation hubs. We build with purpose, ship with precision,
+            and grow with you.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="hero__actions"
+          >
+            <Link to="/services" className="btn btn-primary btn-lg">
+              Explore Services <ArrowRight size={18} />
+            </Link>
+            <Link to="/products" className="btn btn-secondary btn-lg">
+              View Products
+            </Link>
+          </motion.div>
+        </div>
       </section>
 
       {/* ─────────── TRUSTED BY ─────────── */}
@@ -444,23 +498,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─────────── STATISTICS ─────────── */}
-      <section className="stats-section">
-        <div className="container">
-          <div className="stats-grid">
-            {stats.map((stat, i) => (
-              <ScrollReveal key={stat.label} delay={i * 80}>
-                <div className="stat-card">
-                  <div className="stat-card__num">
-                    <CountUp end={stat.end} suffix={stat.suffix} />
-                  </div>
-                  <div className="stat-card__label">{stat.label}</div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* ─────────── TEAM PREVIEW ─────────── */}
       <section className="section team-preview">
@@ -472,18 +510,14 @@ export default function Home() {
               <p>Our multidisciplinary team brings together engineers, designers, strategists, and educators united by one mission.</p>
             </div>
           </ScrollReveal>
-          <div className="team-preview-grid">
-            {team.slice(0, 4).map((member, i) => (
-              <ScrollReveal key={member.id} delay={i * 80}>
-                <div className="team-preview-card">
-                  <div className="team-preview-card__avatar" style={{ background: `${member.color}20`, color: member.color }}>
-                    {member.initials}
-                  </div>
-                  <h3 className="team-preview-card__name">{member.name}</h3>
-                  <p className="team-preview-card__role">{member.role}</p>
-                </div>
-              </ScrollReveal>
-            ))}
+          <div className="flex flex-row items-center justify-center mb-10 w-full">
+            <AnimatedTooltip items={team.slice(0, 4).map((member) => ({
+              id: member.id,
+              name: member.name,
+              designation: member.role,
+              initials: member.initials,
+              color: member.color,
+            }))} />
           </div>
           <ScrollReveal>
             <div className="section-cta">

@@ -172,7 +172,7 @@ export function BeamsBackground({
                 "relative w-full overflow-hidden",
                 className
             )}
-            style={{ background: 'var(--gradient-navy)' }}
+            style={{ background: 'linear-gradient(135deg, #374151 0%, #111827 100%)' }}
         >
             <canvas
                 ref={canvasRef}

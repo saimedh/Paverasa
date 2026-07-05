@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Logo from './Logo';
 import './navbar.css';
 
@@ -32,7 +33,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${!scrolled && location.pathname === '/' ? 'navbar--transparent' : ''}`}>
+      <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
         <div className="navbar__inner container-wide">
           {/* Logo */}
           <Link to="/" className="navbar__logo" aria-label="Paverasa Home">
@@ -47,10 +48,21 @@ export default function Navbar() {
                 to={link.to}
                 end={link.to === '/'}
                 className={({ isActive }) =>
-                  `navbar__link ${isActive ? 'navbar__link--active' : ''}`
+                  `navbar__link relative z-10 ${isActive ? 'navbar__link--active' : ''}`
                 }
               >
-                {link.label}
+                {({ isActive }) => (
+                  <>
+                    {isActive && (
+                      <motion.span
+                        layoutId="nav-active-indicator"
+                        className="absolute bottom-0 left-2 right-2 h-[2px] bg-[#FCA311] rounded-full"
+                        transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                      />
+                    )}
+                    {link.label}
+                  </>
+                )}
               </NavLink>
             ))}
           </nav>

@@ -103,7 +103,6 @@
 .navbar__link--active {
   color: var(--color-primary-hover);
   font-weight: 600;
-  background: var(--color-primary-light);
 }
 
 /* Actions */

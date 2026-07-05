@@ -5,7 +5,9 @@ import {
 } from 'lucide-react';
 import { LinkedinIcon, InstagramIcon, YoutubeIcon, WhatsappIcon } from './SocialIcons';
 import Logo from './Logo';
-import { BeamsBackground } from './ui/beams-background';
+import { motion } from 'framer-motion';
+import { DotPattern } from './ui/dot-pattern';
+import { cn } from '../lib/utils';
 import './footer.css';
 
 const footerLinks = {
@@ -43,7 +45,23 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="footer p-0 overflow-hidden">
-      <BeamsBackground className="w-full pt-20 pb-8" intensity="medium">
+      <section className="relative w-full flex flex-col items-center justify-center pt-20 pb-8 bg-gradient-to-tr from-muted/30 to-background overflow-hidden">
+        <DotPattern className={cn(
+          "[mask-image:radial-gradient(40vw_circle_at_center,white,transparent)]",
+        )} />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.6 }}
+          animate={{ opacity: 0.3, scale: 1 }}
+          transition={{ duration: 1.4 }}
+          className="absolute top-[-50px] right-[-50px] w-[200px] h-[200px] bg-primary/20 blur-[100px] rounded-full z-0 pointer-events-none"
+        />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.6 }}
+          animate={{ opacity: 0.2, scale: 1 }}
+          transition={{ duration: 1.6, delay: 0.3 }}
+          className="absolute bottom-[-100px] left-[-100px] w-[300px] h-[300px] bg-secondary/15 blur-[120px] rounded-full z-0 pointer-events-none"
+        />
+        
         <div className="container-wide relative z-10 w-full">
           {/* Top: Brand + Links */}
           <div className="footer__grid">
@@ -98,14 +116,14 @@ export default function Footer() {
           </div>
 
           {/* Bottom bar */}
-          <div className="footer__bottom">
+          <div className="footer__bottom mt-16 pt-8 border-t border-muted-foreground/10 flex justify-between items-center text-muted-foreground text-sm">
             <p>© {new Date().getFullYear()} Paverasa. All rights reserved.</p>
-            <a href="#top" className="footer__back-top">
-              Back to top <ArrowUpRight size={14} />
+            <a href="#top" className="footer__back-top flex items-center hover:text-primary transition-colors">
+              Back to top <ArrowUpRight size={14} className="ml-1" />
             </a>
           </div>
         </div>
-      </BeamsBackground>
+      </section>
     </footer>
   );
 }
