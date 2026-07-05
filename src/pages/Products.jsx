@@ -7,6 +7,7 @@ import {
   BarChart2,
   ShieldCheck,
   Smartphone,
+  Globe,
 } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import { ExpandingCards } from '../components/ExpandingCards';
@@ -47,39 +48,49 @@ const expandingItems = [
     linkHref: '/contact',
   },
   {
-    id: 'dataviz-pro',
-    title: 'DataViz Pro',
+    id: 'hostel-management',
+    title: 'Hostel Management',
     description:
-      'Build beautiful, interactive data dashboards without a line of code. Connect any source and share insights instantly.',
+      'A complete solution for hostel administrators to manage bookings, resident data, fees, and maintenance requests efficiently.',
     imgSrc:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
-    icon: <BarChart2 size={24} />,
+      'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1200&q=80',
+    icon: <Globe size={24} />,
     linkHref: '/contact',
   },
   {
-    id: 'cloudshield',
-    title: 'CloudShield',
+    id: '2r-menu-ordering',
+    title: '2R Menu Ordering',
     description:
-      'Automated cloud security scanning, compliance monitoring, and threat detection for cloud-native apps.',
+      'Digital menu and ordering system for restaurants. Guests can scan, order, and pay directly from their smartphones.',
     imgSrc:
-      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80',
-    icon: <ShieldCheck size={24} />,
-    linkHref: '/contact',
-  },
-  {
-    id: 'mobilekit',
-    title: 'MobileKit',
-    description:
-      'Premium React Native component library. Ship production-ready mobile apps 3× faster with battle-tested UI primitives.',
-    imgSrc:
-      'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
     icon: <Smartphone size={24} />,
+    linkHref: '/contact',
+  },
+  {
+    id: 'skill-exchange',
+    title: 'Skill Exchange',
+    description:
+      'A community platform where users can trade their expertise. Teach what you know, learn what you need.',
+    imgSrc:
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
+    icon: <GraduationCap size={24} />,
+    linkHref: '/contact',
+  },
+  {
+    id: 'picsidrop',
+    title: 'PicsiDrop',
+    description:
+      'A seamless platform to easily drop, share, and manage pictures and media files securely with clients and stakeholders.',
+    imgSrc:
+      'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1200&q=80',
+    icon: <Globe size={24} />,
     linkHref: '/contact',
   },
 ];
 
 export default function Products() {
-  const live   = products.filter(p => p.status === 'live');
+  const live   = products.filter(p => p.status === 'live' || p.status === 'ongoing');
   const coming = products.filter(p => p.status === 'coming');
 
   const liveFeatures = live.map(product => ({

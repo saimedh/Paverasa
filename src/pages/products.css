@@ -182,15 +182,15 @@
 
 /* Badges (reuse globals, enhance here) */
 .badge-live {
-  background: #D4EFDF;
-  color: #1A7A3E;
-  border: 1px solid #A8E6C3;
+  background: var(--color-bg);
+  color: var(--color-navy);
+  border: 1px solid var(--color-accent);
 }
 
 .badge-coming {
-  background: var(--color-bg-subtle);
-  color: #B45309;
-  border: 1px solid #FDE68A;
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
 }
 
 /* Responsive */

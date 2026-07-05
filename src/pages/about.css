@@ -37,7 +37,7 @@
 }
 
 .about-hero-accent {
-  background: linear-gradient(135deg, #7FEBA5 0%, var(--color-primary) 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -102,7 +102,7 @@
   color: var(--color-primary-hover);
   flex: 1;
 }
-.about-story-card--mission p { color: #1A7A3E; }
+.about-story-card--mission p { color: var(--color-navy); }
 
 .about-story-card--vision {
   background: var(--color-bg-subtle);
@@ -422,7 +422,7 @@
 
 /* Outer wrapper — full width, light background, subtle radial glow */
 .msv-panel {
-  background: radial-gradient(ellipse at 50% 0%, #e8f9f0 0%, #f5fdf8 40%, #ffffff 80%);
+  background: var(--color-bg);
   border-radius: var(--radius-2xl);
   padding: var(--space-10) var(--space-8) var(--space-8);
   display: flex;
@@ -442,13 +442,13 @@
 }
 .msv-panel::before {
   width: 120px; height: 120px;
-  background: radial-gradient(circle, #c3f0d8 0%, transparent 70%);
+  background: radial-gradient(circle, var(--color-bg-subtle) 0%, transparent 70%);
   top: -30px; left: -30px;
   opacity: 0.6;
 }
 .msv-panel::after {
   width: 80px; height: 80px;
-  background: radial-gradient(circle, #b8ead0 0%, transparent 70%);
+  background: radial-gradient(circle, var(--color-bg-subtle) 0%, transparent 70%);
   bottom: 160px; right: -20px;
   opacity: 0.4;
 }
@@ -462,7 +462,7 @@
   display: inline-block;
   padding: 5px 18px;
   border-radius: var(--radius-full);
-  border: 1.5px solid #a7d9b8;
+  border: 1.5px solid var(--color-border);
   background: var(--color-bg-card);
   font-size: var(--text-xs);
   font-weight: 700;
@@ -501,7 +501,7 @@
 .msv-card {
   background: var(--color-bg-card);
   border-radius: var(--radius-xl);
-  border: 1px solid #e8f0eb;
+  border: 1px solid var(--color-border);
   box-shadow: 0 2px 16px rgba(0,0,0,0.04);
   padding: var(--space-5) var(--space-6);
   display: flex;
@@ -520,8 +520,8 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: #d1fae5;
-  color: #16a34a;
+  background: var(--color-bg);
+  color: var(--color-text-muted);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -573,7 +573,7 @@
 
 /* ── Stats bar ── */
 .msv-stats {
-  background: #1A3A28;   /* dark forest green — matches image */
+  background: var(--color-navy);   /* dark forest green — matches image */
   border-radius: var(--radius-xl);
   padding: var(--space-6) var(--space-5);
   display: flex;
@@ -658,7 +658,7 @@
 .msv-logo {
   font-weight: 700;
   font-size: var(--text-base);
-  color: #9ca3af;
+  color: var(--color-text-muted);
   letter-spacing: -0.02em;
   transition: color var(--transition-fast);
   cursor: default;

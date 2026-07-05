@@ -1,7 +1,7 @@
 .footer {
   background: var(--color-navy);
   color: rgba(255, 255, 255, 0.75);
-  padding: var(--space-20) 0 var(--space-8);
+  padding: 0;
 }
 
 .footer__grid {
@@ -110,7 +110,6 @@
   align-items: center;
   justify-content: space-between;
   padding-top: var(--space-8);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: var(--text-sm);
   color: rgba(255, 255, 255, 0.4);
 }

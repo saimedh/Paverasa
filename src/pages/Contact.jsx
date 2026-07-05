@@ -220,14 +220,14 @@ export default function Contact() {
                       <div className="contact-detail__icon"><Phone size={18} /></div>
                       <div>
                         <p className="contact-detail__label">Phone</p>
-                        <p className="contact-detail__value">+1 (555) 000-0000</p>
+                        <p className="contact-detail__value">+91 81254 32177</p>
                       </div>
                     </div>
                     <div className="contact-detail">
                       <div className="contact-detail__icon"><MapPin size={18} /></div>
                       <div>
                         <p className="contact-detail__label">Office</p>
-                        <p className="contact-detail__value">Accra, Ghana</p>
+                        <p className="contact-detail__value">Middle town medchal</p>
                       </div>
                     </div>
                     <div className="contact-detail">

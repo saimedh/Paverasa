@@ -10,7 +10,7 @@ export default function Team() {
       <section className="page-hero page-hero--indigo">
         <div className="container page-hero__content">
           <ScrollReveal>
-            <p className="eyebrow" style={{ color: '#a5b4fc' }}>The Team</p>
+            <p className="eyebrow" style={{ color: '#FCA311' }}>The Team</p>
             <h1 className="page-hero__title">Meet the people<br />
               <span className="about-hero-accent">who make it happen</span>
             </h1>

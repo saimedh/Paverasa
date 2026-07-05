@@ -10,7 +10,7 @@ export const posts = [
     category: 'Our Story',
     author: 'PAVERASA',
     image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=640&q=80',
-    gradient: 'linear-gradient(135deg, #10b981 0%, #047857 100%)',
+    gradient: 'linear-gradient(135deg, #14213D 0%, #0E1729 100%)',
     content: `
 # THE START
 
@@ -87,7 +87,7 @@ And that’s where our story truly began.
     category: 'AI & Innovation',
     author: 'Fatima Bello',
     image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=640&q=80',
-    gradient: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+    gradient: 'linear-gradient(135deg, #FCA311 0%, #14213D 100%)',
     content: `
 # How AI Is Reshaping Student Innovation in Africa
 
@@ -123,7 +123,7 @@ If you're a student with an idea — we want to hear from you.
     category: 'Engineering',
     author: 'Kwame Osei',
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=640&q=80',
-    gradient: 'linear-gradient(135deg, #06b6d4 0%, #6366f1 100%)',
+    gradient: 'linear-gradient(135deg, #14213D 0%, #FCA311 100%)',
     content: `
 # Building Scalable APIs: Lessons from 50 Production Deployments
 
@@ -157,7 +157,7 @@ Whether you use OpenAPI, GraphQL, or gRPC, defining your schema before implement
     category: 'Design',
     author: 'Priya Nair',
     image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=640&q=80',
-    gradient: 'linear-gradient(135deg, #ec4899 0%, #f97316 100%)',
+    gradient: 'linear-gradient(135deg, #0E1729 0%, #14213D 100%)',
     content: `
 # Why Early-Stage Startups Need a Design System
 

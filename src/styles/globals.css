@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* ============================================================
    PAVERASA — Global Design System
    ============================================================ */
@@ -12,12 +14,11 @@
 }
 
 html {
-  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  font-family: 'Google Sans', 'DM Sans', system-ui, -apple-system, sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
@@ -53,51 +54,51 @@ ul, ol {
 
 /* ---------- CSS Custom Properties (Design Tokens) ---------- */
 :root {
-  /* ── Brand Colors (TruckList-inspired: Navy + Bright Green) ── */
+  /* ── Brand Colors (Deep Navy + Vibrant Orange) ── */
 
-  /* Primary action color — Bright Green */
-  --color-primary: #2ECC70;
-  --color-primary-dark: #27AE60;
-  --color-primary-light: #E8FBF0;
-  --color-primary-rgb: 46, 204, 112;
+  /* Primary action color — Deep Navy */
+  --color-primary: #14213D;
+  --color-primary-dark: #0E1729;
+  --color-primary-light: rgba(20, 33, 61, 0.05);
+  --color-primary-rgb: 20, 33, 61;
 
-  /* Brand dark — Navy Charcoal */
-  --color-navy: #1E2D3E;
-  --color-navy-deep: #152232;
-  --color-navy-mid: #243447;
-  --color-navy-light: #2E4260;
+  /* Brand dark — Deep Navy */
+  --color-navy: #14213D;
+  --color-navy-deep: #0E1729;
+  --color-navy-mid: #14213D;
+  --color-navy-light: rgba(20, 33, 61, 0.05);
 
-  /* Accent — lighter green tones */
-  --color-accent: #27AE60;
-  --color-accent-light: #D4EFDF;
+  /* Accent — Vibrant Orange */
+  --color-accent: #FCA311;
+  --color-accent-light: #FCD086;
 
   /* Status */
-  --color-success: #27AE60;
-  --color-warning: #F39C12;
-  --color-error: #E74C3C;
+  --color-success: #14213D;
+  --color-warning: #FCA311;
+  --color-error: #FCA311;
 
   /* Text */
-  --color-text: #1E2D3E;
-  --color-text-muted: #5A6E82;
-  --color-text-subtle: #8FA4B8;
+  --color-text: #14213D;
+  --color-text-muted: rgba(20, 33, 61, 0.65);
+  --color-text-subtle: rgba(20, 33, 61, 0.5);
 
   /* Backgrounds */
   --color-bg: #FFFFFF;
-  --color-bg-subtle: #F5F8FA;
+  --color-bg-subtle: #FFFFFF;
   --color-bg-card: #FFFFFF;
-  --color-bg-navy: #1E2D3E;
+  --color-bg-navy: #14213D;
 
   /* Borders */
-  --color-border: #E1E8EF;
-  --color-border-subtle: #EDF2F7;
+  --color-border: #C2C4C3;
+  --color-border-subtle: #C2C4C3;
 
   /* ── Gradients ── */
-  --gradient-primary: linear-gradient(135deg, #2ECC70 0%, #27AE60 100%);
-  --gradient-primary-rich: linear-gradient(135deg, #2ECC70 0%, #1AA355 100%);
-  --gradient-hero: radial-gradient(ellipse at 50% 0%, #E8FBF0 0%, #FFFFFF 65%);
-  --gradient-navy: linear-gradient(135deg, #1E2D3E 0%, #243447 100%);
-  --gradient-cta: linear-gradient(135deg, #2ECC70 0%, #27AE60 100%);
-  --gradient-card-hover: linear-gradient(135deg, #F0FBF5 0%, #E8FBF0 100%);
+  --gradient-primary: linear-gradient(135deg, #14213D 0%, #0E1729 100%);
+  --gradient-primary-rich: linear-gradient(135deg, #14213D 0%, #FCA311 100%);
+  --gradient-hero: radial-gradient(ellipse at 50% 0%, #FFFFFF 0%, #FFFFFF 100%);
+  --gradient-navy: linear-gradient(135deg, #14213D 0%, #0E1729 100%);
+  --gradient-cta: linear-gradient(135deg, #FCA311 0%, #D8890C 100%);
+  --gradient-card-hover: linear-gradient(135deg, #FFFFFF 0%, #FFFFFF 100%);
 
   /* ── Typography ── */
   /* Google Sans → Plus Jakarta Sans (closest public alternative) as fallback */
@@ -151,8 +152,8 @@ ul, ol {
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.07), 0 8px 10px -6px rgb(0 0 0 / 0.07);
   --shadow-card: 0 0 0 1px var(--color-border), 0 4px 24px rgb(0 0 0 / 0.05);
-  --shadow-card-hover: 0 0 0 1px #A8E6C3, 0 8px 32px rgb(46 204 112 / 0.15);
-  --shadow-primary: 0 8px 32px rgb(46 204 112 / 0.30);
+  --shadow-card-hover: 0 0 0 1px #FCA311, 0 8px 32px rgba(252, 163, 17, 0.15);
+  --shadow-primary: 0 8px 32px rgba(20, 33, 61, 0.30);
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -315,90 +316,55 @@ h1, h2, h3, h4, h5, h6 {
     color 200ms ease;
 }
 
-/* ── Neon top line — ::before ── */
-.btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 12.5%;           /* w-3/4 centered */
-  width: 75%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--btn-neon-color, #2ECC70),
-    transparent
-  );
-  opacity: 0;
-  transition: opacity 500ms ease;
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* ── Neon bottom line — ::after ── */
-.btn::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 12.5%;
-  width: 75%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--btn-neon-color, #2ECC70),
-    transparent
-  );
-  opacity: 0;
-  transition: opacity 500ms ease;
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Show neon lines on hover */
-.btn:hover::before {
-  opacity: 1;
-}
-
-.btn:hover::after {
-  opacity: 0.35;
-}
-
-/* ── Primary (solid green) ── */
+/* ── Primary Button ── */
 .btn-primary {
-  --btn-neon-color: #7FEBA5;
-  background: var(--gradient-primary);
-  color: var(--color-navy);
-  font-weight: 700;
-  border-color: transparent;
-  box-shadow: 0 4px 18px rgba(46, 204, 112, 0.35);
+  background: var(--color-navy);
+  color: #FFFFFF;
+  border: 1px solid var(--color-navy);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(46, 204, 112, 0.5);
-  color: white;
-  border-color: rgba(255, 255, 255, 0.35);
+  background: var(--color-accent);
+  color: var(--color-navy);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-primary:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 12px rgba(46, 204, 112, 0.35);
+  transform: translateY(0);
 }
 
-/* ── Secondary (bordered ghost) ── */
+/* ── Secondary Button ── */
 .btn-secondary {
-  --btn-neon-color: #2ECC70;
-  background: rgba(46, 204, 112, 0.04);
-  color: var(--color-text);
-  border-color: rgba(46, 204, 112, 0.25);
+  background: #FFFFFF;
+  color: var(--color-navy);
+  border: 1px solid var(--color-navy);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-  background: rgba(46, 204, 112, 0.0);
-  border-color: rgba(46, 204, 112, 0.55);
-  color: var(--color-primary);
+  background: #FFFFFF;
+  border-color: var(--color-accent);
+  color: var(--color-navy);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* ── Ghost Button ── */
+.btn-ghost {
+  background: transparent;
+  color: var(--color-navy);
+  border: 1px solid transparent;
+}
+
+.btn-ghost:hover {
+  color: var(--color-accent);
 }
 
 /* ── Sizes ── */

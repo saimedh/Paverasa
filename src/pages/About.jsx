@@ -14,7 +14,7 @@ const values = [
 ];
 
 const timeline = [
-  { year: '2022', title: 'Paverasa Founded', desc: 'Three engineers with a shared belief: software should be accessible and human. Paverasa is born in Accra.' },
+  { year: '2022', title: 'Paverasa Founded', desc: 'Three engineers with a shared belief: software should be accessible and human. Paverasa is born in Middle town medchal.' },
   { year: '2022', title: 'First Product Ships', desc: 'Paverasa Suite v1 launches for local SME clients — replacing spreadsheets with a living, breathing business platform.' },
   { year: '2023', title: 'First Enterprise Client', desc: 'We land our first enterprise contract, validating the market for accessible, affordable enterprise software.' },
   { year: '2023', title: 'CampusLink Launches', desc: 'Our student innovation platform launches at three universities, connecting 500+ students in its first semester.' },
@@ -37,7 +37,7 @@ export default function About() {
         <ParticleCanvas />
         <div className="container page-hero__content">
           <ScrollReveal>
-            <p className="eyebrow" style={{ color: '#a5b4fc' }}>Our Journey</p>
+            <p className="eyebrow" style={{ color: '#FCA311' }}>Our Journey</p>
             <h1 className="page-hero__title">Software built with<br /><span className="about-hero-accent">purpose &amp; passion</span></h1>
             <p className="page-hero__sub">We started with a question: why does great software have to be exclusive? Paverasa is our answer.</p>
           </ScrollReveal>

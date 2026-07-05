@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import Lenis from 'lenis';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -20,6 +21,18 @@ function ScrollToTop() {
 }
 
 function AppLayout() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    return () => lenis.destroy();
+  }, []);
+
   return (
     <>
       <ScrollToTop />

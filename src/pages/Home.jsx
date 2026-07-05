@@ -4,7 +4,13 @@ import {
   Cloud, GraduationCap, Lightbulb, ShieldCheck, Zap, Star,
   CheckCircle2, ChevronRight
 } from 'lucide-react';
-import ParticleCanvas from '../components/ParticleCanvas';
+import { BeamsBackground } from '../components/ui/beams-background';
+import { 
+  HoverSlider, 
+  HoverSliderImage, 
+  HoverSliderImageWrap, 
+  TextStaggerHover 
+} from '../components/ui/animated-slideshow';
 import ScrollReveal from '../components/ScrollReveal';
 import CountUp from '../components/CountUp';
 import { ExpandingCards } from '../components/ExpandingCards';
@@ -19,8 +25,7 @@ const iconMap = {
 };
 
 const partners = [
-  'TechBridge', 'NovaCorp', 'AxisGroup', 'Meridian Labs', 'PulseWorks',
-  'Innovate Hub', 'CloudBase', 'DataStream', 'BuildRight', 'Nexora',
+  'redlix', 'UMA enterprises', 'kumar textiles', 'mayur&capitals', 'abs photography',
 ];
 
 const capabilities = [
@@ -44,29 +49,29 @@ const strengths = [
     icon: Lightbulb,
     title: 'Innovation First',
     desc: 'We explore emerging technologies and apply them pragmatically to create real competitive advantages.',
-    color: '#6366f1',
-    bgColor: '#ede9fe',
+    color: '#14213D',
+    bgColor: '#FFFFFF',
   },
   {
     icon: Star,
     title: 'Quality Obsessed',
     desc: 'Every feature is crafted with precision. We ship work we\'re proud of — always.',
-    color: '#f59e0b',
-    bgColor: '#fef3c7',
+    color: '#FCA311',
+    bgColor: '#FFFFFF',
   },
   {
     icon: ShieldCheck,
     title: 'Security Built In',
     desc: 'Security is not an afterthought. We architect with zero-trust principles from day one.',
-    color: '#10b981',
-    bgColor: '#d1fae5',
+    color: '#14213D',
+    bgColor: '#FFFFFF',
   },
   {
     icon: Zap,
     title: 'Speed & Agility',
     desc: 'We move fast without breaking things — lean processes, clear communication, rapid delivery.',
-    color: '#ec4899',
-    bgColor: '#fce7f3',
+    color: '#FCA311',
+    bgColor: '#FFFFFF',
   },
 ];
 
@@ -103,75 +108,119 @@ const homeExpandingItems = [
     linkHref: '/products',
   },
   {
-    id: 'dataviz-pro',
-    title: 'DataViz Pro',
-    description: 'Build beautiful interactive dashboards without code. Connect any data source and share insights instantly.',
-    imgSrc: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
-    icon: <BarChart2 size={24} />,
+    id: 'hostel-management',
+    title: 'Hostel Management',
+    description: 'A complete solution for hostel administrators to manage bookings, resident data, fees, and maintenance requests efficiently.',
+    imgSrc: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1200&q=80',
+    icon: <Globe size={24} />,
     linkHref: '/products',
   },
   {
-    id: 'cloudshield',
-    title: 'CloudShield',
-    description: 'Automated cloud security scanning, compliance monitoring, and threat detection for cloud-native apps.',
-    imgSrc: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80',
-    icon: <ShieldCheck size={24} />,
-    linkHref: '/products',
-  },
-  {
-    id: 'mobilekit',
-    title: 'MobileKit',
-    description: 'Premium React Native component library — ship production-ready mobile apps 3× faster.',
-    imgSrc: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80',
+    id: '2r-menu-ordering',
+    title: '2R Menu Ordering',
+    description: 'Digital menu and ordering system for restaurants. Guests can scan, order, and pay directly from their smartphones.',
+    imgSrc: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
     icon: <Smartphone size={24} />,
     linkHref: '/products',
   },
+  {
+    id: 'skill-exchange',
+    title: 'Skill Exchange',
+    description: 'A community platform where users can trade their expertise. Teach what you know, learn what you need.',
+    imgSrc: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
+    icon: <GraduationCap size={24} />,
+    linkHref: '/products',
+  },
+  {
+    id: 'picsidrop',
+    title: 'PicsiDrop',
+    description: 'A seamless platform to easily drop, share, and manage pictures and media files securely with clients and stakeholders.',
+    imgSrc: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1200&q=80',
+    icon: <Globe size={24} />,
+    linkHref: '/products',
+  },
+];
+
+const SLIDES = [
+  {
+    id: "slide-0",
+    title: "Web Development",
+    imageUrl: "https://images.unsplash.com/photo-1654618977232-a6c6dea9d1e8?q=80&w=2486&auto=format&fit=crop"
+  },
+  {
+    id: "slide-1",
+    title: "Mobile Development",
+    imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2487&auto=format&fit=crop"
+  },
+  {
+    id: "slide-2",
+    title: "AI Solutions",
+    imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2487&auto=format&fit=crop"
+  },
+  {
+    id: "slide-3",
+    title: "Data Analytics",
+    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2487&auto=format&fit=crop"
+  },
+  {
+    id: "slide-4",
+    title: "Cloud & DevOps",
+    imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2487&auto=format&fit=crop"
+  },
+  {
+    id: "slide-5",
+    title: "Student Innovation",
+    imageUrl: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2487&auto=format&fit=crop"
+  },
+  {
+    id: "slide-6",
+    title: "Google Analytics & SEO",
+    imageUrl: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2487&auto=format&fit=crop"
+  },
+  {
+    id: "slide-7",
+    title: "System Architecture",
+    imageUrl: "https://images.unsplash.com/photo-1503694978374-8a2fa686963a?q=80&w=2487&auto=format&fit=crop"
+  }
 ];
 
 export default function Home() {
   return (
     <div className="home">
       {/* ─────────── HERO ─────────── */}
-      <section className="hero" id="top">
-        <ParticleCanvas />
-        <div className="hero__glow hero__glow--left" />
-        <div className="hero__glow hero__glow--right" />
-        <div className="container hero__content">
-          <div className="hero__badge">
-            <span className="badge-dot" /> Software Solutions &amp; Innovation
-          </div>
-          <h1 className="hero__headline">
-            Build Software<br />
-            <span className="hero__headline-accent">That Moves</span><br />
-            the World
-          </h1>
-          <p className="hero__tagline">
-            Paverasa engineers world-class digital products — from AI-powered platforms
-            to student innovation hubs. We build with purpose, ship with precision,
-            and grow with you.
-          </p>
-          <div className="hero__actions">
-            <Link to="/services" className="btn btn-primary btn-lg">
-              Explore Services <ArrowRight size={18} />
-            </Link>
-            <Link to="/products" className="btn btn-secondary btn-lg">
-              View Products
-            </Link>
-          </div>
-          <div className="hero__social-proof">
-            <div className="hero__avatars">
-              {['SM', 'KO', 'AD', 'JK'].map((init, i) => (
-                <div key={i} className="hero__avatar" style={{ left: i * 24 }}>
-                  {init}
-                </div>
-              ))}
+      <section id="top">
+        <BeamsBackground className="w-full min-h-screen flex flex-col items-center justify-center">
+          <div className="container hero__content z-10 pt-24 pb-12">
+            <h1 className="hero__headline">
+              Build Software<br />
+              <span className="hero__headline-accent">That Moves</span><br />
+              the World
+            </h1>
+            <p className="hero__tagline">
+              Paverasa engineers world-class digital products — from AI-powered platforms
+              to student innovation hubs. We build with purpose, ship with precision,
+              and grow with you.
+            </p>
+            <div className="hero__actions">
+              <Link to="/services" className="btn btn-primary btn-lg">
+                Explore Services <ArrowRight size={18} />
+              </Link>
+              <Link to="/products" className="btn btn-secondary btn-lg">
+                View Products
+              </Link>
             </div>
-            <p>Trusted by <strong>80+ clients</strong> worldwide</p>
+            <div className="hero__social-proof mt-8">
+              <div className="hero__avatars">
+                {['SM', 'KO', 'AD', 'JK'].map((init, i) => (
+                  <div key={i} className="hero__avatar" style={{ left: i * 24 }}>
+                    {init}
+                  </div>
+                ))}
+              </div>
+              <p>Trusted by <strong>80+ clients</strong> worldwide</p>
+            </div>
           </div>
-        </div>
-        <div className="hero__scroll-hint">
-          <div className="hero__scroll-dot" />
-        </div>
+        </BeamsBackground>
       </section>
 
       {/* ─────────── TRUSTED BY ─────────── */}
@@ -266,68 +315,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─────────── SERVICES PREVIEW ─────────── */}
-      <section className="section services-preview">
+      {/* ─────────── OUR EXPERTISE (ANIMATED SLIDESHOW) ─────────── */}
+      <section className="section bg-[var(--color-bg)] text-[var(--color-text)]">
         <div className="container">
-
-          {/* Split header: big title left, description right */}
           <ScrollReveal>
-            <div className="services-split-header">
+            <div className="services-split-header mb-12">
               <div className="services-split-header__left">
                 <span className="services-pill-label">What We Do</span>
                 <h2 className="services-split-title">
-                  OUR<br />
-                  <span className="services-split-title__accent">EXPERTISE</span>
+                  OUR <span className="services-split-title__accent">EXPERTISE</span>
                 </h2>
-              </div>
-              <div className="services-split-header__right">
-                <p className="services-split-desc">
-                  We offer a wide range of technology solutions to help your business thrive in the digital age — from elegant web experiences to autonomous AI systems.
-                </p>
-                <Link to="/services" className="btn btn-primary services-split-cta">
-                  View All Services <ArrowRight size={16} />
-                </Link>
               </div>
             </div>
           </ScrollReveal>
-
-          {/* Bordered card grid with cover images */}
-          <div className="svc-cover-grid">
-            {services.map((svc, i) => {
-              const Icon = iconMap[svc.icon] || Globe;
-              return (
-                <ScrollReveal key={svc.id} delay={i * 60}>
-                  <Link to="/services" className="svc-cover-card">
-                    {/* Cover image */}
-                    <div className="svc-cover-card__cover">
-                      <img
-                        src={svc.cover}
-                        alt={svc.title}
-                        className="svc-cover-card__img"
-                        loading="lazy"
-                      />
-                      <div className="svc-cover-card__overlay" />
-                      <div className="svc-cover-card__cover-icon" style={{ color: svc.color }}>
-                        <Icon size={28} />
-                      </div>
-                    </div>
-                    {/* Card body */}
-                    <div className="svc-cover-card__body">
-                      <div className="svc-cover-card__icon-row">
-                        <div className="svc-cover-card__icon-badge" style={{ background: `${svc.color}18`, color: svc.color }}>
-                          <Icon size={18} />
-                        </div>
-                        <ArrowRight size={15} className="svc-cover-card__arrow" />
-                      </div>
-                      <h3 className="svc-cover-card__title">{svc.title}</h3>
-                      <p className="svc-cover-card__desc">{svc.shortDesc}</p>
-                    </div>
-                  </Link>
-                </ScrollReveal>
-              );
-            })}
-          </div>
-
+          
+          <HoverSlider className="place-content-center p-6 md:px-12 min-h-[60vh]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center w-full">
+              <div className="flex flex-col items-start space-y-3 md:space-y-5">
+                {SLIDES.map((slide, index) => (
+                  <TextStaggerHover
+                    key={slide.title}
+                    index={index}
+                    className="cursor-pointer text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-tighter"
+                    text={slide.title}
+                  />
+                ))}
+              </div>
+              <HoverSliderImageWrap className="w-full aspect-[4/3] rounded-xl overflow-hidden shadow-2xl border-4 border-white">
+                {SLIDES.map((slide, index) => (
+                  <div key={slide.id} className="size-full">
+                    <HoverSliderImage
+                      index={index}
+                      imageUrl={slide.imageUrl}
+                      src={slide.imageUrl}
+                      alt={slide.title}
+                      className="size-full object-cover"
+                      loading="eager"
+                      decoding="async"
+                    />
+                  </div>
+                ))}
+              </HoverSliderImageWrap>
+            </div>
+          </HoverSlider>
         </div>
       </section>
 
@@ -503,7 +533,7 @@ export default function Home() {
             {posts.slice(0, 3).map((post, i) => (
               <ScrollReveal key={post.id} delay={i * 80}>
                 <Link to={`/blog/${post.slug}`} className="blog-card">
-                  <div className="blog-card__thumb" style={{ background: post.gradient }}>
+                  <div className="blog-card__thumb" style={{ backgroundImage: `url(${post.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                     <span className="blog-card__category">{post.category}</span>
                   </div>
                   <div className="blog-card__body">
@@ -534,30 +564,30 @@ export default function Home() {
       </section>
 
       {/* ─────────── CLOSING CTA ─────────── */}
-      <section className="closing-cta">
-        <ParticleCanvas />
-        <div className="closing-cta__glow" />
-        <div className="container closing-cta__content">
-          <ScrollReveal>
-            <p className="eyebrow" style={{ color: '#a5b4fc' }}>Ready to Build?</p>
-            <h2 className="closing-cta__headline">
-              Let's create something<br />
-              <span className="closing-cta__accent">extraordinary together</span>
-            </h2>
-            <p className="closing-cta__sub">
-              Whether you have a fully-formed brief or just an idea on a napkin,
-              we'd love to hear from you.
-            </p>
-            <div className="closing-cta__actions">
-              <Link to="/contact" className="btn btn-primary btn-lg closing-cta__btn-primary">
-                Contact Us <ArrowRight size={18} />
-              </Link>
-              <Link to="/contact" className="btn btn-secondary btn-lg closing-cta__btn-secondary">
-                Schedule a Meeting
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
+      <section className="closing-cta p-0">
+        <BeamsBackground className="w-full flex flex-col items-center justify-center min-h-[60vh]">
+          <div className="container closing-cta__content z-10 text-center">
+            <ScrollReveal>
+              <p className="eyebrow" style={{ color: '#FCA311' }}>Ready to Build?</p>
+              <h2 className="closing-cta__headline">
+                Let's create something<br />
+                <span className="closing-cta__accent">extraordinary together</span>
+              </h2>
+              <p className="closing-cta__sub">
+                Whether you have a fully-formed brief or just an idea on a napkin,
+                we'd love to hear from you.
+              </p>
+              <div className="closing-cta__actions justify-center">
+                <Link to="/contact" className="btn btn-primary btn-lg closing-cta__btn-primary">
+                  Contact Us <ArrowRight size={18} />
+                </Link>
+                <Link to="/contact" className="btn btn-secondary btn-lg closing-cta__btn-secondary">
+                  Schedule a Meeting
+                </Link>
+              </div>
+            </ScrollReveal>
+          </div>
+        </BeamsBackground>
       </section>
     </div>
   );

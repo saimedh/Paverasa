@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+      <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${!scrolled && location.pathname === '/' ? 'navbar--transparent' : ''}`}>
         <div className="navbar__inner container-wide">
           {/* Logo */}
           <Link to="/" className="navbar__logo" aria-label="Paverasa Home">

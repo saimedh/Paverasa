@@ -11,14 +11,22 @@ export default function Logo({ className = '' }) {
       strokeLinecap="square" 
       strokeLinejoin="bevel"
     >
-      <path d="M15,15 L40,15 A 16.25 16.25 0 0 1 40 47.5 L15,47.5 L15,80" stroke="var(--color-primary)" />
-      <path d="M70,80 L95,15 L120,80" stroke="var(--color-primary)" />
+      {/* P - Navy/White (currentColor) */}
+      <path d="M15,15 L40,15 A 16.25 16.25 0 0 1 40 47.5 L15,47.5 L15,80" stroke="currentColor" />
+      {/* A - Orange (Accent) */}
+      <path d="M70,80 L95,15 L120,80" stroke="var(--color-accent)" />
+      {/* V - Navy/White (currentColor) */}
       <path d="M140,15 L165,80 L190,15" stroke="currentColor" />
-      <path d="M210,15 L250,15 M210,47.5 L240,47.5 M210,80 L250,80" stroke="var(--color-primary)" />
+      {/* E - Orange (Accent) */}
+      <path d="M210,15 L250,15 M210,47.5 L240,47.5 M210,80 L250,80" stroke="var(--color-accent)" />
+      {/* R - Navy/White (currentColor) */}
       <path d="M270,47.5 L270,15 L295,15 A 16.25 16.25 0 0 1 295 47.5 Z M270,47.5 L310,80" stroke="currentColor" />
-      <path d="M340,80 L365,15 L390,80" stroke="var(--color-primary)" />
+      {/* A - Orange (Accent) */}
+      <path d="M340,80 L365,15 L390,80" stroke="var(--color-accent)" />
+      {/* S - Navy/White (currentColor) */}
       <path d="M445,15 L425,15 A 16.25 16.25 0 0 0 425 47.5 L 435 47.5 A 16.25 16.25 0 0 1 435 80 L 410 80" stroke="currentColor" />
-      <path d="M470,80 L495,15 L520,80" stroke="var(--color-primary)" />
+      {/* A - Orange (Accent) */}
+      <path d="M470,80 L495,15 L520,80" stroke="var(--color-accent)" />
     </svg>
   );
 }
