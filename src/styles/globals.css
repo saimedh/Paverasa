@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ============================================================
-   PAVERASA — Global Design System
+   PAVERASA -- Global Design System
    ============================================================ */
 
 /* ---------- Google Fonts are loaded via index.html ---------- */
@@ -27,9 +27,10 @@ body {
   overflow-x: hidden;
 }
 
-img, video, canvas {
+img, video, canvas, svg, iframe {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -54,21 +55,21 @@ ul, ol {
 
 /* ---------- CSS Custom Properties (Design Tokens) ---------- */
 :root {
-  /* ── Brand Colors (Deep Navy + Vibrant Orange) ── */
+  /* -- Brand Colors (Deep Navy + Vibrant Orange) -- */
 
-  /* Primary action color — Deep Navy */
+  /* Primary action color -- Deep Navy */
   --color-primary: #14213D;
   --color-primary-dark: #0E1729;
   --color-primary-light: rgba(20, 33, 61, 0.05);
   --color-primary-rgb: 20, 33, 61;
 
-  /* Brand dark — Deep Navy */
+  /* Brand dark -- Deep Navy */
   --color-navy: #14213D;
   --color-navy-deep: #0E1729;
   --color-navy-mid: #14213D;
   --color-navy-light: rgba(20, 33, 61, 0.05);
 
-  /* Accent — Vibrant Orange */
+  /* Accent -- Vibrant Orange */
   --color-accent: #FCA311;
   --color-accent-light: #FCD086;
 
@@ -92,7 +93,7 @@ ul, ol {
   --color-border: #C2C4C3;
   --color-border-subtle: #C2C4C3;
 
-  /* ── Gradients ── */
+  /* -- Gradients -- */
   --gradient-primary: linear-gradient(135deg, #14213D 0%, #0E1729 100%);
   --gradient-primary-rich: linear-gradient(135deg, #14213D 0%, #FCA311 100%);
   --gradient-hero: radial-gradient(ellipse at 50% 0%, #FFFFFF 0%, #FFFFFF 100%);
@@ -100,7 +101,7 @@ ul, ol {
   --gradient-cta: linear-gradient(135deg, #FCA311 0%, #D8890C 100%);
   --gradient-card-hover: linear-gradient(135deg, #FFFFFF 0%, #FFFFFF 100%);
 
-  /* ── Typography ── */
+  /* -- Typography -- */
   /* Google Sans → Plus Jakarta Sans (closest public alternative) as fallback */
   --font-heading: 'Google Sans Display', 'Google Sans', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-body: 'Google Sans Text', 'Google Sans', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -110,12 +111,12 @@ ul, ol {
   --text-base: 1rem;
   --text-lg: 1.125rem;
   --text-xl: 1.25rem;
-  --text-2xl: 1.5rem;
-  --text-3xl: 1.875rem;
-  --text-4xl: 2.25rem;
-  --text-5xl: 3rem;
-  --text-6xl: 3.75rem;
-  --text-hero: clamp(3rem, 6vw, 5.5rem);
+  --text-2xl: clamp(1.25rem, 3vw, 1.5rem);
+  --text-3xl: clamp(1.5rem, 4vw, 1.875rem);
+  --text-4xl: clamp(1.875rem, 5vw, 2.25rem);
+  --text-5xl: clamp(2.25rem, 6vw, 3rem);
+  --text-6xl: clamp(2.75rem, 7vw, 3.75rem);
+  --text-hero: clamp(2.5rem, 8vw, 5.5rem);
 
   /* Spacing */
   --space-1: 0.25rem;
@@ -288,7 +289,7 @@ h1, h2, h3, h4, h5, h6 {
   color: hsl(38, 92%, 25%);
 }
 
-/* ---------- CTA Button — Neon Edition ---------- */
+/* ---------- CTA Button -- Neon Edition ---------- */
 
 /* Base */
 .btn {
@@ -316,7 +317,13 @@ h1, h2, h3, h4, h5, h6 {
     color 200ms ease;
 }
 
-/* ── Primary Button ── */
+@media (max-width: 768px) {
+  .btn, .navbar__link, .mobile-menu__link {
+    min-height: 44px;
+  }
+}
+
+/* -- Primary Button -- */
 .btn-primary {
   background: var(--color-navy);
   color: #FFFFFF;
@@ -336,7 +343,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
-/* ── Secondary Button ── */
+/* -- Secondary Button -- */
 .btn-secondary {
   background: #FFFFFF;
   color: var(--color-navy);
@@ -356,7 +363,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
-/* ── Ghost Button ── */
+/* -- Ghost Button -- */
 .btn-ghost {
   background: transparent;
   color: var(--color-navy);
@@ -367,7 +374,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-accent);
 }
 
-/* ── Sizes ── */
+/* -- Sizes -- */
 .btn-lg {
   padding: var(--space-4) var(--space-8);
   font-size: var(--text-base);
@@ -472,5 +479,67 @@ h1, h2, h3, h4, h5, h6 {
   }
   :root {
     --section-py: 3rem;
+  }
+}
+
+/* ===================================================
+   GLOBAL MOBILE OVERFLOW PREVENTION
+   =================================================== */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Ensure images never break layout */
+img, video, svg, canvas {
+  max-width: 100%;
+}
+
+/* -- 768px and below -- */
+@media (max-width: 768px) {
+  .container,
+  .container-wide {
+    padding: 0 var(--space-4);
+  }
+
+  /* Buttons: ensure min touch target */
+  .btn {
+    min-height: 44px;
+  }
+
+  /* Section header text */
+  .section-header h2 {
+    font-size: var(--text-3xl);
+  }
+
+  .section-header p {
+    font-size: var(--text-base);
+  }
+}
+
+/* -- 480px and below -- */
+@media (max-width: 480px) {
+  .container,
+  .container-wide {
+    padding: 0 var(--space-4);
+  }
+
+  .section-header h2 {
+    font-size: var(--text-2xl);
+  }
+
+  /* Grid utilities: all single column on very small screens */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -- 360px and below -- */
+@media (max-width: 360px) {
+  .container,
+  .container-wide {
+    padding: 0 var(--space-3);
   }
 }

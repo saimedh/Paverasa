@@ -67,11 +67,8 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* CTA */}
+          {/* Actions */}
           <div className="navbar__actions">
-            <Link to="/contact" className="btn btn-primary navbar__cta">
-              Let's Talk
-            </Link>
             <button
               className="navbar__hamburger"
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -98,9 +95,7 @@ export default function Navbar() {
               {link.label}
             </NavLink>
           ))}
-          <Link to="/contact" className="btn btn-primary mobile-menu__cta">
-            Let's Talk →
-          </Link>
+
         </nav>
       </div>
     </>

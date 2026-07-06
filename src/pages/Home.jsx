@@ -653,23 +653,23 @@ export default function Home() {
         {/* Dot Pattern Overlay */}
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-repeat opacity-10 pointer-events-none"></div>
 
-        <div className="w-full flex flex-col items-center justify-center min-h-[60vh] py-24 lg:py-32 relative z-10">
-          <div className="container z-10 text-left flex flex-col lg:flex-row items-start justify-between gap-16 lg:gap-24">
+        <div className="w-full flex flex-col items-center justify-center min-h-[60vh] py-16 lg:py-32 relative z-10">
+          <div className="container z-10 text-left flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-24">
             {/* Left Column */}
             <ScrollReveal className="flex-1 w-full max-w-2xl">
               <div className="mb-8">
                 
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 tracking-tight text-white !text-white">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 tracking-tight text-white !text-white">
                   Let's create something<br />
                   <span style={{ color: '#FCA311' }}>extraordinary together.</span>
                 </h2>
                 
-                <p className="text-lg max-w-xl leading-relaxed mb-10" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+                <p className="text-base md:text-lg max-w-xl leading-relaxed mb-8" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
                   Whether you have a fully-formed brief or just an idea on a napkin,
                   we'd love to hear from you and bring it to life.
                 </p>
                 
-                <div className="flex flex-wrap items-center gap-4 mb-12">
+                <div className="flex flex-wrap items-center gap-4 mb-8">
                   <Link to="/contact" className="btn btn-lg rounded-full px-8 py-4 text-base font-bold flex items-center gap-2 transition-transform hover:scale-105 shadow-[0_0_20px_rgba(252,163,17,0.4)]" style={{ backgroundColor: '#FCA311', color: 'white', border: 'none' }}>
                     Contact Us <ArrowRight size={20} />
                   </Link>
@@ -683,7 +683,7 @@ export default function Home() {
             </ScrollReveal>
 
             {/* Right Column (Card) */}
-            <ScrollReveal delay={200} className="w-full lg:w-[500px] shrink-0 mt-8 lg:mt-0 mb-12 lg:mb-0">
+            <ScrollReveal delay={200} className="w-full lg:w-[500px] shrink-0 lg:mt-0 mb-8 lg:mb-0">
               <div className="bg-[#0B1220]/80 backdrop-blur-[24px] border border-white/[0.08] rounded-none p-8 lg:p-10 flex flex-col relative shadow-[0_0_50px_rgba(0,0,0,0.5)]">
                 {/* Subtle right glow highlight inside card */}
                 <div className="absolute top-0 right-0 w-[2px] h-full bg-gradient-to-b from-transparent via-[#F59E0B] to-transparent opacity-50"></div>

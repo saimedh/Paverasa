@@ -447,3 +447,40 @@
     gap: var(--space-4);
   }
 }
+
+/* ===================================================
+   BLOG ARTICLE  MOBILE FIXES
+   =================================================== */
+@media (max-width: 640px) {
+  .article-layout {
+    grid-template-columns: 1fr;
+    margin-top: -2rem;
+  }
+  .article-hero {
+    padding: calc(80px + 3rem) 0 5rem;
+  }
+  .article-title {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+  .article-glass-panel {
+    padding: var(--space-5);
+  }
+  .article-lead {
+    font-size: var(--text-lg);
+  }
+  .article-share-bar {
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: flex-start;
+  }
+  .article-byline {
+    flex-direction: column;
+    gap: var(--space-2);
+    border-radius: var(--radius-xl);
+  }
+  .article-sidebar {
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+}

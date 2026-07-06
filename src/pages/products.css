@@ -1,230 +1,482 @@
 /* ===== PRODUCTS PAGE ===== */
 
+
+
 /* Hero title */
+
 .products-hero-title {
+
   font-size: clamp(2.5rem, 5vw, 4.5rem);
+
   font-weight: 900;
+
   color: var(--color-text);
+
   letter-spacing: -0.04em;
+
   line-height: 1.05;
+
   margin: var(--space-4) 0 var(--space-6);
+
 }
+
+
 
 /* Section header row */
+
 .products-section-header {
+
   display: flex;
+
   align-items: flex-end;
+
   justify-content: space-between;
+
   gap: var(--space-8);
+
   margin-bottom: var(--space-10);
+
   padding-bottom: var(--space-6);
+
   border-bottom: 1.5px solid var(--color-border);
+
 }
+
+
 
 .products-section-header__left {
+
   display: flex;
+
   align-items: center;
+
   gap: var(--space-3);
+
 }
+
+
 
 .products-section-label {
+
   font-size: var(--text-2xl);
+
   font-weight: 900;
+
   letter-spacing: -0.02em;
+
   color: var(--color-navy);
+
 }
+
+
 
 .products-section-sub {
+
   font-size: var(--text-sm);
+
   color: var(--color-text-muted);
+
   max-width: 340px;
+
   text-align: right;
+
   line-height: 1.6;
+
 }
 
-/* ─────────────────────────────────────────
-   THE GRID — exact pattern from the request
-   ───────────────────────────────────────── */
+
+
+/* -----------------------------------------
+
+   THE GRID -- exact pattern from the request
+
+   ----------------------------------------- */
+
 .prod-grid {
+
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 24px;
+
   align-items: stretch;       /* all rows same height */
+
 }
 
-/* ─────────────────────────────────────────
-   THE CARD — flex column, btn at bottom
-   ───────────────────────────────────────── */
+
+
+/* -----------------------------------------
+
+   THE CARD -- flex column, btn at bottom
+
+   ----------------------------------------- */
+
 .prod-full-card {
+
   display: flex;
+
   flex-direction: column;
+
   height: 100%;               /* stretch inside the grid cell */
+
   background: var(--color-bg-card);
+
   border-radius: var(--radius-2xl);
+
   overflow: hidden;
+
   border: 1.5px solid var(--color-border);
+
   box-shadow: var(--shadow-card);
+
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
 }
+
+
 
 .prod-full-card:hover {
+
   transform: translateY(-6px);
+
   box-shadow: var(--shadow-card-hover);
+
   border-color: var(--color-primary);
+
 }
+
+
 
 .prod-full-card--coming {
+
   opacity: 0.88;
+
 }
+
+
 
 .prod-full-card--coming:hover {
+
   border-color: var(--color-border);
+
   transform: translateY(-3px);
+
 }
+
+
 
 /* Cover image area */
+
 .prod-full-card__cover {
+
   position: relative;
+
   height: 220px;
+
   flex-shrink: 0;
+
   overflow: hidden;
+
   background: var(--color-navy);
+
 }
+
+
 
 .prod-full-card__img {
+
   width: 100%;
+
   height: 100%;
+
   object-fit: cover;
+
   display: block;
+
   transition: transform 0.5s ease;
+
 }
+
+
 
 .prod-full-card:hover .prod-full-card__img {
+
   transform: scale(1.05);
+
 }
+
+
 
 .prod-full-card__img--muted {
+
   filter: saturate(0.4) brightness(0.85);
+
 }
+
+
 
 .prod-full-card__cover-overlay {
+
   position: absolute;
+
   inset: 0;
+
   mix-blend-mode: multiply;
+
 }
+
+
 
 /* Badge in cover top-right */
+
 .prod-full-card__badge {
+
   position: absolute;
+
   top: var(--space-4);
+
   right: var(--space-4);
+
   z-index: 2;
+
 }
+
+
 
 /* Emoji bottom-left of cover */
+
 .prod-full-card__emoji-float {
+
   position: absolute;
+
   bottom: var(--space-4);
+
   left: var(--space-4);
+
   font-size: 2rem;
+
   line-height: 1;
+
   z-index: 2;
+
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+
 }
 
-/* ─────────────────────────────────────────
-   Card body — flex col so btn goes to bottom
-   ───────────────────────────────────────── */
+
+
+/* -----------------------------------------
+
+   Card body -- flex col so btn goes to bottom
+
+   ----------------------------------------- */
+
 .prod-full-card__body {
+
   display: flex;
+
   flex-direction: column;     /* stack children vertically */
+
   flex: 1;                    /* take all remaining card height */
+
   padding: var(--space-7);
+
   gap: var(--space-3);
+
 }
+
+
 
 .prod-full-card__meta {
+
   display: flex;
+
   flex-direction: column;
+
   gap: var(--space-1);
+
 }
+
+
 
 .prod-full-card__category {
+
   display: block;
+
 }
+
+
 
 .prod-full-card__name {
+
   font-size: var(--text-2xl);
+
   font-weight: 900;
+
   letter-spacing: -0.03em;
+
   color: var(--color-navy);
+
   line-height: 1.15;
+
 }
+
+
 
 .prod-full-card__tagline {
+
   font-size: var(--text-sm);
+
   font-weight: 700;
+
   line-height: 1.4;
+
 }
+
+
 
 .prod-full-card__desc {
+
   font-size: var(--text-sm);
+
   color: var(--color-text-muted);
+
   line-height: 1.75;
+
   flex: 1;                    /* push btn to bottom */
+
 }
 
-/* THE BUTTON — pinned to bottom via margin-top: auto */
+
+
+/* THE BUTTON -- pinned to bottom via margin-top: auto */
+
 .prod-full-card__btn {
+
   margin-top: auto;           /* pushes btn to card bottom */
+
   align-self: flex-start;
+
 }
+
+
 
 /* Badges (reuse globals, enhance here) */
+
 .badge-live {
+
   background: var(--color-bg);
+
   color: var(--color-navy);
+
   border: 1px solid var(--color-accent);
+
 }
+
+
 
 .badge-coming {
+
   background: var(--color-bg);
+
   color: var(--color-text-muted);
+
   border: 1px solid var(--color-border);
+
 }
+
+
 
 /* Responsive */
+
 @media (max-width: 1024px) {
+
   .prod-grid {
+
     grid-template-columns: repeat(2, 1fr);
+
   }
+
   .products-section-header {
+
     flex-direction: column;
+
     align-items: flex-start;
+
   }
+
   .products-section-sub {
+
     text-align: left;
+
   }
+
 }
 
+
+
+@media (max-width: 640px) {
+
+  .prod-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+
+  }
+
+  .products-section-header {
+
+    gap: var(--space-4);
+
+  }
+
+}
+
+
+
+/* -- Expanding Cards section wrapper -- */
+
+.products-expanding-section {
+
+  background: var(--color-bg-card);
+
+}
+
+
+
+.products-expanding-wrap {
+
+  display: flex;
+
+  justify-content: center;
+
+  width: 100%;
+
+}
+
+
+
+
+/* ===================================================
+   PRODUCTS PAGE  MOBILE FIXES
+   =================================================== */
 @media (max-width: 640px) {
   .prod-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+  .products-hero-title {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
   .products-section-header {
-    gap: var(--space-4);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+  .products-section-sub {
+    text-align: left;
+    max-width: 100%;
   }
 }
-
-/* ── Expanding Cards section wrapper ── */
-.products-expanding-section {
-  background: var(--color-bg-card);
-}
-
-.products-expanding-wrap {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
