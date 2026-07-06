@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import {
   ArrowRight, Globe, Smartphone, Palette, Brain, BarChart3, BarChart2,
   Cloud, GraduationCap, Lightbulb, ShieldCheck, Zap, Star,
-  CheckCircle2, ChevronRight, Rocket, Code, User, Target, Users, Mail, Phone, MapPin, Calendar, Clock
+  CheckCircle2, ChevronRight, Rocket, Code, User, Target, Users, Mail, Phone, MapPin, Calendar, Clock, Folder, ThumbsUp
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '../components/ui/button';
@@ -642,21 +642,26 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* ─────────── CLOSING CTA ─────────── */}
-      <section className="w-full bg-[#14213D] relative overflow-hidden">
-        <div className="w-full flex flex-col items-center justify-center min-h-[60vh] py-24 lg:py-32">
+      <section className="w-full bg-[#030712] relative overflow-hidden">
+        {/* Simulated Globe / Glowing background */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FCA311]/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#FCA311]/5 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        {/* Dot Pattern Overlay */}
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-repeat opacity-10 pointer-events-none"></div>
+
+        <div className="w-full flex flex-col items-center justify-center min-h-[60vh] py-24 lg:py-32 relative z-10">
           <div className="container z-10 text-left flex flex-col lg:flex-row items-start justify-between gap-16 lg:gap-24">
             {/* Left Column */}
             <ScrollReveal className="flex-1 w-full max-w-2xl">
               <div className="mb-8">
-                <div className="inline-block px-4 py-1.5 rounded bg-[#FCA311] mb-4">
-                  <p className="uppercase tracking-widest text-sm font-bold text-[#111111] m-0">Ready to build something great?</p>
-                </div>
-                <div className="w-12 h-1 mb-6 rounded-full" style={{ background: '#FCA311' }}></div>
                 
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight text-white !text-white">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 tracking-tight text-white !text-white">
                   Let's create something<br />
-                  <span style={{ color: '#FCA311' }}>extraordinary</span> together.
+                  <span style={{ color: '#FCA311' }}>extraordinary together.</span>
                 </h2>
                 
                 <p className="text-lg max-w-xl leading-relaxed mb-10" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
@@ -665,99 +670,78 @@ export default function Home() {
                 </p>
                 
                 <div className="flex flex-wrap items-center gap-4 mb-12">
-                  <Link to="/contact" className="btn btn-lg rounded-full px-8 py-6 text-base font-bold flex items-center gap-2 transition-transform hover:scale-105" style={{ backgroundColor: '#FCA311', color: 'white', border: 'none' }}>
+                  <Link to="/contact" className="btn btn-lg rounded-full px-8 py-4 text-base font-bold flex items-center gap-2 transition-transform hover:scale-105 shadow-[0_0_20px_rgba(252,163,17,0.4)]" style={{ backgroundColor: '#FCA311', color: 'white', border: 'none' }}>
                     Contact Us <ArrowRight size={20} />
                   </Link>
-                  <Link to="/contact" className="btn btn-outline btn-lg rounded-full px-8 py-6 text-base font-medium flex items-center gap-2 border-white/20 text-white hover:bg-white/5 bg-transparent backdrop-blur-sm">
+                  <Link to="/contact" className="btn btn-lg rounded-full px-8 py-4 text-base font-medium flex items-center gap-2 border border-solid border-white/30 text-white !text-white hover:bg-white/5 bg-transparent backdrop-blur-sm">
                     Schedule a Meeting <Calendar size={18} className="ml-1 opacity-70" />
                   </Link>
                 </div>
 
-                {/* 3 Value Props */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-4 md:gap-8 border-t border-white/10 pt-8 w-full">
-                  <div className="flex items-center gap-3">
-                    <div className="text-[#FCA311]">
-                      <Zap size={24} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-white font-semibold text-sm">Quick Response</span>
-                      <span className="text-white/50 text-xs">We reply within 24 hours</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="text-[#FCA311]">
-                      <Users size={24} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-white font-semibold text-sm">Expert Consultation</span>
-                      <span className="text-white/50 text-xs">Free 30-min discovery call</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="text-[#FCA311]">
-                      <ShieldCheck size={24} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-white font-semibold text-sm">Secure & Confidential</span>
-                      <span className="text-white/50 text-xs">Your ideas are always safe</span>
-                    </div>
-                  </div>
-                </div>
+
               </div>
             </ScrollReveal>
 
             {/* Right Column (Card) */}
-            <ScrollReveal delay={200} className="w-full lg:w-[450px] shrink-0 mt-8 lg:mt-0 mb-12 lg:mb-0">
-              <div className="border border-white/10 rounded-3xl p-8 md:p-10 flex flex-col relative overflow-hidden" style={{ background: 'transparent' }}>
-                {/* Subtle gradient glow inside card */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-[#FCA311]/10 rounded-full blur-[80px] pointer-events-none -z-10 transform translate-x-1/2 -translate-y-1/2"></div>
+            <ScrollReveal delay={200} className="w-full lg:w-[500px] shrink-0 mt-8 lg:mt-0 mb-12 lg:mb-0">
+              <div className="bg-[#0B1220]/80 backdrop-blur-[24px] border border-white/[0.08] rounded-none p-8 lg:p-10 flex flex-col relative shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                {/* Subtle right glow highlight inside card */}
+                <div className="absolute top-0 right-0 w-[2px] h-full bg-gradient-to-b from-transparent via-[#F59E0B] to-transparent opacity-50"></div>
                 
-                <h3 className="text-2xl font-bold mb-2" style={{ color: 'white' }}>Let's start a conversation</h3>
-                <div className="w-10 h-1 mb-10 rounded-full" style={{ background: '#FCA311' }}></div>
-                
-                <div className="flex flex-col gap-8">
-                  {/* Email */}
-                  <div className="flex items-start gap-5 group">
-                    <div className="text-[#FCA311] mt-1">
-                      <Mail size={24} />
+                <div className="relative z-10">
+                  <h3 className="text-[28px] font-bold mb-3 !text-white leading-tight">Let's start a conversation</h3>
+                  <p className="!text-white/60 text-base mb-8 leading-relaxed">We're here to help and answer any question you might have.</p>
+                  
+                  <div className="flex flex-col gap-4">
+                    {/* Email */}
+                    <div className="bg-white/[0.05] backdrop-blur-[18px] border border-white/[0.08] rounded-none p-5 flex flex-row items-center gap-5 hover:bg-white/[0.08] transition-colors">
+                      <div className="w-12 h-12 rounded-none bg-[#F59E0B]/10 border border-[#F59E0B]/20 shadow-[0_0_15px_rgba(245,158,11,0.2)] flex items-center justify-center text-[#F59E0B] shrink-0">
+                        <Mail size={20} />
+                      </div>
+                      <div className="flex flex-col flex-1 min-w-0">
+                        <span className="text-[13px] font-medium text-white/50 mb-1 uppercase tracking-wider">Email Us</span>
+                        <span className="text-[15px] font-semibold text-white whitespace-nowrap overflow-hidden text-ellipsis w-full leading-snug">hello@paverasa.com</span>
+                      </div>
                     </div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-medium mb-1" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>Email Us</span>
-                      <span className="text-base" style={{ color: 'white' }}>hello@paverasa.com</span>
+                    
+                    {/* Phone */}
+                    <div className="bg-white/[0.05] backdrop-blur-[18px] border border-white/[0.08] rounded-none p-5 flex flex-row items-center gap-5 hover:bg-white/[0.08] transition-colors">
+                      <div className="w-12 h-12 rounded-none bg-[#F59E0B]/10 border border-[#F59E0B]/20 shadow-[0_0_15px_rgba(245,158,11,0.2)] flex items-center justify-center text-[#F59E0B] shrink-0">
+                        <Phone size={20} />
+                      </div>
+                      <div className="flex flex-col flex-1 min-w-0">
+                        <span className="text-[13px] font-medium text-white/50 mb-1 uppercase tracking-wider">Call Us</span>
+                        <span className="text-[15px] font-semibold text-white whitespace-nowrap overflow-hidden text-ellipsis w-full leading-snug">+91 81254 32177</span>
+                      </div>
+                    </div>
+                    
+                    {/* Location */}
+                    <div className="bg-white/[0.05] backdrop-blur-[18px] border border-white/[0.08] rounded-none p-5 flex flex-row items-center gap-5 hover:bg-white/[0.08] transition-colors">
+                      <div className="w-12 h-12 rounded-none bg-[#F59E0B]/10 border border-[#F59E0B]/20 shadow-[0_0_15px_rgba(245,158,11,0.2)] flex items-center justify-center text-[#F59E0B] shrink-0">
+                        <MapPin size={20} />
+                      </div>
+                      <div className="flex flex-col flex-1 min-w-0">
+                        <span className="text-[13px] font-medium text-white/50 mb-1 uppercase tracking-wider">Our Location</span>
+                        <span className="text-[15px] font-semibold text-white whitespace-nowrap overflow-hidden text-ellipsis w-full leading-snug">Middle town medchal</span>
+                      </div>
+                    </div>
+                    
+                    {/* Working Hours */}
+                    <div className="bg-white/[0.05] backdrop-blur-[18px] border border-white/[0.08] rounded-none p-5 flex flex-row items-center gap-5 hover:bg-white/[0.08] transition-colors">
+                      <div className="w-12 h-12 rounded-none bg-[#F59E0B]/10 border border-[#F59E0B]/20 shadow-[0_0_15px_rgba(245,158,11,0.2)] flex items-center justify-center text-[#F59E0B] shrink-0">
+                        <Clock size={20} />
+                      </div>
+                      <div className="flex flex-col flex-1 min-w-0">
+                        <span className="text-[13px] font-medium text-white/50 mb-1 uppercase tracking-wider">Working Hours</span>
+                        <span className="text-[15px] font-semibold text-white whitespace-nowrap overflow-hidden text-ellipsis w-full leading-snug">Mon - Sat: 9:00 AM - 7:00 PM</span>
+                      </div>
                     </div>
                   </div>
                   
-                  {/* Phone */}
-                  <div className="flex items-start gap-5 group">
-                    <div className="text-[#FCA311] mt-1">
-                      <Phone size={24} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-medium mb-1" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>Call Us</span>
-                      <span className="text-base" style={{ color: 'white' }}>+91 81254 32177</span>
-                    </div>
-                  </div>
-                  
-                  {/* Location */}
-                  <div className="flex items-start gap-5 group">
-                    <div className="text-[#FCA311] mt-1">
-                      <MapPin size={24} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-medium mb-1" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>Our Location</span>
-                      <span className="text-base" style={{ color: 'white' }}>Middle town medchal</span>
-                    </div>
-                  </div>
-                  
-                  {/* Working Hours */}
-                  <div className="flex items-start gap-5 group">
-                    <div className="text-[#FCA311] mt-1">
-                      <Clock size={24} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-medium mb-1" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>Working Hours</span>
-                      <span className="text-base" style={{ color: 'white' }}>Mon - Sat: 9:00 AM - 7:00 PM</span>
-                    </div>
+                  <div className="mt-8 pt-8 border-t border-white/[0.08] flex justify-center">
+                    <Link to="/contact" className="w-fit h-12 px-8 flex items-center justify-center gap-2 border border-[#F59E0B]/50 rounded-none text-white !text-white font-medium hover:bg-[#F59E0B]/10 hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-all">
+                      Book a Meeting <Calendar size={18} />
+                    </Link>
                   </div>
                 </div>
               </div>
