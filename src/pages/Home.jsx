@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 import {
   ArrowRight, Globe, Smartphone, Palette, Brain, BarChart3, BarChart2,
   Cloud, GraduationCap, Lightbulb, ShieldCheck, Zap, Star,
-  CheckCircle2, ChevronRight
+  CheckCircle2, ChevronRight, Rocket, Code, User, Target, Users, Mail, Phone, MapPin, Calendar, Clock
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '../components/ui/button';
 import { DotPattern } from '../components/ui/dot-pattern';
 import { cn } from '../lib/utils';
-import { BeamsBackground } from '../components/ui/beams-background';
+
 import { 
   HoverSlider, 
   HoverSliderImage, 
@@ -89,31 +89,17 @@ const stats = [
 
 const homeExpandingItems = [
   {
-    id: 'paverasa-suite',
-    title: 'Paverasa Suite',
-    description: 'All-in-one ERP platform — project management, HR, finance & client management in a single seamless interface.',
-    imgSrc: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+    id: 'kpi-project',
+    tagline: 'Key Performance Indicator',
+    title: 'KPI Project',
+    description: 'Track and analyze key business metrics in real-time to drive growth and efficiency.',
+    imgSrc: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
     icon: <BarChart3 size={24} />,
     linkHref: '/products',
   },
   {
-    id: 'intelliflow',
-    title: 'IntelliFlow',
-    description: 'AI-powered workflow automation that learns your patterns and continuously optimises operations.',
-    imgSrc: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=1200&q=80',
-    icon: <Brain size={24} />,
-    linkHref: '/products',
-  },
-  {
-    id: 'campuslink',
-    title: 'CampusLink',
-    description: 'Connecting student innovators, mentors & investors. Post projects, find co-founders, showcase your work.',
-    imgSrc: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80',
-    icon: <GraduationCap size={24} />,
-    linkHref: '/products',
-  },
-  {
     id: 'hostel-management',
+    tagline: 'Smart hostel administration',
     title: 'Hostel Management',
     description: 'A complete solution for hostel administrators to manage bookings, resident data, fees, and maintenance requests efficiently.',
     imgSrc: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1200&q=80',
@@ -122,6 +108,7 @@ const homeExpandingItems = [
   },
   {
     id: '2r-menu-ordering',
+    tagline: 'Contactless dining experience',
     title: '2R Menu Ordering',
     description: 'Digital menu and ordering system for restaurants. Guests can scan, order, and pay directly from their smartphones.',
     imgSrc: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
@@ -130,6 +117,7 @@ const homeExpandingItems = [
   },
   {
     id: 'skill-exchange',
+    tagline: 'Post a skill, earn a skill',
     title: 'Skill Exchange',
     description: 'A community platform where users can trade their expertise. Teach what you know, learn what you need.',
     imgSrc: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
@@ -138,6 +126,7 @@ const homeExpandingItems = [
   },
   {
     id: 'picsidrop',
+    tagline: 'P2P delivery app',
     title: 'PicsiDrop',
     description: 'A seamless platform to easily drop, share, and manage pictures and media files securely with clients and stakeholders.',
     imgSrc: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1200&q=80',
@@ -283,38 +272,118 @@ export default function Home() {
       </section>
 
       {/* ─────────── WHO WE ARE ─────────── */}
-      <section className="section who-we-are">
+      <section className="section who-we-are bg-white">
         <div className="container">
-          <div className="who-we-are__grid">
-            <ScrollReveal>
-              <div className="who-we-are__text">
-                <p className="eyebrow">Who We Are</p>
-                <h2 className="title">A tech company that cares about builders</h2>
-                <p className="who-we-are__body">
-                  Paverasa is a software company on a mission to make powerful digital tools
-                  accessible to everyone — from enterprise businesses to student innovators
-                  working out of university labs. We combine deep technical expertise with
-                  genuine care for the people and organizations we serve.
-                </p>
-                <p className="who-we-are__body">
-                  Founded in 2022, we've grown into a 25-person team delivering across
-                  web, mobile, AI, cloud, and data — without ever losing our human touch.
-                </p>
-                <Link to="/about" className="btn btn-secondary">
-                  Our Journey <ChevronRight size={16} />
-                </Link>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={150}>
-              <div className="who-we-are__visual">
-
-                <div className="who-we-are__values">
-                  {['Mission-Driven', 'Student-Friendly', 'Innovation-First', 'People-Centered'].map(v => (
-                    <span key={v} className="who-we-are__tag">{v}</span>
-                  ))}
+          <div className="who-we-are__grid-new">
+            
+            {/* Left Column */}
+            <div className="who-we-are__left">
+              <ScrollReveal>
+                <p className="who-we-are__eyebrow-new">WHO WE ARE</p>
+                <h2 className="who-we-are__headline">
+                  Building Software.<br />
+                  Driving <span className="who-we-are__accent">Innovation.</span><br />
+                  Empowering <span className="who-we-are__accent">Students.</span>
+                </h2>
+                
+                <div className="who-we-are__text-content">
+                  <p>
+                    Paverasa is a technology company that builds intelligent, scalable, and impactful
+                    software solutions for businesses and communities. We specialize in turning
+                    ideas into digital products that solve real-world problems and create long-term
+                    value.
+                  </p>
+                  <p>
+                    What sets us apart is our mission to empower the next generation of innovators.
+                    Through hands-on projects, mentorship, and learning-driven environments, we
+                    help students grow into confident builders and future-ready professionals.
+                  </p>
                 </div>
-              </div>
-            </ScrollReveal>
+
+                <div className="who-we-are__features">
+                  <div className="who-we-are__feature">
+                    <Rocket size={20} className="who-we-are__feature-icon" />
+                    <span>Innovation<br/>at the Core</span>
+                  </div>
+                  <div className="who-we-are__feature">
+                    <Code size={20} className="who-we-are__feature-icon" />
+                    <span>Engineering<br/>Excellence</span>
+                  </div>
+                  <div className="who-we-are__feature">
+                    <User size={20} className="who-we-are__feature-icon" />
+                    <span>Student Growth<br/>& Empowerment</span>
+                  </div>
+                  <div className="who-we-are__feature">
+                    <ShieldCheck size={20} className="who-we-are__feature-icon" />
+                    <span>Integrity &<br/>Reliability</span>
+                  </div>
+                </div>
+
+                <Link to="/about" className="who-we-are__btn">
+                  Discover Our Journey <ArrowRight size={16} />
+                </Link>
+              </ScrollReveal>
+            </div>
+
+            {/* Right Column */}
+            <div className="who-we-are__right">
+              <ScrollReveal delay={150}>
+                <div className="who-we-are__team-card">
+                  <h3 className="who-we-are__team-card-title">Meet the People Behind the Purpose</h3>
+                  
+                  <div className="who-we-are__team-images">
+                    <div className="who-we-are__team-img-wrap">
+                      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" alt="Team collaborating" />
+                    </div>
+                    <div className="who-we-are__team-img-wrap">
+                      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Team discussion" />
+                    </div>
+                    <div className="who-we-are__team-img-wrap">
+                      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80" alt="Team working" />
+                    </div>
+                  </div>
+
+                  <h4 className="who-we-are__team-subtitle">Our Passionate Team</h4>
+                  <p className="who-we-are__team-desc">
+                    Engineers, designers, and dreamers working together<br/>to build meaningful digital experiences.
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={250}>
+                <div className="who-we-are__core-values">
+                  <div className="who-we-are__core-value" style={{ backgroundColor: '#F5F3FF' }}>
+                    <div className="who-we-are__value-header">
+                      <GraduationCap size={16} className="who-we-are__value-icon" style={{ color: '#6D28D9' }} />
+                      <h5 style={{ color: '#4C1D95' }}>Student-Centric</h5>
+                    </div>
+                    <p style={{ color: '#5B21B6' }}>We nurture talent and create opportunities for student growth.</p>
+                  </div>
+                  <div className="who-we-are__core-value" style={{ backgroundColor: '#FFF7ED' }}>
+                    <div className="who-we-are__value-header">
+                      <Lightbulb size={16} className="who-we-are__value-icon" style={{ color: '#EA580C' }} />
+                      <h5 style={{ color: '#9A3412' }}>Innovation-First</h5>
+                    </div>
+                    <p style={{ color: '#C2410C' }}>We embrace creativity and build solutions that make an impact.</p>
+                  </div>
+                  <div className="who-we-are__core-value" style={{ backgroundColor: '#F0FDF4' }}>
+                    <div className="who-we-are__value-header">
+                      <Users size={16} className="who-we-are__value-icon" style={{ color: '#16A34A' }} />
+                      <h5 style={{ color: '#14532D' }}>Collaboration</h5>
+                    </div>
+                    <p style={{ color: '#15803D' }}>We believe great things are built together.</p>
+                  </div>
+                  <div className="who-we-are__core-value" style={{ backgroundColor: '#EFF6FF' }}>
+                    <div className="who-we-are__value-header">
+                      <Target size={16} className="who-we-are__value-icon" style={{ color: '#2563EB' }} />
+                      <h5 style={{ color: '#1E3A8A' }}>Impact-Driven</h5>
+                    </div>
+                    <p style={{ color: '#1D4ED8' }}>Every product we build is designed to solve real-world problems.</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+            
           </div>
         </div>
       </section>
@@ -429,7 +498,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="section-header">
               <p className="eyebrow">Our Process</p>
-              <h2>How we bring ideas to life</h2>
+              <h2>How we bring <span className="hover-highlight">ideas</span> to <span className="hover-highlight">life</span></h2>
               <p>A proven five-step framework that keeps projects on track, on budget, and exceeding expectations.</p>
             </div>
           </ScrollReveal>
@@ -535,7 +604,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="section-header">
               <p className="eyebrow">Latest Insights</p>
-              <h2>From our team's minds</h2>
+              <h2>From our <span style={{ color: '#FCA311' }}>team's</span> minds</h2>
               <p>Thoughts on technology, design, engineering culture, and building the future.</p>
             </div>
           </ScrollReveal>
@@ -574,30 +643,127 @@ export default function Home() {
       </section>
 
       {/* ─────────── CLOSING CTA ─────────── */}
-      <section className="closing-cta p-0">
-        <BeamsBackground className="w-full flex flex-col items-center justify-center min-h-[60vh]">
-          <div className="container closing-cta__content z-10 text-center">
-            <ScrollReveal>
-              <p className="eyebrow" style={{ color: '#FCA311' }}>Ready to Build?</p>
-              <h2 className="closing-cta__headline">
-                Let's create something<br />
-                <span className="closing-cta__accent">extraordinary together</span>
-              </h2>
-              <p className="closing-cta__sub">
-                Whether you have a fully-formed brief or just an idea on a napkin,
-                we'd love to hear from you.
-              </p>
-              <div className="closing-cta__actions justify-center">
-                <Link to="/contact" className="btn btn-primary btn-lg closing-cta__btn-primary">
-                  Contact Us <ArrowRight size={18} />
-                </Link>
-                <Link to="/contact" className="btn btn-secondary btn-lg closing-cta__btn-secondary">
-                  Schedule a Meeting
-                </Link>
+      <section className="w-full bg-[#14213D] relative overflow-hidden">
+        <div className="w-full flex flex-col items-center justify-center min-h-[60vh] py-24 lg:py-32">
+          <div className="container z-10 text-left flex flex-col lg:flex-row items-start justify-between gap-16 lg:gap-24">
+            {/* Left Column */}
+            <ScrollReveal className="flex-1 w-full max-w-2xl">
+              <div className="mb-8">
+                <div className="inline-block px-4 py-1.5 rounded bg-[#FCA311] mb-4">
+                  <p className="uppercase tracking-widest text-sm font-bold text-[#111111] m-0">Ready to build something great?</p>
+                </div>
+                <div className="w-12 h-1 mb-6 rounded-full" style={{ background: '#FCA311' }}></div>
+                
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight text-white !text-white">
+                  Let's create something<br />
+                  <span style={{ color: '#FCA311' }}>extraordinary</span> together.
+                </h2>
+                
+                <p className="text-lg max-w-xl leading-relaxed mb-10" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+                  Whether you have a fully-formed brief or just an idea on a napkin,
+                  we'd love to hear from you and bring it to life.
+                </p>
+                
+                <div className="flex flex-wrap items-center gap-4 mb-12">
+                  <Link to="/contact" className="btn btn-lg rounded-full px-8 py-6 text-base font-bold flex items-center gap-2 transition-transform hover:scale-105" style={{ backgroundColor: '#FCA311', color: 'white', border: 'none' }}>
+                    Contact Us <ArrowRight size={20} />
+                  </Link>
+                  <Link to="/contact" className="btn btn-outline btn-lg rounded-full px-8 py-6 text-base font-medium flex items-center gap-2 border-white/20 text-white hover:bg-white/5 bg-transparent backdrop-blur-sm">
+                    Schedule a Meeting <Calendar size={18} className="ml-1 opacity-70" />
+                  </Link>
+                </div>
+
+                {/* 3 Value Props */}
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-4 md:gap-8 border-t border-white/10 pt-8 w-full">
+                  <div className="flex items-center gap-3">
+                    <div className="text-[#FCA311]">
+                      <Zap size={24} />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-white font-semibold text-sm">Quick Response</span>
+                      <span className="text-white/50 text-xs">We reply within 24 hours</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="text-[#FCA311]">
+                      <Users size={24} />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-white font-semibold text-sm">Expert Consultation</span>
+                      <span className="text-white/50 text-xs">Free 30-min discovery call</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="text-[#FCA311]">
+                      <ShieldCheck size={24} />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-white font-semibold text-sm">Secure & Confidential</span>
+                      <span className="text-white/50 text-xs">Your ideas are always safe</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Right Column (Card) */}
+            <ScrollReveal delay={200} className="w-full lg:w-[450px] shrink-0 mt-8 lg:mt-0 mb-12 lg:mb-0">
+              <div className="border border-white/10 rounded-3xl p-8 md:p-10 flex flex-col relative overflow-hidden" style={{ background: 'transparent' }}>
+                {/* Subtle gradient glow inside card */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[#FCA311]/10 rounded-full blur-[80px] pointer-events-none -z-10 transform translate-x-1/2 -translate-y-1/2"></div>
+                
+                <h3 className="text-2xl font-bold mb-2" style={{ color: 'white' }}>Let's start a conversation</h3>
+                <div className="w-10 h-1 mb-10 rounded-full" style={{ background: '#FCA311' }}></div>
+                
+                <div className="flex flex-col gap-8">
+                  {/* Email */}
+                  <div className="flex items-start gap-5 group">
+                    <div className="text-[#FCA311] mt-1">
+                      <Mail size={24} />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium mb-1" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>Email Us</span>
+                      <span className="text-base" style={{ color: 'white' }}>hello@paverasa.com</span>
+                    </div>
+                  </div>
+                  
+                  {/* Phone */}
+                  <div className="flex items-start gap-5 group">
+                    <div className="text-[#FCA311] mt-1">
+                      <Phone size={24} />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium mb-1" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>Call Us</span>
+                      <span className="text-base" style={{ color: 'white' }}>+91 81254 32177</span>
+                    </div>
+                  </div>
+                  
+                  {/* Location */}
+                  <div className="flex items-start gap-5 group">
+                    <div className="text-[#FCA311] mt-1">
+                      <MapPin size={24} />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium mb-1" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>Our Location</span>
+                      <span className="text-base" style={{ color: 'white' }}>Middle town medchal</span>
+                    </div>
+                  </div>
+                  
+                  {/* Working Hours */}
+                  <div className="flex items-start gap-5 group">
+                    <div className="text-[#FCA311] mt-1">
+                      <Clock size={24} />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium mb-1" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>Working Hours</span>
+                      <span className="text-base" style={{ color: 'white' }}>Mon - Sat: 9:00 AM - 7:00 PM</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
           </div>
-        </BeamsBackground>
+        </div>
       </section>
     </div>
   );

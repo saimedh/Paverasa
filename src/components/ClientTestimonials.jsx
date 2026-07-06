@@ -8,8 +8,8 @@ const testimonials = [
     id: 1,
     quote:
       'Paverasa has been a game-changer for us. Their service is top-notch and their team is incredibly responsive.',
-    name: 'Amara Diallo',
-    title: 'CEO of NovaCorp',
+    name: 'Pavan',
+    title: 'ceo and strategy lead',
     img: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=687&auto=format&fit=crop',
     variant: 'primary',
     col: 0,
@@ -19,8 +19,8 @@ const testimonials = [
   {
     id: 2,
     quote: "We've seen incredible results. Their expertise and dedication speak for themselves.",
-    name: 'Rika Shinoda',
-    title: 'CEO of Kintsugi',
+    name: 'Saimedh',
+    title: 'CTO and head of product delivery',
     img: 'https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?q=80&w=687&auto=format&fit=crop',
     variant: 'blue',
     col: 0,
@@ -31,8 +31,8 @@ const testimonials = [
     id: 3,
     quote:
       'Their team is highly professional and their innovative solutions have transformed the way we operate.',
-    name: 'Marcus Reeves',
-    title: 'CEO of OdeaoLabs',
+    name: 'Rakesh',
+    title: 'COO and CPO(people officer)',
     img: 'https://images.unsplash.com/photo-1566753323558-f4e0952af115?q=80&w=1021&auto=format&fit=crop',
     variant: 'dark',
     col: 1,
@@ -41,8 +41,8 @@ const testimonials = [
   {
     id: 4,
     quote: "We're extremely satisfied with Paverasa. Their expertise exceeded our expectations.",
-    name: 'John Mensah',
-    title: 'CEO of Labsbo',
+    name: 'Aravindh',
+    title: 'CFO and CMO',
     img: 'https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=687&auto=format&fit=crop',
     variant: 'dark',
     col: 1,
@@ -51,8 +51,8 @@ const testimonials = [
   {
     id: 5,
     quote: 'Their customer support is absolutely exceptional — always available and incredibly helpful.',
-    name: 'Steven Osei',
-    title: 'CTO of Boxefi',
+    name: 'Dhanush',
+    title: 'Cloud & Infrastructure Engineer',
     img: 'https://images.unsplash.com/photo-1740102074295-c13fae3e4f8a?q=80&w=687&auto=format&fit=crop',
     variant: 'dark',
     col: 1,
@@ -61,8 +61,8 @@ const testimonials = [
   {
     id: 6,
     quote: 'Paverasa has been a key partner in our growth journey. Truly world-class.',
-    name: 'Léa Fontaine',
-    title: 'CEO of AxisGroup',
+    name: 'Nandini & Gayatri',
+    title: 'Operations, Analytics and People Associates',
     img: 'https://images.unsplash.com/photo-1563237023-b1e970526dcb?q=80&w=765&auto=format&fit=crop',
     variant: 'blue',
     col: 2,
@@ -73,8 +73,8 @@ const testimonials = [
     id: 7,
     quote:
       'Paverasa has been a true game-changer. Their exceptional service, combined with deep expertise and commitment to excellence, has made a significant impact on our business.',
-    name: 'Paul Asante',
-    title: 'CTO of Meridian Labs',
+    name: 'Sahil baba',
+    title: 'Research and Development Engineer',
     img: 'https://images.unsplash.com/photo-1590086782957-93c06ef21604?q=80&w=687&auto=format&fit=crop',
     variant: 'primary',
     col: 2,
@@ -149,16 +149,7 @@ export default function ClientTestimonials() {
           customVariants={revealVariants}
           timelineRef={sectionRef}
         >
-          Trusted by startups and the world's largest companies
-        </TimelineContent>
-        <TimelineContent
-          as="p"
-          className="testimonials-header__sub"
-          animationNum={1}
-          customVariants={revealVariants}
-          timelineRef={sectionRef}
-        >
-          Here's what our clients say about working with Paverasa
+          Team of Paverasa
         </TimelineContent>
       </div>
 

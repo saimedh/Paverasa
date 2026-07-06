@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Target, Eye, Heart, Lightbulb, Users, Users2, ShieldCheck, CheckCircle2, Rocket } from 'lucide-react';
+import { ArrowRight, Target, Eye, Heart, Lightbulb, Users, Users2, ShieldCheck, CheckCircle2, Rocket, Code, Globe, User } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import ParticleCanvas from '../components/ParticleCanvas';
 import { team } from '../data/team';
@@ -36,93 +36,83 @@ export default function About() {
       <section className="page-hero page-hero--indigo">
         <ParticleCanvas />
         <div className="container page-hero__content">
-          <ScrollReveal>
-            <p className="eyebrow" style={{ color: '#FCA311' }}>Our Journey</p>
-            <h1 className="page-hero__title">Software built with<br /><span className="about-hero-accent">purpose &amp; passion</span></h1>
-            <p className="page-hero__sub">We started with a question: why does great software have to be exclusive? Paverasa is our answer.</p>
-          </ScrollReveal>
+          <div className="about-hero-grid">
+            <ScrollReveal className="about-hero-left">
+              <p className="eyebrow" style={{ color: '#FCA311' }}>OUR JOURNEY</p>
+              <h1 className="page-hero__title" style={{ textAlign: 'left' }}>
+                <div>Built by <span style={{ color: '#FCA311' }}>Students.</span></div>
+                <div>Driven by <span style={{ color: '#FCA311' }}>Innovation.</span></div>
+                <div>Trusted by Businesses.</div>
+              </h1>
+              <div className="about-hero-text">
+                <p>Paverasa began with four ambitious students who believed that innovation should never be limited by experience, age, or resources.</p>
+                <p>What started inside classrooms, college labs, and late-night brainstorming sessions has evolved into a technology company building modern software, AI solutions, digital products, and opportunities for the next generation of innovators.</p>
+                <p>Today, we partner with startups, businesses, and institutions to transform ideas into products that create real impact.</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={150} className="about-hero-right">
+              <img 
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" 
+                alt="Students collaborating" 
+                className="about-hero-image"
+              />
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
       {/* Story */}
-      <section className="section">
+      <section className="section about-story-section">
         <div className="container">
-          <div className="about-story-grid">
-            <ScrollReveal>
-              <div>
-                <p className="eyebrow">Our Story</p>
-                <h2 className="about-section-title">From a university lab to a continental platform</h2>
-                <div className="about-story-text">
-                  <p>Paverasa began in 2022 when three university friends — a software engineer, a designer, and a business strategist — noticed a gap: African businesses were being underserved by software that was too expensive, too complex, or too foreign to their context.</p>
-                  <p>We built our first product for a small logistics company that was tracking deliveries on paper. When we handed them a live dashboard that showed their fleet in real time, the founder cried. That moment defined everything we do.</p>
-                  <p>Today, Paverasa serves clients across multiple industries and countries, runs student innovation programs at universities, and ships our own products used by thousands of people. But that same spirit — software as a tool for liberation — remains at our core.</p>
+          <div className="about-story-new-grid">
+            {/* Left Column */}
+            <div className="about-story-left">
+              <ScrollReveal>
+                <p className="eyebrow" style={{ color: '#FCA311' }}>OUR STORY</p>
+                <h2 className="about-section-title">From College Dreams to Real-World Impact</h2>
+                <div className="about-story-text-new">
+                  <p>Every company has a beginning. Ours wasn't in a corporate office. It started inside classrooms, college labs, libraries, and countless late-night discussions where four students shared one belief—Technology should create opportunities, not barriers.</p>
+                  <p>Paverasa was founded with a simple mission: to develop exceptional software for businesses while empowering students with real industry experience, mentorship, and innovation.</p>
                 </div>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={150}>
-              <div className="msv-panel">
+                <img 
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" 
+                  alt="Modern Office Building" 
+                  className="about-story-building-img" 
+                />
+              </ScrollReveal>
 
-                {/* WHO WE ARE pill */}
-                <div className="msv-eyebrow-wrap">
-                  <span className="msv-eyebrow">Who We Are</span>
-                </div>
+            </div>
 
-                {/* Heading */}
-                <h2 className="msv-title">Our Mission &amp; Vision</h2>
-                <p className="msv-subtitle">
-                  We are on a mission to build world-class software that empowers
-                  businesses and <span className="msv-highlight">inspires innovators</span> everywhere.
-                </p>
-
-                {/* Mission card */}
-                <div className="msv-card">
-                  <div className="msv-card__icon-wrap">
-                    <Target size={28} strokeWidth={1.8} />
-                  </div>
-                  <div className="msv-card__body">
-                    <span className="msv-card__eyebrow">Mission</span>
-                    <h3 className="msv-card__title">Our Mission</h3>
-                    <div className="msv-card__bar" />
-                    <p className="msv-card__desc">
-                      To make world-class software development accessible to every
-                      business and every student innovator, regardless of their budget
-                      or background.
-                    </p>
+            {/* Right Column (Cards) */}
+            <div className="about-story-right">
+              <ScrollReveal delay={150}>
+                <div className="about-mvv-card">
+                  <div className="about-mvv-icon"><Target size={32} /></div>
+                  <div className="about-mvv-content">
+                    <h4>OUR MISSION</h4>
+                    <p>Building technology that creates opportunity. We build impactful solutions for businesses and empowering experiences for students.</p>
                   </div>
                 </div>
-
-                {/* Vision card */}
-                <div className="msv-card">
-                  <div className="msv-card__icon-wrap">
-                    <Eye size={28} strokeWidth={1.8} />
-                  </div>
-                  <div className="msv-card__body">
-                    <span className="msv-card__eyebrow">Vision</span>
-                    <h3 className="msv-card__title">Our Vision</h3>
-                    <div className="msv-card__bar" />
-                    <p className="msv-card__desc">
-                      A world where the best ideas — regardless of geography —
-                      become the best software products.
-                    </p>
+              </ScrollReveal>
+              <ScrollReveal delay={200}>
+                <div className="about-mvv-card">
+                  <div className="about-mvv-icon"><Eye size={32} /></div>
+                  <div className="about-mvv-content">
+                    <h4>OUR VISION</h4>
+                    <p>To become a globally recognized technology company that inspires innovation, empowers students, and transforms businesses.</p>
                   </div>
                 </div>
-
-
-
-                {/* Trusted by */}
-                <div className="msv-trusted">
-                  <p className="msv-trusted__label">Trusted by Innovative Companies</p>
-                  <div className="msv-trusted__logos">
-                    <span className="msv-logo msv-logo--google">Google</span>
-                    <span className="msv-logo msv-logo--microsoft">Microsoft</span>
-                    <span className="msv-logo msv-logo--aws">aws</span>
-                    <span className="msv-logo msv-logo--shopify">Shopify</span>
-                    <span className="msv-logo msv-logo--stripe">stripe</span>
+              </ScrollReveal>
+              <ScrollReveal delay={250}>
+                <div className="about-mvv-card">
+                  <div className="about-mvv-icon"><Heart size={32} /></div>
+                  <div className="about-mvv-content">
+                    <h4>OUR VALUES</h4>
+                    <p>Innovation First • Student Empowerment<br/>Engineering Excellence • Integrity<br/>Continuous Learning • Impact Over Hype</p>
                   </div>
                 </div>
-
-              </div>
-            </ScrollReveal>
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>

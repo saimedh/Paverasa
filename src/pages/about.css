@@ -701,3 +701,339 @@
   }
 }
 
+
+/* =====================================================
+   NEW ABOUT LAYOUT STYLES
+   ===================================================== */
+
+/* Hero Section */
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+  text-align: left;
+}
+
+.about-hero-text {
+  margin-top: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.about-hero-text p {
+  font-size: var(--text-base);
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+}
+
+.about-hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+/* Story Section */
+.about-story-new-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: stretch;
+}
+
+.about-story-left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.about-story-text-new {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.about-story-text-new p {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.about-story-building-img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  height: 280px;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-4);
+}
+
+/* Stats Bar */
+.about-stats-bar {
+  background: var(--color-navy);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.about-stat-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.about-stat-num {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: white;
+}
+
+.about-stat-label {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Right Column Cards */
+.about-story-right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  justify-content: flex-start;
+}
+
+.about-mvv-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-start;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.about-mvv-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #FCA311;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-mvv-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.about-mvv-content h4 {
+  font-size: var(--text-lg);
+  font-weight: 800;
+  color: var(--color-navy);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.about-mvv-content p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .about-hero-grid,
+  .about-story-new-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-stats-bar {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-mvv-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+/* Make about page hero smaller */
+.about-page .page-hero {
+  padding: calc(68px + 3rem) 0 3rem;
+}
+
+.about-hero-image {
+  max-height: 400px; /* Reduce image height to help make section smaller */
+}
+
+
+.page-hero__title div {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .page-hero__title div {
+    white-space: normal;
+  }
+}
+
+
+
+/* =====================================================
+   NEW TEAM CARD STYLES
+   ===================================================== */
+.team-card-new {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  height: 100%;
+}
+
+.team-card-new__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-2);
+}
+
+.team-card-new__img-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
+}
+
+.team-card-new__icon-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #fef0db; /* Light orange */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-card-new__initials {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+
+.team-card-new__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex-grow: 1;
+}
+
+.team-card-new__name {
+  font-size: var(--text-lg);
+  font-weight: 800;
+  color: var(--color-navy);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.team-card-new__role {
+  font-size: var(--text-sm);
+  color: #FCA311;
+  font-weight: 600;
+  margin: 0;
+}
+
+.team-card-new__divider {
+  width: 100%;
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--space-2) 0;
+}
+
+.team-card-new__bio {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.team-card-new__bullets {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-3) 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.team-card-new__bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.bullet-icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.team-card-new__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+

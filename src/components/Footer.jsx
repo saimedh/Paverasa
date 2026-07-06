@@ -81,21 +81,7 @@ export default function Footer() {
                   </a>
                 ))}
               </div>
-              {/* Contact info */}
-              <div className="footer__contact">
-                <div className="footer__contact-item">
-                  <Mail size={14} />
-                  <span>hello@paverasa.com</span>
-                </div>
-                <div className="footer__contact-item">
-                  <Phone size={14} />
-                  <span>+91 81254 32177</span>
-                </div>
-                <div className="footer__contact-item">
-                  <MapPin size={14} />
-                  <span>Middle town medchal</span>
-                </div>
-              </div>
+
             </div>
 
             {/* Link columns */}

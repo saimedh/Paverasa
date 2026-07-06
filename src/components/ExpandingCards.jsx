@@ -70,10 +70,16 @@ export const ExpandingCards = forwardRef(function ExpandingCards(
                 {item.title}
               </h3>
 
-              {/* Active content — icon, title, description */}
+              {/* Active content — icon, tagline, title, description */}
               <div className={`expanding-cards__icon${isActive ? ' expanding-cards__icon--visible' : ''}`}>
                 {item.icon}
               </div>
+
+              {item.tagline && (
+                <span className={`expanding-cards__tagline${isActive ? ' expanding-cards__tagline--visible' : ''}`}>
+                  {item.tagline}
+                </span>
+              )}
 
               <h3 className={`expanding-cards__active-title${isActive ? ' expanding-cards__active-title--visible' : ''}`}>
                 {item.title}

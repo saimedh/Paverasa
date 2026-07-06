@@ -161,3 +161,20 @@
 .expanding-cards__desc--visible {
   opacity: 1;
 }
+
+/* -- Tagline -- */
+.expanding-cards__tagline {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #FCA311;
+  margin-bottom: -6px;
+  opacity: 0;
+  transition: opacity 300ms ease 100ms;
+}
+
+.expanding-cards__tagline--visible {
+  opacity: 1;
+}
+
