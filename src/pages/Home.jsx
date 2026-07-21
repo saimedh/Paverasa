@@ -54,28 +54,28 @@ const strengths = [
     icon: Lightbulb,
     title: 'Innovation First',
     desc: 'We explore emerging technologies and apply them pragmatically to create real competitive advantages.',
-    color: '#14213D',
+    color: '#F97316',
     bgColor: '#FFFFFF',
   },
   {
     icon: Star,
     title: 'Quality Obsessed',
     desc: 'Every feature is crafted with precision. We ship work we\'re proud of — always.',
-    color: '#FCA311',
+    color: '#F97316',
     bgColor: '#FFFFFF',
   },
   {
     icon: ShieldCheck,
     title: 'Security Built In',
     desc: 'Security is not an afterthought. We architect with zero-trust principles from day one.',
-    color: '#14213D',
+    color: '#F97316',
     bgColor: '#FFFFFF',
   },
   {
     icon: Zap,
     title: 'Speed & Agility',
     desc: 'We move fast without breaking things — lean processes, clear communication, rapid delivery.',
-    color: '#FCA311',
+    color: '#F97316',
     bgColor: '#FFFFFF',
   },
 ];
@@ -183,9 +183,7 @@ export default function Home() {
     <div className="home">
       {/* ─────────── HERO ─────────── */}
       <section id="top" className="relative w-full min-h-[100vh] flex flex-col items-center justify-center px-6 py-24 overflow-hidden bg-gradient-to-br from-background to-muted/30">
-        <DotPattern className={cn(
-          "[mask-image:radial-gradient(50vw_circle_at_center,white,transparent)]",
-        )} />
+
         <motion.div
           initial={{ opacity: 0, scale: 0.6 }}
           animate={{ opacity: 0.4, scale: 1 }}
@@ -199,25 +197,7 @@ export default function Home() {
           className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-secondary/20 blur-[160px] rounded-full z-0"
         />
 
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          {Array.from({ length: 30 }).map((_, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 0 }}
-              animate={{ opacity: 0.2, y: [0, -20, 0] }}
-              transition={{
-                duration: 5 + Math.random() * 5,
-                repeat: Infinity,
-                delay: Math.random() * 5,
-              }}
-              className="absolute w-1 h-1 bg-muted-foreground/30 rounded-full"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-              }}
-            />
-          ))}
-        </div>
+
 
         <div className="relative z-10 w-full max-w-3xl mx-auto px-4 text-center hero__content">
           <motion.h1
@@ -604,7 +584,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="section-header">
               <p className="eyebrow">Latest Insights</p>
-              <h2>From our <span style={{ color: '#FCA311' }}>team's</span> minds</h2>
+              <h2>From our <span style={{ color: '#F97316' }}>team's</span> minds</h2>
               <p>Thoughts on technology, design, engineering culture, and building the future.</p>
             </div>
           </ScrollReveal>
@@ -644,11 +624,11 @@ export default function Home() {
 
 
       {/* ─────────── CLOSING CTA ─────────── */}
-      <section className="w-full bg-[#030712] relative overflow-hidden">
+      <section className="w-full bg-white relative overflow-hidden">
         {/* Simulated Globe / Glowing background */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FCA311]/10 rounded-full blur-[100px] pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#FCA311]/5 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#F97316]/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#F97316]/5 rounded-full blur-[100px] pointer-events-none"></div>
         
         {/* Dot Pattern Overlay */}
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-repeat opacity-10 pointer-events-none"></div>
@@ -659,21 +639,21 @@ export default function Home() {
             <ScrollReveal className="flex-1 w-full max-w-2xl">
               <div className="mb-8">
                 
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 tracking-tight text-white !text-white">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 tracking-tight text-gray-900 !text-gray-900">
                   Let's create something<br />
-                  <span style={{ color: '#FCA311' }}>extraordinary together.</span>
+                  <span style={{ color: '#F97316' }}>extraordinary together.</span>
                 </h2>
                 
-                <p className="text-base md:text-lg max-w-xl leading-relaxed mb-8" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+                <p className="text-base md:text-lg max-w-xl leading-relaxed mb-8" style={{ color: 'rgba(0, 0, 0, 0.7)' }}>
                   Whether you have a fully-formed brief or just an idea on a napkin,
                   we'd love to hear from you and bring it to life.
                 </p>
                 
                 <div className="flex flex-wrap items-center gap-4 mb-8">
-                  <Link to="/contact" className="btn btn-lg rounded-full px-8 py-4 text-base font-bold flex items-center gap-2 transition-transform hover:scale-105 shadow-[0_0_20px_rgba(252,163,17,0.4)]" style={{ backgroundColor: '#FCA311', color: 'white', border: 'none' }}>
+                  <Link to="/contact" className="btn btn-lg rounded-full px-8 py-4 text-base font-bold flex items-center gap-2 transition-transform hover:scale-105 shadow-[0_0_20px_rgba(252,163,17,0.4)]" style={{ backgroundColor: '#F97316', color: 'white', border: 'none' }}>
                     Contact Us <ArrowRight size={20} />
                   </Link>
-                  <Link to="/contact" className="btn btn-lg rounded-full px-8 py-4 text-base font-medium flex items-center gap-2 border border-solid border-white/30 text-white !text-white hover:bg-white/5 bg-transparent backdrop-blur-sm">
+                  <Link to="/contact" className="btn btn-lg rounded-full px-8 py-4 text-base font-medium flex items-center gap-2 border border-solid border-black/20 text-gray-900 !text-gray-900 hover:bg-black/5 bg-transparent backdrop-blur-sm">
                     Schedule a Meeting <Calendar size={18} className="ml-1 opacity-70" />
                   </Link>
                 </div>
@@ -682,67 +662,72 @@ export default function Home() {
               </div>
             </ScrollReveal>
 
-            {/* Right Column (Card) */}
-            <ScrollReveal delay={200} className="w-full lg:w-[500px] shrink-0 lg:mt-0 mb-8 lg:mb-0">
-              <div className="bg-[#0B1220]/80 backdrop-blur-[24px] border border-white/[0.08] rounded-none p-8 lg:p-10 flex flex-col relative shadow-[0_0_50px_rgba(0,0,0,0.5)]">
-                {/* Subtle right glow highlight inside card */}
-                <div className="absolute top-0 right-0 w-[2px] h-full bg-gradient-to-b from-transparent via-[#F59E0B] to-transparent opacity-50"></div>
+            <ScrollReveal delay={200} className="w-full lg:w-[580px] shrink-0 lg:mt-0 mb-8 lg:mb-0">
+              <div className="bg-white rounded-3xl flex flex-col relative shadow-[0_20px_50px_-10px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden group/card">
+                {/* Subtle orange accent corner */}
+                <div className="absolute -top-32 -right-32 w-64 h-64 bg-orange-500/10 rounded-full blur-[50px] pointer-events-none transition-transform duration-1000 group-hover/card:scale-125"></div>
                 
-                <div className="relative z-10">
-                  <h3 className="text-[28px] font-bold mb-3 !text-white leading-tight">Let's start a conversation</h3>
-                  <p className="!text-white/60 text-base mb-8 leading-relaxed">We're here to help and answer any question you might have.</p>
+                <div className="relative z-10 p-8 lg:p-10">
+                  <h3 className="text-[32px] lg:text-[36px] font-extrabold mb-3 text-[#111827] tracking-tight leading-[1.1]">
+                    Let's start a<br />conversation<span className="text-[#F97316]">.</span>
+                  </h3>
+                  <p className="text-gray-500 text-[16px] mb-6 leading-relaxed">
+                    We're here to help and answer any question you might have.
+                  </p>
                   
-                  <div className="flex flex-col gap-4">
+                  <div className="flex flex-col mb-6">
                     {/* Email */}
-                    <div className="bg-white/[0.05] backdrop-blur-[18px] border border-white/[0.08] rounded-none p-5 flex flex-row items-center gap-5 hover:bg-white/[0.08] transition-colors">
-                      <div className="w-12 h-12 rounded-none bg-[#F59E0B]/10 border border-[#F59E0B]/20 shadow-[0_0_15px_rgba(245,158,11,0.2)] flex items-center justify-center text-[#F59E0B] shrink-0">
-                        <Mail size={20} />
+                    <a href="mailto:hello@paverasa.com" className="flex items-center gap-4 py-4 border-b border-gray-100 group cursor-pointer transition-transform duration-300 hover:translate-x-2">
+                      <div className="w-12 h-12 rounded-xl bg-[#FFF5ED] flex items-center justify-center text-[#F97316] shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:bg-orange-100 group-hover:shadow-sm">
+                        <Mail size={20} strokeWidth={2} className="transition-transform duration-300 group-hover:-rotate-6" />
                       </div>
-                      <div className="flex flex-col flex-1 min-w-0">
-                        <span className="text-[13px] font-medium text-white/50 mb-1 uppercase tracking-wider">Email Us</span>
-                        <span className="text-[15px] font-semibold text-white whitespace-nowrap overflow-hidden text-ellipsis w-full leading-snug">hello@paverasa.com</span>
+                      <div className="flex flex-col justify-center min-w-0">
+                        <span className="text-[11px] font-bold text-gray-500 mb-0.5 uppercase tracking-wider transition-colors duration-300 group-hover:text-orange-500">Email Us</span>
+                        <span className="text-[15px] font-bold text-[#111827] truncate">hello@paverasa.com</span>
                       </div>
-                    </div>
+                    </a>
                     
                     {/* Phone */}
-                    <div className="bg-white/[0.05] backdrop-blur-[18px] border border-white/[0.08] rounded-none p-5 flex flex-row items-center gap-5 hover:bg-white/[0.08] transition-colors">
-                      <div className="w-12 h-12 rounded-none bg-[#F59E0B]/10 border border-[#F59E0B]/20 shadow-[0_0_15px_rgba(245,158,11,0.2)] flex items-center justify-center text-[#F59E0B] shrink-0">
-                        <Phone size={20} />
+                    <a href="tel:+918125432177" className="flex items-center gap-4 py-4 border-b border-gray-100 group cursor-pointer transition-transform duration-300 hover:translate-x-2">
+                      <div className="w-12 h-12 rounded-xl bg-[#FFF5ED] flex items-center justify-center text-[#F97316] shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:bg-orange-100 group-hover:shadow-sm">
+                        <Phone size={20} strokeWidth={2} className="transition-transform duration-300 group-hover:rotate-6" />
                       </div>
-                      <div className="flex flex-col flex-1 min-w-0">
-                        <span className="text-[13px] font-medium text-white/50 mb-1 uppercase tracking-wider">Call Us</span>
-                        <span className="text-[15px] font-semibold text-white whitespace-nowrap overflow-hidden text-ellipsis w-full leading-snug">+91 81254 32177</span>
+                      <div className="flex flex-col justify-center min-w-0">
+                        <span className="text-[11px] font-bold text-gray-500 mb-0.5 uppercase tracking-wider transition-colors duration-300 group-hover:text-orange-500">Call Us</span>
+                        <span className="text-[15px] font-bold text-[#111827] truncate">+91 81254 32177</span>
                       </div>
-                    </div>
+                    </a>
                     
                     {/* Location */}
-                    <div className="bg-white/[0.05] backdrop-blur-[18px] border border-white/[0.08] rounded-none p-5 flex flex-row items-center gap-5 hover:bg-white/[0.08] transition-colors">
-                      <div className="w-12 h-12 rounded-none bg-[#F59E0B]/10 border border-[#F59E0B]/20 shadow-[0_0_15px_rgba(245,158,11,0.2)] flex items-center justify-center text-[#F59E0B] shrink-0">
-                        <MapPin size={20} />
+                    <div className="flex items-center gap-4 py-4 border-b border-gray-100 group cursor-pointer transition-transform duration-300 hover:translate-x-2">
+                      <div className="w-12 h-12 rounded-xl bg-[#FFF5ED] flex items-center justify-center text-[#F97316] shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:bg-orange-100 group-hover:shadow-sm">
+                        <MapPin size={20} strokeWidth={2} className="transition-transform duration-300 group-hover:-rotate-6" />
                       </div>
-                      <div className="flex flex-col flex-1 min-w-0">
-                        <span className="text-[13px] font-medium text-white/50 mb-1 uppercase tracking-wider">Our Location</span>
-                        <span className="text-[15px] font-semibold text-white whitespace-nowrap overflow-hidden text-ellipsis w-full leading-snug">Middle town medchal</span>
+                      <div className="flex flex-col justify-center min-w-0">
+                        <span className="text-[11px] font-bold text-gray-500 mb-0.5 uppercase tracking-wider transition-colors duration-300 group-hover:text-orange-500">Location</span>
+                        <span className="text-[15px] font-bold text-[#111827] truncate">Middle town medchal</span>
                       </div>
                     </div>
                     
                     {/* Working Hours */}
-                    <div className="bg-white/[0.05] backdrop-blur-[18px] border border-white/[0.08] rounded-none p-5 flex flex-row items-center gap-5 hover:bg-white/[0.08] transition-colors">
-                      <div className="w-12 h-12 rounded-none bg-[#F59E0B]/10 border border-[#F59E0B]/20 shadow-[0_0_15px_rgba(245,158,11,0.2)] flex items-center justify-center text-[#F59E0B] shrink-0">
-                        <Clock size={20} />
+                    <div className="flex items-center gap-4 py-4 group cursor-pointer transition-transform duration-300 hover:translate-x-2">
+                      <div className="w-12 h-12 rounded-xl bg-[#FFF5ED] flex items-center justify-center text-[#F97316] shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:bg-orange-100 group-hover:shadow-sm">
+                        <Clock size={20} strokeWidth={2} className="transition-transform duration-300 group-hover:rotate-12" />
                       </div>
-                      <div className="flex flex-col flex-1 min-w-0">
-                        <span className="text-[13px] font-medium text-white/50 mb-1 uppercase tracking-wider">Working Hours</span>
-                        <span className="text-[15px] font-semibold text-white whitespace-nowrap overflow-hidden text-ellipsis w-full leading-snug">Mon - Sat: 9:00 AM - 7:00 PM</span>
+                      <div className="flex flex-col justify-center min-w-0">
+                        <span className="text-[11px] font-bold text-gray-500 mb-0.5 uppercase tracking-wider transition-colors duration-300 group-hover:text-orange-500">Hours</span>
+                        <span className="text-[15px] font-bold text-[#111827] truncate">Mon-Sat: 9AM-7PM</span>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="mt-8 pt-8 border-t border-white/[0.08] flex justify-center">
-                    <Link to="/contact" className="w-fit h-12 px-8 flex items-center justify-center gap-2 border border-[#F59E0B]/50 rounded-none text-white !text-white font-medium hover:bg-[#F59E0B]/10 hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-all">
-                      Book a Meeting <Calendar size={18} />
-                    </Link>
-                  </div>
+                  <Link to="/contact" className="w-full flex items-center justify-between bg-[#F97316] hover:bg-[#EA580C] text-white px-6 py-4 rounded-2xl font-bold transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 hover:-translate-y-1 group">
+                    <div className="flex items-center gap-3">
+                      <Calendar size={20} strokeWidth={2} className="transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12" />
+                      <span className="text-[16px]">Book a Meeting</span>
+                    </div>
+                    <ArrowRight size={20} strokeWidth={2.5} className="group-hover:translate-x-1.5 transition-transform duration-300" />
+                  </Link>
                 </div>
               </div>
             </ScrollReveal>

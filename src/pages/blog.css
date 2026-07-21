@@ -222,7 +222,7 @@
 
   letter-spacing: 0.025em;
 
-  color: var(--color-navy);
+  color: var(--color-text);
 
 }
 
@@ -466,7 +466,7 @@
 
   letter-spacing: -0.025em;
 
-  color: var(--color-navy);
+  color: var(--color-text);
 
   
 

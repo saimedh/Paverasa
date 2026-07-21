@@ -55,51 +55,51 @@ ul, ol {
 
 /* ---------- CSS Custom Properties (Design Tokens) ---------- */
 :root {
-  /* -- Brand Colors (Deep Navy + Vibrant Orange) -- */
+  /* -- Brand Colors (Vibrant Orange & White Theme) -- */
 
-  /* Primary action color -- Deep Navy */
-  --color-primary: #14213D;
-  --color-primary-dark: #0E1729;
-  --color-primary-light: rgba(20, 33, 61, 0.05);
-  --color-primary-rgb: 20, 33, 61;
+  /* Primary action color -- Vibrant Orange */
+  --color-primary: #F97316;
+  --color-primary-dark: #EA580C;
+  --color-primary-light: rgba(249, 115, 22, 0.05);
+  --color-primary-rgb: 249, 115, 22;
 
-  /* Brand dark -- Deep Navy */
-  --color-navy: #14213D;
-  --color-navy-deep: #0E1729;
-  --color-navy-mid: #14213D;
-  --color-navy-light: rgba(20, 33, 61, 0.05);
+  /* Brand dark -- Was Navy, now mapped to Light Backgrounds/White */
+  --color-navy: #FFFFFF;
+  --color-navy-deep: #F9FAFB;
+  --color-navy-mid: #F3F4F6;
+  --color-navy-light: rgba(255, 255, 255, 0.05);
 
   /* Accent -- Vibrant Orange */
   --color-accent: #FCA311;
   --color-accent-light: #FCD086;
 
   /* Status */
-  --color-success: #14213D;
-  --color-warning: #FCA311;
-  --color-error: #FCA311;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
 
-  /* Text */
-  --color-text: #14213D;
-  --color-text-muted: rgba(20, 33, 61, 0.65);
-  --color-text-subtle: rgba(20, 33, 61, 0.5);
+  /* Text - Dark Gray for readability on white */
+  --color-text: #111827;
+  --color-text-muted: #4B5563;
+  --color-text-subtle: #9CA3AF;
 
   /* Backgrounds */
   --color-bg: #FFFFFF;
-  --color-bg-subtle: #FFFFFF;
+  --color-bg-subtle: #F9FAFB;
   --color-bg-card: #FFFFFF;
-  --color-bg-navy: #14213D;
+  --color-bg-navy: #FFFFFF;
 
   /* Borders */
-  --color-border: #C2C4C3;
-  --color-border-subtle: #C2C4C3;
+  --color-border: #E5E7EB;
+  --color-border-subtle: #F3F4F6;
 
   /* -- Gradients -- */
-  --gradient-primary: linear-gradient(135deg, #14213D 0%, #0E1729 100%);
-  --gradient-primary-rich: linear-gradient(135deg, #14213D 0%, #FCA311 100%);
-  --gradient-hero: radial-gradient(ellipse at 50% 0%, #FFFFFF 0%, #FFFFFF 100%);
-  --gradient-navy: linear-gradient(135deg, #14213D 0%, #0E1729 100%);
+  --gradient-primary: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+  --gradient-primary-rich: linear-gradient(135deg, #FCA311 0%, #F97316 100%);
+  --gradient-hero: radial-gradient(ellipse at 50% 0%, #FFFFFF 0%, #F9FAFB 100%);
+  --gradient-navy: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%);
   --gradient-cta: linear-gradient(135deg, #FCA311 0%, #D8890C 100%);
-  --gradient-card-hover: linear-gradient(135deg, #FFFFFF 0%, #FFFFFF 100%);
+  --gradient-card-hover: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%);
 
   /* -- Typography -- */
   /* Google Sans → Plus Jakarta Sans (closest public alternative) as fallback */
@@ -325,16 +325,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* -- Primary Button -- */
 .btn-primary {
-  background: var(--color-navy);
+  background: var(--color-primary);
   color: #FFFFFF;
-  border: 1px solid var(--color-navy);
+  border: 1px solid var(--color-primary);
   box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
-  background: var(--color-accent);
-  color: var(--color-navy);
-  border-color: var(--color-accent);
+  background: var(--color-primary-dark);
+  color: #FFFFFF;
+  border-color: var(--color-primary-dark);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -346,15 +346,15 @@ h1, h2, h3, h4, h5, h6 {
 /* -- Secondary Button -- */
 .btn-secondary {
   background: #FFFFFF;
-  color: var(--color-navy);
-  border: 1px solid var(--color-navy);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
   box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-  background: #FFFFFF;
-  border-color: var(--color-accent);
-  color: var(--color-navy);
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -366,12 +366,13 @@ h1, h2, h3, h4, h5, h6 {
 /* -- Ghost Button -- */
 .btn-ghost {
   background: transparent;
-  color: var(--color-navy);
+  color: var(--color-primary);
   border: 1px solid transparent;
 }
 
 .btn-ghost:hover {
-  color: var(--color-accent);
+  color: var(--color-primary-dark);
+  background: var(--color-primary-light);
 }
 
 /* -- Sizes -- */

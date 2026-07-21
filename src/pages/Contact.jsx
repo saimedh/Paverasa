@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { Mail, Phone, MapPin, Clock, ChevronDown, ChevronUp, CheckCircle2, ArrowRight, Calendar, Send, MessageSquare, Zap } from "lucide-react";
 import ScrollReveal from "../components/ScrollReveal";
 import "./contact.css";
@@ -199,7 +199,7 @@ export default function Contact() {
                     </div>
                   </div>
                 )}
-                <button type="submit" className="btn btn-primary contact-submit" disabled={!selectedDay || !selectedSlot}>
+                <button type="submit" className="btn btn-primary contact-submit mt-6" disabled={!selectedDay || !selectedSlot}>
                   Confirm Booking <ArrowRight size={15} />
                 </button>
               </form>

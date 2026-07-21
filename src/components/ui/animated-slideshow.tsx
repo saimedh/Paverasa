@@ -120,6 +120,7 @@ export const TextStaggerHover = React.forwardRef<
 
                   <motion.span
                     className="absolute left-0 top-0 inline-block opacity-100"
+                    style={{ color: '#F97316' }}
                     initial={{ y: "110%" }}
                     animate={isActive ? { y: "0%" } : { y: "110%" }}
                   >

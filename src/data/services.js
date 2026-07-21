@@ -17,7 +17,7 @@ export const services = [
     title: 'Mobile Development',
     shortDesc: 'Cross-platform and native mobile apps for iOS and Android with great UX.',
     fullDesc: 'Our mobile team delivers pixel-perfect apps for iOS and Android using React Native and Flutter. We handle everything from ideation to App Store submission, with ongoing maintenance and updates.',
-    color: '#FCA311',
+    color: '#F97316',
     features: ['React Native & Flutter', 'iOS & Android', 'Offline-First Architecture', 'Push Notifications'],
   },
   {
@@ -47,7 +47,7 @@ export const services = [
     title: 'Data Analytics',
     shortDesc: 'Turn raw data into actionable insights with beautiful dashboards and models.',
     fullDesc: 'We design and build end-to-end data pipelines, interactive dashboards, and reporting systems. Our analytics solutions empower teams to make confident, data-driven decisions faster than ever before.',
-    color: '#FCA311',
+    color: '#F97316',
     features: ['Data Pipelines & ETL', 'Business Intelligence', 'Custom Dashboards', 'Statistical Modeling'],
   },
   {
@@ -77,7 +77,7 @@ export const services = [
     title: 'Google Analytics & SEO',
     shortDesc: 'Data-driven marketing and search engine optimization to boost your online presence.',
     fullDesc: 'We help you understand your audience and improve your search rankings. From setting up complex Google Analytics tracking to on-page and technical SEO, we ensure your digital assets are visible and measurable.',
-    color: '#FCA311',
+    color: '#F97316',
     features: ['Google Analytics Setup', 'Technical SEO', 'Keyword Strategy', 'Conversion Tracking'],
   },
   {

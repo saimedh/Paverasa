@@ -27,26 +27,7 @@ const expandingItems = [
     icon: <BarChart3 size={24} />,
     linkHref: '/contact',
   },
-  {
-    id: 'intelliflow',
-    title: 'IntelliFlow',
-    description:
-      'AI-powered workflow automation that learns from your patterns and continuously optimises your business operations.',
-    imgSrc:
-      'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=1200&q=80',
-    icon: <Brain size={24} />,
-    linkHref: '/contact',
-  },
-  {
-    id: 'campuslink',
-    title: 'CampusLink',
-    description:
-      'Connecting student innovators, mentors, and investors. Post projects, find co-founders, and showcase your work.',
-    imgSrc:
-      'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80',
-    icon: <GraduationCap size={24} />,
-    linkHref: '/contact',
-  },
+
   {
     id: 'hostel-management',
     title: 'Hostel Management',

@@ -45,28 +45,38 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="footer p-0 overflow-hidden">
-      <section className="relative w-full flex flex-col items-center justify-center pt-20 pb-8 bg-gradient-to-tr from-muted/30 to-background overflow-hidden">
-        <DotPattern className={cn(
-          "[mask-image:radial-gradient(40vw_circle_at_center,white,transparent)]",
-        )} />
+      <section className="relative w-full flex flex-col items-center justify-center pt-20 pb-8 overflow-hidden bg-orange-500">
+
         <motion.div
           initial={{ opacity: 0, scale: 0.6 }}
           animate={{ opacity: 0.3, scale: 1 }}
           transition={{ duration: 1.4 }}
-          className="absolute top-[-50px] right-[-50px] w-[200px] h-[200px] bg-primary/20 blur-[100px] rounded-full z-0 pointer-events-none"
+          className="absolute top-[-50px] right-[-50px] w-[200px] h-[200px] bg-white/20 blur-[100px] rounded-full z-0 pointer-events-none"
         />
         <motion.div
           initial={{ opacity: 0, scale: 0.6 }}
           animate={{ opacity: 0.2, scale: 1 }}
           transition={{ duration: 1.6, delay: 0.3 }}
-          className="absolute bottom-[-100px] left-[-100px] w-[300px] h-[300px] bg-secondary/15 blur-[120px] rounded-full z-0 pointer-events-none"
+          className="absolute bottom-[-100px] left-[-100px] w-[300px] h-[300px] bg-white/15 blur-[120px] rounded-full z-0 pointer-events-none"
         />
+        
+        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-0 select-none overflow-hidden opacity-15">
+          <span className="text-[14vw] sm:text-[15vw] leading-none font-black uppercase tracking-widest text-white whitespace-nowrap">
+            PAVERASA
+          </span>
+        </div>
         
         <div className="container-wide relative z-10 w-full">
           {/* Top: Brand + Links */}
           <div className="footer__grid">
             {/* Brand column */}
-            <div className="footer__brand">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="footer__brand"
+            >
               <Link to="/" className="footer__logo" aria-label="Paverasa Home">
                 <Logo className="footer__logo-svg" />
               </Link>
@@ -82,11 +92,18 @@ export default function Footer() {
                 ))}
               </div>
 
-            </div>
+            </motion.div>
 
             {/* Link columns */}
-            {Object.entries(footerLinks).map(([group, links]) => (
-              <div key={group} className="footer__col">
+            {Object.entries(footerLinks).map(([group, links], i) => (
+              <motion.div 
+                key={group} 
+                className="footer__col"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 * (i + 1) }}
+              >
                 <h4 className="footer__col-title">{group}</h4>
                 <ul className="footer__col-links">
                   {links.map((link) => (
@@ -97,17 +114,23 @@ export default function Footer() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Bottom bar */}
-          <div className="footer__bottom mt-16 pt-8 border-t border-muted-foreground/10 flex justify-between items-center text-muted-foreground text-sm">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="footer__bottom mt-16 pt-8 border-t border-muted-foreground/10 flex justify-between items-center text-muted-foreground text-sm"
+          >
             <p>© {new Date().getFullYear()} Paverasa. All rights reserved.</p>
             <a href="#top" className="footer__back-top flex items-center hover:text-primary transition-colors">
               Back to top <ArrowUpRight size={14} className="ml-1" />
             </a>
-          </div>
+          </motion.div>
         </div>
       </section>
     </footer>

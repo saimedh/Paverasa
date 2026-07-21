@@ -180,7 +180,7 @@
 
   line-height: 1.02;
 
-  color: var(--color-navy);
+  color: var(--color-text);
 
   margin-bottom: var(--space-6);
 
@@ -192,7 +192,7 @@
 
 .hero__headline-accent {
 
-  background: linear-gradient(135deg, #FCA311 0%, #FCD086 100%);
+  background: linear-gradient(135deg, #F97316 0%, #FCD086 100%);
 
   -webkit-background-clip: text;
 
@@ -2366,7 +2366,7 @@
 
   line-height: 0.95;
 
-  color: var(--color-navy);
+  color: var(--color-text);
 
   text-transform: uppercase;
 
@@ -2806,7 +2806,7 @@
 
   letter-spacing: -0.035em;
 
-  color: var(--color-navy);
+  color: var(--color-text);
 
 }
 
@@ -4506,7 +4506,7 @@
 }
 
 .hover-highlight:hover {
-  color: #FCA311;
+  color: #F97316;
 }
 
 
@@ -4521,19 +4521,19 @@
 }
 
 .process-step:hover .process-step__icon-wrap {
-  background: #FCA311;
+  background: #F97316;
   color: white;
-  border-color: #FCA311;
-  box-shadow: 0 0 0 2px #FCA311;
+  border-color: #F97316;
+  box-shadow: 0 0 0 2px #F97316;
 }
 
 .process-step:hover .process-step__label {
-  color: #FCA311;
+  color: #F97316;
   transition: color 0.3s ease;
 }
 
 .process-step:hover .process-step__num {
-  color: #FCA311;
+  color: #F97316;
   transition: color 0.3s ease;
 }
 

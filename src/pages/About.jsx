@@ -38,10 +38,10 @@ export default function About() {
         <div className="container page-hero__content">
           <div className="about-hero-grid">
             <ScrollReveal className="about-hero-left">
-              <p className="eyebrow" style={{ color: '#FCA311' }}>OUR JOURNEY</p>
+              <p className="eyebrow" style={{ color: '#F97316' }}>OUR JOURNEY</p>
               <h1 className="page-hero__title" style={{ textAlign: 'left' }}>
-                <div>Built by <span style={{ color: '#FCA311' }}>Students.</span></div>
-                <div>Driven by <span style={{ color: '#FCA311' }}>Innovation.</span></div>
+                <div>Built by <span style={{ color: '#F97316' }}>Students.</span></div>
+                <div>Driven by <span style={{ color: '#F97316' }}>Innovation.</span></div>
                 <div>Trusted by Businesses.</div>
               </h1>
               <div className="about-hero-text">
@@ -68,17 +68,12 @@ export default function About() {
             {/* Left Column */}
             <div className="about-story-left">
               <ScrollReveal>
-                <p className="eyebrow" style={{ color: '#FCA311' }}>OUR STORY</p>
+                <p className="eyebrow" style={{ color: '#F97316' }}>OUR STORY</p>
                 <h2 className="about-section-title">From College Dreams to Real-World Impact</h2>
                 <div className="about-story-text-new">
                   <p>Every company has a beginning. Ours wasn't in a corporate office. It started inside classrooms, college labs, libraries, and countless late-night discussions where four students shared one belief—Technology should create opportunities, not barriers.</p>
                   <p>Paverasa was founded with a simple mission: to develop exceptional software for businesses while empowering students with real industry experience, mentorship, and innovation.</p>
                 </div>
-                <img 
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" 
-                  alt="Modern Office Building" 
-                  className="about-story-building-img" 
-                />
               </ScrollReveal>
 
             </div>

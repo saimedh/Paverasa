@@ -3,6 +3,7 @@ import { Globe, Smartphone, Palette, Brain, BarChart3, Cloud, GraduationCap, Arr
 import ScrollReveal from '../components/ScrollReveal';
 import ParticleCanvas from '../components/ParticleCanvas';
 import { services } from '../data/services';
+import { RevealImageList } from '../components/ui/reveal-images';
 import './services.css';
 
 const iconMap = {
@@ -27,41 +28,10 @@ export default function Services() {
 
       {/* Services List */}
       <section className="section">
-        <div className="container">
-          <div className="services-list">
-            {services.map((svc, i) => {
-              const Icon = iconMap[svc.icon] || Globe;
-              return (
-                <ScrollReveal key={svc.id} delay={i * 60}>
-                  <div className="svc-item">
-                    <div className="svc-item__icon-col">
-                      <div className="svc-item__icon" style={{ background: `${svc.color}18`, color: svc.color }}>
-                        <Icon size={28} />
-                      </div>
-                      <span className="svc-item__num">0{i + 1}</span>
-                    </div>
-                    <div className="svc-item__body">
-                      <h2 className="svc-item__title">{svc.title}</h2>
-                      <p className="svc-item__desc">{svc.fullDesc}</p>
-                      <ul className="svc-item__features">
-                        {svc.features.map(f => (
-                          <li key={f} className="svc-item__feature">
-                            <CheckCircle2 size={15} />
-                            <span>{f}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="svc-item__cta">
-                      <Link to="/contact" className="btn btn-primary">
-                        Get Started <ArrowRight size={16} />
-                      </Link>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              );
-            })}
-          </div>
+        <div className="container py-12">
+          <ScrollReveal>
+            <RevealImageList />
+          </ScrollReveal>
         </div>
       </section>
 
