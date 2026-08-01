@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Target, Eye, Heart, Lightbulb, Users, Users2, ShieldCheck, CheckCircle2, Rocket, Code, Globe, User } from 'lucide-react';
+import { ArrowRight, Target, Eye, Heart, Lightbulb, Users, Users2, ShieldCheck, CheckCircle2, Rocket, Code, Globe, User, GraduationCap } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import ParticleCanvas from '../components/ParticleCanvas';
 import { team } from '../data/team';
@@ -57,6 +57,123 @@ export default function About() {
                 className="about-hero-image"
               />
             </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────── WHO WE ARE ─────────── */}
+      <section className="section who-we-are bg-white">
+        <div className="container">
+          <div className="who-we-are__grid-new">
+            
+            {/* Left Column */}
+            <div className="who-we-are__left">
+              <ScrollReveal>
+                <p className="who-we-are__eyebrow-new">WHO WE ARE</p>
+                <h2 className="who-we-are__headline">
+                  Building Software.<br />
+                  Driving <span className="who-we-are__accent">Innovation.</span><br />
+                  Empowering <span className="who-we-are__accent">Students.</span>
+                </h2>
+                
+                <div className="who-we-are__text-content">
+                  <p>
+                    Paverasa is a technology company that builds intelligent, scalable, and impactful
+                    software solutions for businesses and communities. We specialize in turning
+                    ideas into digital products that solve real-world problems and create long-term
+                    value.
+                  </p>
+                  <p>
+                    What sets us apart is our mission to empower the next generation of innovators.
+                    Through hands-on projects, mentorship, and learning-driven environments, we
+                    help students grow into confident builders and future-ready professionals.
+                  </p>
+                </div>
+
+                <div className="who-we-are__features">
+                  <div className="who-we-are__feature">
+                    <Rocket size={20} className="who-we-are__feature-icon" />
+                    <span>Innovation<br/>at the Core</span>
+                  </div>
+                  <div className="who-we-are__feature">
+                    <Code size={20} className="who-we-are__feature-icon" />
+                    <span>Engineering<br/>Excellence</span>
+                  </div>
+                  <div className="who-we-are__feature">
+                    <User size={20} className="who-we-are__feature-icon" />
+                    <span>Student Growth<br/>& Empowerment</span>
+                  </div>
+                  <div className="who-we-are__feature">
+                    <ShieldCheck size={20} className="who-we-are__feature-icon" />
+                    <span>Integrity &<br/>Reliability</span>
+                  </div>
+                </div>
+
+                <Link to="/about" className="who-we-are__btn">
+                  Discover Our Journey <ArrowRight size={16} />
+                </Link>
+              </ScrollReveal>
+            </div>
+
+            {/* Right Column */}
+            <div className="who-we-are__right">
+              <ScrollReveal delay={150}>
+                <div className="who-we-are__team-card">
+                  <h3 className="who-we-are__team-card-title">Meet the People Behind the Purpose</h3>
+                  
+                  <div className="who-we-are__team-images">
+                    <div className="who-we-are__team-img-wrap">
+                      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" alt="Team collaborating" />
+                    </div>
+                    <div className="who-we-are__team-img-wrap">
+                      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Team discussion" />
+                    </div>
+                    <div className="who-we-are__team-img-wrap">
+                      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80" alt="Team working" />
+                    </div>
+                  </div>
+
+                  <h4 className="who-we-are__team-subtitle">Our Passionate Team</h4>
+                  <p className="who-we-are__team-desc">
+                    Engineers, designers, and dreamers working together<br/>to build meaningful digital experiences.
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={250}>
+                <div className="who-we-are__core-values">
+                  <div className="who-we-are__core-value" style={{ backgroundColor: '#F5F3FF' }}>
+                    <div className="who-we-are__value-header">
+                      <GraduationCap size={16} className="who-we-are__value-icon" style={{ color: '#6D28D9' }} />
+                      <h5 style={{ color: '#4C1D95' }}>Student-Centric</h5>
+                    </div>
+                    <p style={{ color: '#5B21B6' }}>We nurture talent and create opportunities for student growth.</p>
+                  </div>
+                  <div className="who-we-are__core-value" style={{ backgroundColor: '#FFF7ED' }}>
+                    <div className="who-we-are__value-header">
+                      <Lightbulb size={16} className="who-we-are__value-icon" style={{ color: '#EA580C' }} />
+                      <h5 style={{ color: '#9A3412' }}>Innovation-First</h5>
+                    </div>
+                    <p style={{ color: '#C2410C' }}>We embrace creativity and build solutions that make an impact.</p>
+                  </div>
+                  <div className="who-we-are__core-value" style={{ backgroundColor: '#F0FDF4' }}>
+                    <div className="who-we-are__value-header">
+                      <Users size={16} className="who-we-are__value-icon" style={{ color: '#16A34A' }} />
+                      <h5 style={{ color: '#14532D' }}>Collaboration</h5>
+                    </div>
+                    <p style={{ color: '#15803D' }}>We believe great things are built together.</p>
+                  </div>
+                  <div className="who-we-are__core-value" style={{ backgroundColor: '#EFF6FF' }}>
+                    <div className="who-we-are__value-header">
+                      <Target size={16} className="who-we-are__value-icon" style={{ color: '#2563EB' }} />
+                      <h5 style={{ color: '#1E3A8A' }}>Impact-Driven</h5>
+                    </div>
+                    <p style={{ color: '#1D4ED8' }}>Every product we build is designed to solve real-world problems.</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+            
           </div>
         </div>
       </section>

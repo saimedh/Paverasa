@@ -3,7 +3,7 @@ export const services = [
   {
     id: 'web-dev',
     icon: 'Globe',
-    cover: '/assets/cover-web-dev.png',
+    cover: '/assets/cover-web-dev.png?v=2',
     title: 'Web Development',
     shortDesc: 'High-performance web applications built with modern frameworks and best practices.',
     fullDesc: 'We craft blazing-fast, SEO-optimized web applications using React, Next.js, Vue, and Node.js. From landing pages to enterprise-grade platforms, we build digital experiences that convert and scale.',
@@ -13,7 +13,7 @@ export const services = [
   {
     id: 'mobile-dev',
     icon: 'Smartphone',
-    cover: '/assets/cover-mobile-dev.png',
+    cover: '/assets/cover-mobile-dev.png?v=2',
     title: 'Mobile Development',
     shortDesc: 'Cross-platform and native mobile apps for iOS and Android with great UX.',
     fullDesc: 'Our mobile team delivers pixel-perfect apps for iOS and Android using React Native and Flutter. We handle everything from ideation to App Store submission, with ongoing maintenance and updates.',
@@ -23,7 +23,7 @@ export const services = [
   {
     id: 'ui-ux',
     icon: 'Palette',
-    cover: '/assets/cover-uiux.png',
+    cover: '/assets/cover-uiux.png?v=2',
     title: 'UI/UX Design',
     shortDesc: 'Human-centered design that delights users and drives business results.',
     fullDesc: 'Great software starts with great design. We research, prototype, and iterate to create interfaces that are intuitive, accessible, and memorable — always grounded in real user behavior and data.',
@@ -33,7 +33,7 @@ export const services = [
   {
     id: 'ai',
     icon: 'Brain',
-    cover: '/assets/cover-ai.png',
+    cover: '/assets/cover-ai.png?v=2',
     title: 'AI Solutions',
     shortDesc: 'Intelligent systems that automate, predict, and unlock new possibilities.',
     fullDesc: 'From custom LLM integrations to computer vision and predictive analytics, we help businesses harness AI. We build practical AI features — chatbots, recommendation engines, OCR, and more — that create real value.',
@@ -43,7 +43,7 @@ export const services = [
   {
     id: 'analytics',
     icon: 'BarChart3',
-    cover: '/assets/cover-analytics.png',
+    cover: '/assets/cover-analytics.png?v=2',
     title: 'Data Analytics',
     shortDesc: 'Turn raw data into actionable insights with beautiful dashboards and models.',
     fullDesc: 'We design and build end-to-end data pipelines, interactive dashboards, and reporting systems. Our analytics solutions empower teams to make confident, data-driven decisions faster than ever before.',
@@ -53,7 +53,7 @@ export const services = [
   {
     id: 'cloud',
     icon: 'Cloud',
-    cover: '/assets/cover-cloud.png',
+    cover: '/assets/cover-cloud.png?v=2',
     title: 'Cloud & DevOps',
     shortDesc: 'Scalable cloud infrastructure with automated CI/CD and cost optimization.',
     fullDesc: 'We architect and manage cloud environments on AWS, GCP, and Azure — with infrastructure-as-code, auto-scaling, and zero-downtime deployments. Your apps stay fast, resilient, and affordable.',
@@ -63,7 +63,7 @@ export const services = [
   {
     id: 'student',
     icon: 'GraduationCap',
-    cover: '/assets/cover-student.png',
+    cover: '/assets/cover-student.png?v=2',
     title: 'Student Innovation',
     shortDesc: 'Mentorship, tools, and funding opportunities for the next generation of builders.',
     fullDesc: 'Paverasa champions student innovation. We run bootcamps, hackathons, mentorship programs, and provide discounted or free resources to student-led startups. The future belongs to those who dare to build.',
@@ -73,7 +73,7 @@ export const services = [
   {
     id: 'analytics-seo',
     icon: 'TrendingUp',
-    cover: '/assets/cover-analytics-seo.png',
+    cover: '/assets/cover-analytics-seo.png?v=2',
     title: 'Google Analytics & SEO',
     shortDesc: 'Data-driven marketing and search engine optimization to boost your online presence.',
     fullDesc: 'We help you understand your audience and improve your search rankings. From setting up complex Google Analytics tracking to on-page and technical SEO, we ensure your digital assets are visible and measurable.',
@@ -83,7 +83,7 @@ export const services = [
   {
     id: 'system-architecture',
     icon: 'Layers',
-    cover: '/assets/cover-architecture.png',
+    cover: '/assets/cover-architecture.png?v=2',
     title: 'System Architecture',
     shortDesc: 'Robust, scalable, and secure system designs for enterprise applications.',
     fullDesc: 'We design high-level structures of software systems, ensuring they meet both current requirements and future growth. Our architectural blueprints focus on reliability, performance, and seamless integration.',

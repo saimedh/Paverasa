@@ -1,180 +1,161 @@
 // Blog/Insights data
+
 export const posts = [
+
   {
-    id: 'the-start',
-    slug: 'the-start',
-    title: 'THE START',
-    excerpt: 'No one really sees what it takes. From the outside, we are just four students—attending classes, writing exams, living a normal life. But behind that… there were thoughts we never said out loud.',
-    date: 'April 28, 2026',
-    readTime: '3 min read',
-    category: 'Our Story',
-    author: 'PAVERASA',
-    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=640&q=80',
-    gradient: 'linear-gradient(135deg, #14213D 0%, #0E1729 100%)',
-    content: `
-# THE START
-
-No one really sees what it takes.
-From the outside, we are just four students—attending classes, writing exams, living a normal life.
-But behind that… there were thoughts we never said out loud.
-
-The pressure to not fail.
-The responsibility we carry for our families.
-The fear of choosing a path that isn’t “safe.”
-
-We come from middle-class homes, where dreams are often adjusted to fit reality.
-And we understand why.
-We’ve seen the struggles.
-We’ve seen what stability means.
-
-But somewhere, silently, each of us had the same question—
-*“Is this all we are meant to do?”*
-
-We didn’t have answers.
-We didn’t have guarantees.
-All we had… was a feeling that we shouldn’t ignore.
-So we didn’t.
-
-We chose to listen to that small voice inside us—
-even when it didn’t make sense to anyone else.
-
-No big announcements.
-No perfect plans.
-Just a quiet decision…
-to try...
-
-### In middle-class families, dreams are never just yours.
-
-Every decision carries weight.
-Every step is measured.
-Every risk feels expensive.
-
-We grew up watching our families work hard—not for luxury, but for stability.
-So naturally, life had a plan for us:
-Study well.
-Get a secure job.
-Don’t take risks.
-
-And honestly… we respect that.
-But somewhere between expectations and reality,
-we found ourselves asking—
-
-*“What if we want something more?”*
-
-Not more money.
-Not more comfort.
-But more meaning.
-
-Choosing a different path wasn’t easy.
-Because it didn’t just affect us—
-it challenged everything we were taught to believe.
-
-There was fear.
-There was confusion.
-But there was also something else…
-A quiet courage we didn’t know we had.
-
-And that’s where our story truly began.
-    `,
+    "id": "7467149574730194368",
+    "slug": "an-idea-called-picsidrop",
+    "title": "An Idea Called PicsiDrop",
+    "excerpt": "&nbsp; The Problem We Couldn't Ignore The more we looked around... the more we noticed something strange. Every day, thousands of people were already ...",
+    "date": "June 5, 2026",
+    "readTime": "1 min read",
+    "category": "Entrepreneurship",
+    "author": "PAVERASA THE DREAM OF FOUR",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=640&q=80",
+    "gradient": "linear-gradient(135deg, #F97316 0%, #14213D 100%)",
+    "content": "&nbsp;\n\n## The Problem We Couldn't Ignore\n\nThe more we looked around...\n\nthe more we noticed something strange.\n\nEvery day, thousands of people were already traveling.\n\nStudents going to college.\n\nEmployees going to work.\n\nPeople moving from one place to another as part of their normal routine.\n\nThe movement was already happening.\n\nThe roads were already crowded.\n\nThe journeys were already being made.\n\nYet at the same time...\n\ncountless deliveries were happening separately.\n\nMore vehicles.\n\nMore fuel.\n\nMore time.\n\nMore cost.\n\nAnd one question kept coming back to us.\n\nWhat if these journeys could do more?\n\nWhat if someone already traveling in the same direction could help move a package along the way?\n\nWhat if a daily commute could become an opportunity?\n\nAt first...\n\nit sounded like just another idea.\n\nA random thought.\n\nSomething interesting to discuss and then forget.\n\nBut the more we talked about it...\n\nthe harder it became to ignore.\n\nBecause this wasn't just about deliveries.\n\nIt was about efficiency.\n\nOpportunity.\n\nAnd making better use of something that already existed.\n\nWe didn't have all the answers.\n\nBut for the first time...\n\nwe felt like we had found a problem worth solving.\n\nAnd that changed everything."
   },
   {
-    id: 'ai-student-innovation',
-    slug: 'ai-student-innovation',
-    title: 'How AI Is Reshaping Student Innovation in Africa',
-    excerpt: 'Across universities and tech hubs, a generation of student builders is harnessing AI tools to solve hyper-local problems. Here\'s what we\'re seeing on the ground.',
-    date: 'June 28, 2026',
-    readTime: '6 min read',
-    category: 'AI & Innovation',
-    author: 'Fatima Bello',
-    image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=640&q=80',
-    gradient: 'linear-gradient(135deg, #F97316 0%, #14213D 100%)',
-    content: `
-# How AI Is Reshaping Student Innovation in Africa
-
-Across universities, hackathons, and tech hubs from Lagos to Nairobi, something extraordinary is happening. A new generation of student builders is picking up AI tools — not as novelties, but as serious instruments for solving real problems.
-
-## The Shift We're Seeing
-
-At Paverasa, we run innovation programs in partnership with several universities. Over the past 18 months, the number of student projects incorporating AI has grown by over 300%. More importantly, the *quality* and *scope* of these projects has changed dramatically.
-
-Students are no longer just building chatbots. They're building:
-- Agricultural disease detection systems using computer vision
-- Financial inclusion tools powered by NLP that work in local languages
-- Predictive health screening tools for community clinics
-
-## What This Means for the Industry
-
-The implication is clear: the next wave of African tech innovation will be AI-native from day one. Companies and investors who build relationships with student innovators today are positioning themselves at the forefront of this wave.
-
-## How Paverasa Is Contributing
-
-Through CampusLink and our Student Innovation Programs, we provide free access to AI development resources, mentorship from our engineering team, and a community of peers building alongside you.
-
-If you're a student with an idea — we want to hear from you.
-    `,
+    "id": "7231576119906444807",
+    "slug": "paverasa-more-than-just-name",
+    "title": "PAVERASA  : MORE THAN JUST A NAME",
+    "excerpt": "Giving it a name felt exciting. But names alone don't build anything. What mattered was what stood behind it. For us, Paverasa was never meant to be j...",
+    "date": "May 30, 2026",
+    "readTime": "1 min read",
+    "category": "Entrepreneurship",
+    "author": "PAVERASA THE DREAM OF FOUR",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=640&q=80",
+    "gradient": "linear-gradient(135deg, #14213D 0%, #F97316 100%)",
+    "content": "Giving it a name felt exciting.\n\nBut names alone don't build anything.\n\nWhat mattered was what stood behind it.\n\nFor us, Paverasa was never meant to be just another company.\n\nIt was an idea.\n\nA belief.\n\nA reminder of why we started in the first place.\n\nWe weren't trying to become entrepreneurs overnight.\n\nWe weren't chasing success stories.\n\nWe were simply trying to solve problems that people face every day.\n\nThe kind of problems that are easy to ignore.\n\nEasy to accept.\n\nEasy to live with.\n\nBut difficult to solve.\n\nAnd that realization changed everything.\n\nBecause once you start looking at the world through that lens—\n\nyou begin to see opportunities where others see inconveniences.\n\nQuestions where others see routines.\n\nPossibilities where others see limitations.\n\nThat was the mindset we wanted Paverasa to represent.\n\nNot just building businesses.\n\nBut building solutions.\n\nNot just talking about change.\n\nBut trying to create it.\n\nAnd with that mindset...\n\nwe started searching for the first problem worth solving."
   },
   {
-    id: 'building-scalable-apis',
-    slug: 'building-scalable-apis',
-    title: 'Building Scalable APIs: Lessons from 50 Production Deployments',
-    excerpt: 'After deploying over 50 APIs to production for clients across industries, we\'ve distilled the patterns that separate robust services from brittle ones.',
-    date: 'June 14, 2026',
-    readTime: '9 min read',
-    category: 'Engineering',
-    author: 'Kwame Osei',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=640&q=80',
-    gradient: 'linear-gradient(135deg, #14213D 0%, #F97316 100%)',
-    content: `
-# Building Scalable APIs: Lessons from 50 Production Deployments
-
-Scalability isn't something you bolt on after the fact — it's an architectural posture you adopt from the first line of code.
-
-## The Top 5 Lessons
-
-**1. Design for the 99th percentile, not the average**
-Most API performance discussions focus on average response times. But your users experience the worst case. Profile under realistic load.
-
-**2. Async everything that can be async**
-Synchronous blocking calls are the number one killer of API throughput. Webhooks, message queues, and event-driven patterns exist for good reason.
-
-**3. Rate limiting is not optional**
-Every public-facing API endpoint needs rate limiting. Full stop. We've seen too many clients get hit by abuse they never anticipated.
-
-**4. Observability from day one**
-Structured logging, distributed tracing, and meaningful metrics aren't premature optimization — they're table stakes.
-
-**5. Schema-first development pays dividends**
-Whether you use OpenAPI, GraphQL, or gRPC, defining your schema before implementation creates a forcing function for clear thinking.
-    `,
+    "id": "3045194758381217562",
+    "slug": "thats-when-paverasa-began",
+    "title": "That’s When PAVERASA Began",
+    "excerpt": "&nbsp;Every journey reaches a point… where thoughts are no longer enough. For us— that moment came quietly. Somewhere between all the late-night discu...",
+    "date": "May 24, 2026",
+    "readTime": "1 min read",
+    "category": "Entrepreneurship",
+    "author": "PAVERASA THE DREAM OF FOUR",
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFTl4vRA0NtPpa-cqJr61HDJ12NIEeccFKuHIgxCshoqfeSj4xeaPvktUEZ0FacJ1aAdc33dVfi9C-urES2a1dQmdHYsrkbYW46DcxE6Z2qCy2T105-gAkEhlAZvIkfPIo9JiZu86KKm3BTKNqQZFdpd0Nt29Yie9Ty0kH4TbT2dXtZscunLN6rMdrapQE/s320/WhatsApp%20Image%202026-05-24%20at%2011.16.49%20PM.jpeg",
+    "gradient": "linear-gradient(135deg, #0E1729 0%, #14213D 100%)",
+    "content": "&nbsp;Every journey reaches a point…\n\nwhere thoughts are no longer enough.\n\nFor us—\n\nthat moment came quietly.\n\nSomewhere between all the late-night discussions, unfinished ideas, confusion, and constant overthinking…\n\nwe realized something.\n\nWe were no longer just students discussing ideas for fun.\n\nWe were trying to build something we genuinely believed in.\n\nNot because we knew everything.\n\nNot because we were fully ready.\n\nBut because ignoring the idea had become harder than trying.\n\nThere were still doubts.\n\nStill uncertainty.\n\nStill moments where nothing made sense.\n\nBut this time…\n\nthe feeling was different.\n\nThe idea finally had direction.\n\nNot because we suddenly became experts—\n\nbut because we understood why we started in the first place.\n\nWe wanted to create something meaningful.\n\nSomething built with purpose.\n\nSomething that could solve real problems instead of just talking about them.\n\nAnd slowly…\n\nthat vision became a name.\n\n**Paverasa Pvt. Ltd.**\n\n[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFTl4vRA0NtPpa-cqJr61HDJ12NIEeccFKuHIgxCshoqfeSj4xeaPvktUEZ0FacJ1aAdc33dVfi9C-urES2a1dQmdHYsrkbYW46DcxE6Z2qCy2T105-gAkEhlAZvIkfPIo9JiZu86KKm3BTKNqQZFdpd0Nt29Yie9Ty0kH4TbT2dXtZscunLN6rMdrapQE/s320/WhatsApp%20Image%202026-05-24%20at%2011.16.49%20PM.jpeg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFTl4vRA0NtPpa-cqJr61HDJ12NIEeccFKuHIgxCshoqfeSj4xeaPvktUEZ0FacJ1aAdc33dVfi9C-urES2a1dQmdHYsrkbYW46DcxE6Z2qCy2T105-gAkEhlAZvIkfPIo9JiZu86KKm3BTKNqQZFdpd0Nt29Yie9Ty0kH4TbT2dXtZscunLN6rMdrapQE/s1600/WhatsApp%20Image%202026-05-24%20at%2011.16.49%20PM.jpeg)\nNot just a company.\n\nBut a reflection of four students who chose a different path.\n\nA beginning built from uncertainty, learning, mistakes, late nights, belief—\n\nand the courage to try anyway.\n\nThis is only the beginning.\n\nAnd somewhere ahead…\n\nthe real journey is waiting for us."
   },
   {
-    id: 'design-systems-for-startups',
-    slug: 'design-systems-for-startups',
-    title: 'Why Early-Stage Startups Need a Design System (and How to Build One)',
-    excerpt: 'A design system feels like overhead for a startup — until you\'re three products deep with four designers working in conflicting styles. Here\'s how to start small and scale right.',
-    date: 'May 30, 2026',
-    readTime: '7 min read',
-    category: 'Design',
-    author: 'Priya Nair',
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=640&q=80',
-    gradient: 'linear-gradient(135deg, #0E1729 0%, #14213D 100%)',
-    content: `
-# Why Early-Stage Startups Need a Design System
-
-Most early-stage startups treat design systems as a luxury reserved for big companies with large design teams. This is a mistake that costs them dearly when they scale.
-
-## The Real Cost of Design Debt
-
-Without a system, every new screen becomes a negotiation. Colors vary. Spacing is inconsistent. Buttons look different across pages. The cognitive tax on your team — and on your users — compounds daily.
-
-## Start with Just Three Things
-
-You don't need a full-blown Figma design system on day one. Start with:
-1. A color palette (5 colors max)
-2. A type scale (4 sizes)
-3. A spacing scale (4–6 values)
-
-Document them. Enforce them. Everything else can evolve from there.
-    `,
+    "id": "1538070886753936212",
+    "slug": "the-idea-finally-had-shape",
+    "title": "THE IDEA FINALLY HAD A SHAPE",
+    "excerpt": "&nbsp; For a long time… it was just feelings. Thoughts we couldn’t fully explain. Problems we kept noticing. Questions that stayed in our minds longer...",
+    "date": "May 19, 2026",
+    "readTime": "1 min read",
+    "category": "Entrepreneurship",
+    "author": "PAVERASA THE DREAM OF FOUR",
+    "image": "https://blogger.googleusercontent.com/img/a/AVvXsEiQD0TEvfwZ6KIAR4pXrAlA2uJ61qEfDczfB2yU8lg1iWouCT64k3MhMlo89pWPCqesVx8G84sIZxJ70DuVyxYDiVrGcysvlnaWCUDipwq03zitIAmpy2ju-JXAQ7xZymdWZKfZQSwWEsVbHNSF3-xqp5bS2ROEvpA89R_O9IpU7mPj5RoOQC6nlX_LRd1x=w400-h266",
+    "gradient": "linear-gradient(135deg, #14213D 0%, #0E1729 100%)",
+    "content": "&nbsp;For a long time…\n\nit was just feelings.\n\nThoughts we couldn’t fully explain.Problems we kept noticing.Questions that stayed in our minds longer than they should have.\n\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\n\n[![](https://blogger.googleusercontent.com/img/a/AVvXsEiQD0TEvfwZ6KIAR4pXrAlA2uJ61qEfDczfB2yU8lg1iWouCT64k3MhMlo89pWPCqesVx8G84sIZxJ70DuVyxYDiVrGcysvlnaWCUDipwq03zitIAmpy2ju-JXAQ7xZymdWZKfZQSwWEsVbHNSF3-xqp5bS2ROEvpA89R_O9IpU7mPj5RoOQC6nlX_LRd1x=w400-h266)](https://blogger.googleusercontent.com/img/a/AVvXsEiQD0TEvfwZ6KIAR4pXrAlA2uJ61qEfDczfB2yU8lg1iWouCT64k3MhMlo89pWPCqesVx8G84sIZxJ70DuVyxYDiVrGcysvlnaWCUDipwq03zitIAmpy2ju-JXAQ7xZymdWZKfZQSwWEsVbHNSF3-xqp5bS2ROEvpA89R_O9IpU7mPj5RoOQC6nlX_LRd1x)\n\n&nbsp; But slowly—\n\nthose conversations started connecting.\n\nPiece by piece.\n\nWhat once felt random…\n\nstarted making sense.\n\nWe weren’t just talking anymore.\n\nWe were trying to build something that could actually solve a real problem.\n\n&nbsp;Not something huge.\n\nNot something perfect.\n\nJust something useful.\nSomething meaningful.\n\nAnd honestly…\n\nthat realization changed the way we looked at everything.\n\nBecause now there was responsibility.\n\nNot just excitement.\n\n[![](https://blogger.googleusercontent.com/img/a/AVvXsEgtUYzUawAQrHtBU9rrifpxd_bHR9uooHFn0Fk-T1nao-eOF7aZ94TjLzXt-UneJ47zZMKeYlkvcjKMk9Ky5NlgZPA3ZIU5oBWkLBew-_iQy3OFjSQ_ePbG3TzidxFcy7EroqMthKeLgKlukvbqBqTS5RxSNKzqUywuasNZVAL0z7RbgVgtiPm8VEp3RN6T=w400-h266)](https://blogger.googleusercontent.com/img/a/AVvXsEgtUYzUawAQrHtBU9rrifpxd_bHR9uooHFn0Fk-T1nao-eOF7aZ94TjLzXt-UneJ47zZMKeYlkvcjKMk9Ky5NlgZPA3ZIU5oBWkLBew-_iQy3OFjSQ_ePbG3TzidxFcy7EroqMthKeLgKlukvbqBqTS5RxSNKzqUywuasNZVAL0z7RbgVgtiPm8VEp3RN6T)\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\n\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;The idea had become real enough to fail.\n\nReal enough to doubt.\n\nReal enough to matter.\n\nBut even after all the uncertainty…\n\nwe kept coming back to the same thought:\n\n“If this can genuinely help people… shouldn’t we at least try?”\n\nAnd somewhere in the middle of all those late nights and unfinished discussions—\n\nthe idea finally had a shape.\n\nNot just in our minds anymore.\n\nBut in front of us.\n\n&nbsp;"
   },
+  {
+    "id": "2666552908478250462",
+    "slug": "thats-when-we-started-building",
+    "title": "That’s When We Started Building",
+    "excerpt": "&nbsp; At first… it was just thoughts. Questions. Ideas. Conversations that kept repeating themselves. &nbsp;But after a point— thinking didn’t feel e...",
+    "date": "May 18, 2026",
+    "readTime": "1 min read",
+    "category": "Entrepreneurship",
+    "author": "PAVERASA THE DREAM OF FOUR",
+    "image": "https://blogger.googleusercontent.com/img/a/AVvXsEh1S1ta0dIqTUnuUmZaMJh5ZSvkW8WJE1laWaGXlz-WClqoN4aH9qz0cyG9_sjqd088D4TUEEdfHfxHYR6QHr4nWsQ1zCDFpz2Ohx-KaMSLyZEry2HLCdT964MwpsZq2rCCsdN-YkwbndhiGjCKZBGAqRLnoFyChAuasgaF6bCx2OhIlpN-WpsUJb0LaijG=w652-h286",
+    "gradient": "linear-gradient(135deg, #F97316 0%, #14213D 100%)",
+    "content": "&nbsp;At first…\n\nit was just thoughts.\n\nQuestions.Ideas.Conversations that kept repeating themselves.\n\n[![](https://blogger.googleusercontent.com/img/a/AVvXsEh1S1ta0dIqTUnuUmZaMJh5ZSvkW8WJE1laWaGXlz-WClqoN4aH9qz0cyG9_sjqd088D4TUEEdfHfxHYR6QHr4nWsQ1zCDFpz2Ohx-KaMSLyZEry2HLCdT964MwpsZq2rCCsdN-YkwbndhiGjCKZBGAqRLnoFyChAuasgaF6bCx2OhIlpN-WpsUJb0LaijG=w652-h286)](https://blogger.googleusercontent.com/img/a/AVvXsEh1S1ta0dIqTUnuUmZaMJh5ZSvkW8WJE1laWaGXlz-WClqoN4aH9qz0cyG9_sjqd088D4TUEEdfHfxHYR6QHr4nWsQ1zCDFpz2Ohx-KaMSLyZEry2HLCdT964MwpsZq2rCCsdN-YkwbndhiGjCKZBGAqRLnoFyChAuasgaF6bCx2OhIlpN-WpsUJb0LaijG)\n\n&nbsp;But after a point—\n\nthinking didn’t feel enough anymore.\n\nWe wanted to see if something real could actually come out of it.\n\nSo we started doing what most beginners do.\n\nSearching for answers we didn’t fully understand.Learning things we had never tried before.\n\nMaking mistakes every few steps.&nbsp; &nbsp; &nbsp;\n\nSometimes we felt motivated.\n\nSometimes we felt completely lost.\n\nThere were moments where even simple things felt difficult.\n\nNot because the idea was impossible—\n\nbut because we were new to all of this.&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\n\n[![](https://blogger.googleusercontent.com/img/a/AVvXsEhGOGK3nCKGnTQ08c6KkQUZOuvGQsT4Ns3m5ldrn4Z9Thx2IVQ0iJfX8YZ_F2WyPn7GWgWwyi4S7BicNO0KJH3gbK-97cV-65-uA_0u8IKEvKxZtv3KXT4DbZM6QSqwxdXaFyi8Hugxmj5hU403mI4ZeFP6kU-cVqNDIlOSl_AkC1jjan1g-HosyeDWY-KS=w574-h382)](https://blogger.googleusercontent.com/img/a/AVvXsEhGOGK3nCKGnTQ08c6KkQUZOuvGQsT4Ns3m5ldrn4Z9Thx2IVQ0iJfX8YZ_F2WyPn7GWgWwyi4S7BicNO0KJH3gbK-97cV-65-uA_0u8IKEvKxZtv3KXT4DbZM6QSqwxdXaFyi8Hugxmj5hU403mI4ZeFP6kU-cVqNDIlOSl_AkC1jjan1g-HosyeDWY-KS)\n\nStill…\n\nwe kept showing up.\n\nOne small step at a time.\n\nLate nights.\nRandom notes.\nHalf-working ideas.\nConversations that slowly became plans.\n\nAnd somewhere in the middle of all that…\n\nsomething changed.\n\nThis no longer felt like “just an idea.”\n\nFor the first time—\n\nit started feeling real."
+  },
+  {
+    "id": "1650473304134361651",
+    "slug": "one-question-stayed-with-us",
+    "title": "ONE QUESTION STAYED WITH US ",
+    "excerpt": "The more we noticed it… the harder it became to ignore. It wasn’t just a random inconvenience anymore. It was one of those things people silently adju...",
+    "date": "May 16, 2026",
+    "readTime": "1 min read",
+    "category": "Entrepreneurship",
+    "author": "PAVERASA THE DREAM OF FOUR",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=640&q=80",
+    "gradient": "linear-gradient(135deg, #14213D 0%, #F97316 100%)",
+    "content": "The more we noticed it…\n\nthe harder it became to ignore.\n\nIt wasn’t just a random inconvenience anymore.\n\nIt was one of those things people silently adjust to every day.\n\nNobody really stops to question it.\n\nBecause eventually, people get used to struggling with things that should have been simple.\n\nAnd honestly…\n\nthat thought stayed with us.\n\nWhy should something so normalstill feel so inconvenient?\n\nWe talked about it more seriously this time.\n\nNot like random discussions.\n\nBut like people trying to understand whether something could actually be done differently.\n\nSome conversations went nowhere.\n\nSome ideas made no sense.\n\nSome felt impossible the moment we said them out loud.\n\nBut somewhere in the middle of all that confusion…\n\nsomething started taking shape.\n\nVery slowly.\n\nNot a business.Not a company.\n\nJust… an idea.\n\nAn idea that maybe—\n\nthere was a better way to do things.\n\nAnd for the first time…\n\nwe stopped thinking only as students.\n\nWe started thinking like builders."
+  },
+  {
+    "id": "2058204013272086407",
+    "slug": "we-started-seeing-things-differently",
+    "title": "We Started Seeing Things Differently",
+    "excerpt": "we started noticing. we started questioning. An inconvenience there. the more often we saw it. Around people. Sometimes even in our own experiences. w...",
+    "date": "May 13, 2026",
+    "readTime": "1 min read",
+    "category": "Entrepreneurship",
+    "author": "PAVERASA THE DREAM OF FOUR",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=640&q=80",
+    "gradient": "linear-gradient(135deg, #0E1729 0%, #14213D 100%)",
+    "content": "we started noticing.we started questioning.An inconvenience there.the more often we saw it.Around people.Sometimes even in our own experiences.we used to do the same.\n\nOnce we started…\n\nit became hard to look at things the same way again.\n\nSmall problems started standing out.\n\nSituations people ignored…\n\nThings people adjusted to…\n\nAt first, it was random.\n\nA conversation here.\n\nNothing huge.\n\nBut the strange part was—\n\nthe more we paid attention,\n\nIn everyday life.\n\nAnd every time we noticed it…\n\nthe same thought came back:\n\n*“Why does this still feel so difficult?”*\n\nMost people moved on from these things quickly.\n\nHonestly…\n\nBut now, something felt different.\n\nWe weren’t just observing anymore.\n\nWe were trying to understand.\n\nNot because we had solutions.\n\nBut because for the first time…\n\nwe genuinely wanted to find one."
+  },
+  {
+    "id": "4969895412239739385",
+    "slug": "we-start",
+    "title": "WE START",
+    "excerpt": "Not with a company. Not with a perfect idea. Just… with curiosity. Once we made that decision, everything still felt uncertain. We didn’t suddenly bec...",
+    "date": "May 10, 2026",
+    "readTime": "1 min read",
+    "category": "Entrepreneurship",
+    "author": "PAVERASA THE DREAM OF FOUR",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=640&q=80",
+    "gradient": "linear-gradient(135deg, #14213D 0%, #0E1729 100%)",
+    "content": "Not with a company.Not with a perfect idea.\n\nJust… with curiosity.\n\nOnce we made that decision,everything still felt uncertain.\n\nWe didn’t suddenly become experts.\n\nMost of the time,we were just figuring things out as we went.\n\nSearching.Discussing.Questioning everything.\n\nSome days felt exciting.Some days felt completely confusing.\n\nThere were moments where the idea felt real.\n\nAnd moments where it felt impossible.\n\nBut slowly…something started changing.\n\nWe stopped talking like people who were “just thinking.”\n\nWe started acting like people trying to build something.\n\nEven if it was small.\n\nEven if nobody noticed.\n\nEven if we had no guarantee it would work.\n\nBecause somewhere between all the confusion and overthinking…\n\nwe realized something important—\n\nif we kept waiting to feel ready,we would never begin.\n\nSo we stopped waiting.\n\nAnd we started."
+  },
+  {
+    "id": "2236625121788656964",
+    "slug": "choice-that-makes-us-here",
+    "title": "CHOICE THAT MAKES US HERE ",
+    "excerpt": "&nbsp; EVERYONE HAD A CHOICE BUT HERE WE CHOOSE DIFFERENT FROM OTHERS &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;We Had Two Choices Once we saw it… we couldn’t ...",
+    "date": "May 6, 2026",
+    "readTime": "1 min read",
+    "category": "Entrepreneurship",
+    "author": "PAVERASA THE DREAM OF FOUR",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=640&q=80",
+    "gradient": "linear-gradient(135deg, #F97316 0%, #14213D 100%)",
+    "content": "&nbsp;**EVERYONE HAD A CHOICE BUT HERE WE CHOOSE DIFFERENT FROM OTHERS**\n\n&nbsp; &nbsp; &nbsp;&nbsp;\n\n## &nbsp;We Had Two Choices\n\nOnce we saw it… we couldn’t ignore it anymore.\n\nBut knowing something is wrongand deciding to do something about it—those are two very different things.\n\nWe had two choices.\n\nDo what everyone does—notice it, talk about it for a while,and then move on.\n\nOr…\n\nstay with it.Think about it.Try to understand it.\n\nEven if it meant failing.\n\nAnd honestly—the first option was easier.\n\nNo risk.No pressure.No expectations.\n\nThe second option?\n\nUncertainty.Confusion.The chance that nothing works.\n\nWe didn’t decide immediately.\n\nThere were days we ignored it.Days we told ourselves,*“Let’s just focus on studies.”*\n\nBut somehow…we kept coming back.\n\nThat same question again—\n\n*“What if we actually try to solve this?”*\n\nNot perfectly.Not completely.\n\nJust… start.\n\nThat thought stayed longer than our doubts.\n\nAnd slowly—\n\nwithout any big announcement,without feeling fully ready—\n\nwe made a decision.\n\nNot a confident one.Not a perfect one.\n\nJust a real one.\n\nWe were going to try."
+  },
+  {
+    "id": "6065327301648461693",
+    "slug": "before-we-knew-it-we-were-in-it",
+    "title": "Before We Knew It, We Were In It",
+    "excerpt": "Nothing around us changed. Same classrooms. Same routines. Same everyday life. But something… didn’t feel the same anymore. That question— “What if we...",
+    "date": "May 3, 2026",
+    "readTime": "2 min read",
+    "category": "Entrepreneurship",
+    "author": "PAVERASA THE DREAM OF FOUR",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=640&q=80",
+    "gradient": "linear-gradient(135deg, #14213D 0%, #F97316 100%)",
+    "content": "Nothing around us changed.\n\nSame classrooms.Same routines.Same everyday life.\n\nBut something… didn’t feel the same anymore.\n\nThat question—*“What if we try?”*\n\nIt didn’t leave.\n\nIt followed us.\n\nInto lectures we couldn’t fully focus on.Into walks back home.Into those quiet moments when everything else went silent.\n\nWe didn’t sit down and make a plan.\n\nWe didn’t say, *“This is the start.”*\n\nWe just… kept coming back to it.\n\nAgain.And again.\n\nAt first, it felt small.Almost meaningless.\n\nJust another thought.\n\nBut slowly—it started taking space.\n\nIn our conversations.In our time.In our minds.\n\nWe tried a few things.Some worked.Most didn’t.\n\nThere were moments when it felt like nothing was happening.\n\nAnd yet…we didn’t stop.\n\nNot because we were confident.Not because we had clarity.\n\nBut because something about it felt… important.\n\nLike we were standing at the edge of something—we couldn’t see it clearly,but we knew it was there.\n\nWe didn’t have a name for it.We didn’t know where it would lead.\n\nBut deep down—\n\nwe had a feeling…\n\nthis wasn’t just a phase.\n\nThis was the beginning of something we wouldn’t be able to walk away from."
+  },
+  {
+    "id": "4077252696178042895",
+    "slug": "somewhere-things-started-changing",
+    "title": "Somewhere… Things Started Changing",
+    "excerpt": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Somewhere… Things Started&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Changing It wasn’t a big moment. No sudden clarit...",
+    "date": "May 1, 2026",
+    "readTime": "1 min read",
+    "category": "Entrepreneurship",
+    "author": "PAVERASA THE DREAM OF FOUR",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=640&q=80",
+    "gradient": "linear-gradient(135deg, #0E1729 0%, #14213D 100%)",
+    "content": "&nbsp;\n\n## &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Somewhere… Things Started&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Changing\n\nIt wasn’t a big moment.\n\nNo sudden clarity.No perfect plan.\n\nJust… small things.\n\nConversations that lasted longer than usual.Silences that meant more than words.Thoughts that didn’t leave, even after the day ended.\n\nSometimes after classes…sometimes late at night…we found ourselves talking about the same thing.\n\nNot marks.Not exams.\n\nSomething else.\n\nSomething we couldn’t fully explain.\n\nA question… that kept coming back—*“What if we try?”*\n\nNot because we were ready.Not because we had everything figured out.\n\nJust because…we didn’t want to ignore it anymore.\n\nThere were pauses.Doubts.That uncomfortable feeling of stepping into something unknown.\n\nBut at the same time…there was a strange kind of calm.\n\nLike…this might actually mean something.\n\nNo big discussions.No final decisions written anywhere.\n\nJust four people…slowly leaning towards the same thought.\n\nAnd one day—\n\nwithout saying it loudly,without making it official—\n\nwe knew.\n\nSomething had already started."
+  },
+  {
+    "id": "4330049521451277226",
+    "slug": "the-start",
+    "title": "THE START ",
+    "excerpt": "No one really sees what it takes. From the outside, we are just four students—attending classes, writing exams, living a normal life. But behind that…...",
+    "date": "April 28, 2026",
+    "readTime": "2 min read",
+    "category": "Entrepreneurship",
+    "author": "PAVERASA THE DREAM OF FOUR",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=640&q=80",
+    "gradient": "linear-gradient(135deg, #14213D 0%, #0E1729 100%)",
+    "content": "No one really sees what it takes.\n\nFrom the outside, we are just four students—attending classes, writing exams, living a normal life.\n\nBut behind that… there were thoughts we never said out loud.\n\nThe pressure to not fail.The responsibility we carry for our families.The fear of choosing a path that isn’t “safe.”\n\nWe come from middle-class homes, where dreams are often adjusted to fit reality.\n\nAnd we understand why.We’ve seen the struggles.We’ve seen what stability means.\n\nBut somewhere, silently, each of us had the same question—*“Is this all we are meant to do?”*\n\nWe didn’t have answers.We didn’t have guarantees.\n\nAll we had… was a feeling that we shouldn’t ignore.\n\nSo we didn’t.\n\nWe chose to listen to that small voice inside us—even when it didn’t make sense to anyone else.\n\nNo big announcements.No perfect plans.\n\nJust a quiet decision…to try......,\n\nIn middle-class families, dreams are never just yours.\n\nEvery decision carries weight.Every step is measured.Every risk feels expensive.\n\nWe grew up watching our families work hard—not for luxury, but for stability.\n\nSo naturally, life had a plan for us:Study well.Get a secure job.Don’t take risks.\n\nAnd honestly… we respect that.\n\nBut somewhere between expectations and reality,we found ourselves asking—\n\n*“What if we want something more?”*\n\nNot more money.Not more comfort.\n\nBut more meaning.\n\nChoosing a different path wasn’t easy.Because it didn’t just affect us—it challenged everything we were taught to believe.\n\nThere was fear.There was confusion.\n\nBut there was also something else…A quiet courage we didn’t know we had.\n\nAnd that’s where our story truly began."
+  }
 ];

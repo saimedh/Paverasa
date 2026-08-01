@@ -50,7 +50,7 @@ export default function Blog() {
             <h2 className="blog-posts-title">All Articles</h2>
           </div>
           <div className="blog-all-grid">
-            {posts.map((post) => (
+            {posts.slice(1).map((post) => (
               <a
                 href={`/blog/${post.slug}`}
                 key={post.title}
