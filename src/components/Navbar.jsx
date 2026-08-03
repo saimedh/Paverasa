@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { motion } from 'framer-motion';
 import Logo from './Logo';
 import './navbar.css';
 
@@ -12,7 +11,6 @@ const navLinks = [
   { to: '/products', label: 'Products' },
   { to: '/team', label: 'Team' },
   { to: '/blog', label: 'Blog' },
-  { to: '/contact', label: 'Contact' },
 ];
 
 export default function Navbar() {
@@ -26,7 +24,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileOpen(false);
   }, [location]);
@@ -34,13 +31,14 @@ export default function Navbar() {
   return (
     <>
       <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
-        <div className="navbar__inner container-wide">
-          {/* Logo */}
-          <Link to="/" className="navbar__logo" aria-label="Paverasa Home">
+        <div className="navbar__inner">
+
+          {/* ── Left: Logo in black box ── */}
+          <Link to="/" className="navbar__logo-box" aria-label="Paverasa Home">
             <Logo className="navbar__logo-svg" />
           </Link>
 
-          {/* Desktop Nav */}
+          {/* ── Middle: Nav links ── */}
           <nav className="navbar__links" aria-label="Main navigation">
             {navLinks.map((link) => (
               <NavLink
@@ -48,27 +46,21 @@ export default function Navbar() {
                 to={link.to}
                 end={link.to === '/'}
                 className={({ isActive }) =>
-                  `navbar__link relative z-10 ${isActive ? 'navbar__link--active' : ''}`
+                  `navbar__link ${isActive ? 'navbar__link--active' : ''}`
                 }
               >
-                {({ isActive }) => (
-                  <>
-                    {isActive && (
-                      <motion.span
-                        layoutId="nav-active-indicator"
-                        className="absolute bottom-0 left-2 right-2 h-[2px] bg-[#F97316] rounded-full"
-                        transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                      />
-                    )}
-                    {link.label}
-                  </>
-                )}
+                {link.label}
               </NavLink>
             ))}
           </nav>
 
-          {/* Actions */}
-          <div className="navbar__actions">
+          {/* ── Right: CTA & Mobile Menu Toggle ── */}
+          <div className="navbar__right">
+            <Link to="/contact" className="navbar__cta-btn">
+              Let's Talk
+            </Link>
+            
+            {/* ── Mobile hamburger ── */}
             <button
               className="navbar__hamburger"
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -77,10 +69,11 @@ export default function Navbar() {
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
+
         </div>
       </header>
 
-      {/* Mobile Menu */}
+      {/* ── Mobile drawer ── */}
       <div className={`mobile-menu ${mobileOpen ? 'mobile-menu--open' : ''}`}>
         <nav className="mobile-menu__links">
           {navLinks.map((link) => (
@@ -95,7 +88,9 @@ export default function Navbar() {
               {link.label}
             </NavLink>
           ))}
-
+          <Link to="/contact" className="mobile-menu__cta-pill">
+            Let's Talk
+          </Link>
         </nav>
       </div>
     </>

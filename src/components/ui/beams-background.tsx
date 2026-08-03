@@ -137,15 +137,27 @@ export function BeamsBackground({
             ctx.restore();
         }
 
-        function animate() {
+        let lastTime = 0;
+        const fpsInterval = 1000 / 30;
+
+        function animate(time: number) {
+            animationFrameRef.current = requestAnimationFrame(animate);
+
+            if (!time) time = performance.now();
+            const elapsed = time - lastTime;
+            if (elapsed < fpsInterval) return;
+            lastTime = time - (elapsed % fpsInterval);
+
             if (!canvas || !ctx) return;
 
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             const totalBeams = beamsRef.current.length;
             beamsRef.current.forEach((beam, index) => {
-                beam.y -= beam.speed;
-                beam.pulse += beam.pulseSpeed;
+                // Adjust speed slightly to compensate for lower framerate 
+                // (Optional, but helps keep the feel consistent)
+                beam.y -= beam.speed * 2; 
+                beam.pulse += beam.pulseSpeed * 2;
 
                 // Reset beam when it goes off screen
                 if (beam.y + beam.length < -100) {
@@ -154,8 +166,6 @@ export function BeamsBackground({
 
                 drawBeam(ctx, beam);
             });
-
-            animationFrameRef.current = requestAnimationFrame(animate);
         }
 
         animate();

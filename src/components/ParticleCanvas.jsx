@@ -30,7 +30,17 @@ export default function ParticleCanvas({ className = '' }) {
       r: Math.random() * 2 + 1,
     }));
 
-    function draw() {
+    let lastTime = 0;
+    const fpsInterval = 1000 / 30;
+
+    function draw(time) {
+      animRef.current = requestAnimationFrame(draw);
+
+      if (!time) time = performance.now();
+      const elapsed = time - lastTime;
+      if (elapsed < fpsInterval) return;
+      lastTime = time - (elapsed % fpsInterval);
+
       ctx.clearRect(0, 0, W, H);
 
       // Draw connections
@@ -58,14 +68,12 @@ export default function ParticleCanvas({ className = '' }) {
         ctx.fillStyle = 'rgba(252, 163, 17, 0.4)';
         ctx.fill();
 
-        // Move
-        p.x += p.vx;
-        p.y += p.vy;
+        // Move (speed doubled to compensate for 30fps throttle)
+        p.x += p.vx * 2;
+        p.y += p.vy * 2;
         if (p.x < 0 || p.x > W) p.vx *= -1;
         if (p.y < 0 || p.y > H) p.vy *= -1;
       }
-
-      animRef.current = requestAnimationFrame(draw);
     }
 
     draw();

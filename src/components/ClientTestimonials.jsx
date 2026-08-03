@@ -113,12 +113,9 @@ function TestimonialCard({ t, sectionRef }) {
             <strong className="tcard__name">{t.name}</strong>
             <span className="tcard__title">{t.title}</span>
           </div>
-          <img
-            src={t.img}
-            alt={t.name}
-            className="tcard__avatar"
-            loading="lazy"
-          />
+          <div className="tcard__avatar tcard__avatar--initials" aria-label={t.name}>
+            {t.name.charAt(0).toUpperCase()}
+          </div>
         </div>
       </article>
     </TimelineContent>

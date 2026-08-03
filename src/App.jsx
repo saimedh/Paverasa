@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Lenis from 'lenis';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import { Footer } from './components/ui/footer-section';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
