@@ -88,6 +88,17 @@ export const ExpandingCards = forwardRef(function ExpandingCards(
               <p className={`expanding-cards__desc${isActive ? ' expanding-cards__desc--visible' : ''}`}>
                 {item.description}
               </p>
+
+              {item.linkHref && (
+                <a
+                  href={item.linkHref}
+                  target={item.linkHref.startsWith('http') ? '_blank' : '_self'}
+                  rel={item.linkHref.startsWith('http') ? 'noopener noreferrer' : ''}
+                  className={`expanding-cards__link${isActive ? ' expanding-cards__link--visible' : ''}`}
+                >
+                  Visit Website
+                </a>
+              )}
             </article>
           </li>
         );

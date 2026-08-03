@@ -129,9 +129,9 @@ const homeExpandingItems = [
     tagline: 'P2P delivery app',
     title: 'PicsiDrop',
     description: 'A seamless platform to easily drop, share, and manage pictures and media files securely with clients and stakeholders.',
-    imgSrc: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1200&q=80',
+    imgSrc: '/assets/picsidrop-screen.png',
     icon: <Globe size={24} />,
-    linkHref: '/products',
+    linkHref: 'https://picsidrop.in/',
   },
 ];
 
@@ -139,42 +139,42 @@ const SLIDES = [
   {
     id: "slide-0",
     title: "Web Development",
-    imageUrl: "https://images.unsplash.com/photo-1654618977232-a6c6dea9d1e8?q=80&w=2486&auto=format&fit=crop"
+    imageUrl: "/assets/expertise-webdev.svg"
   },
   {
     id: "slide-1",
     title: "Mobile Development",
-    imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2487&auto=format&fit=crop"
+    imageUrl: "/assets/expertise-mobile.jpg"
   },
   {
     id: "slide-2",
     title: "AI Solutions",
-    imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2487&auto=format&fit=crop"
+    imageUrl: "/assets/expertise-ai.jpg"
   },
   {
     id: "slide-3",
     title: "Data Analytics",
-    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2487&auto=format&fit=crop"
+    imageUrl: "/assets/expertise-database.jpg"
   },
   {
     id: "slide-4",
     title: "Cloud & DevOps",
-    imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2487&auto=format&fit=crop"
+    imageUrl: "/assets/expertise-cloud.jpg"
   },
   {
     id: "slide-5",
     title: "Student Innovation",
-    imageUrl: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2487&auto=format&fit=crop"
+    imageUrl: "/assets/expertise-innovation.jpg"
   },
   {
     id: "slide-6",
     title: "Google Analytics & SEO",
-    imageUrl: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2487&auto=format&fit=crop"
+    imageUrl: "/assets/expertise-seo.jpg"
   },
   {
     id: "slide-7",
     title: "System Architecture",
-    imageUrl: "https://images.unsplash.com/photo-1503694978374-8a2fa686963a?q=80&w=2487&auto=format&fit=crop"
+    imageUrl: "/assets/expertise-architecture.svg"
   }
 ];
 

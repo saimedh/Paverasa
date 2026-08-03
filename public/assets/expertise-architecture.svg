@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- White background -->
+  <rect width="800" height="600" fill="white"/>
+
+  <!-- Peach background circles -->
+  <circle cx="400" cy="295" r="230" fill="#fde8d8" opacity="0.7"/>
+  <circle cx="400" cy="295" r="180" fill="#fbd5bb" opacity="0.45"/>
+
+  <!-- Bottom separator line -->
+  <line x1="80" y1="555" x2="720" y2="555" stroke="#e0e0e0" stroke-width="2"/>
+
+  <!-- ── Server rack (left) ── -->
+  <rect x="175" y="175" width="130" height="240" rx="12" fill="#2d3748"/>
+  <!-- Rack units -->
+  <rect x="188" y="190" width="104" height="42" rx="6" fill="white"/>
+  <circle cx="204" cy="211" r="6" fill="#F97316"/>
+  <rect x="218" y="205" width="60" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="218" y="214" width="40" height="4" rx="2" fill="#e2e8f0"/>
+
+  <rect x="188" y="240" width="104" height="42" rx="6" fill="white"/>
+  <circle cx="204" cy="261" r="6" fill="#F97316"/>
+  <rect x="218" y="255" width="60" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="218" y="264" width="40" height="4" rx="2" fill="#e2e8f0"/>
+
+  <rect x="188" y="290" width="104" height="42" rx="6" fill="white"/>
+  <circle cx="204" cy="311" r="6" fill="#F97316"/>
+  <rect x="218" y="305" width="60" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="218" y="314" width="40" height="4" rx="2" fill="#e2e8f0"/>
+
+  <rect x="188" y="340" width="104" height="42" rx="6" fill="white"/>
+  <circle cx="204" cy="361" r="6" fill="#F97316"/>
+  <rect x="218" y="355" width="60" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="218" y="364" width="40" height="4" rx="2" fill="#e2e8f0"/>
+
+  <!-- ── Arrows from server to database ── -->
+  <!-- Top arrow -->
+  <line x1="307" y1="221" x2="368" y2="280" stroke="#2d3748" stroke-width="2" stroke-dasharray="none"/>
+  <polygon points="368,280 356,272 363,260" fill="#2d3748"/>
+
+  <!-- Bottom arrow -->
+  <line x1="307" y1="360" x2="368" y2="320" stroke="#2d3748" stroke-width="2"/>
+  <polygon points="368,320 356,328 363,340" fill="#2d3748"/>
+
+  <!-- ── Database cylinder (center) ── -->
+  <!-- Body -->
+  <rect x="368" y="230" width="100" height="140" rx="6" fill="#F97316"/>
+  <!-- Top ellipse -->
+  <ellipse cx="418" cy="230" rx="50" ry="18" fill="#FB923C"/>
+  <!-- Middle stripe -->
+  <line x1="368" y1="280" x2="468" y2="280" stroke="#EA580C" stroke-width="2"/>
+  <line x1="368" y1="325" x2="468" y2="325" stroke="#EA580C" stroke-width="2"/>
+  <!-- Bottom ellipse -->
+  <ellipse cx="418" cy="370" rx="50" ry="18" fill="#EA580C"/>
+  <!-- Label -->
+  <text x="418" y="358" font-family="Arial, sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="500">database</text>
+
+  <!-- ── Arrow from database to gateway ── -->
+  <line x1="468" y1="300" x2="550" y2="300" stroke="#2d3748" stroke-width="2"/>
+  <polygon points="550,300 540,294 540,306" fill="#2d3748"/>
+
+  <!-- ── Gateway icon (right) ── -->
+  <circle cx="598" cy="300" r="48" fill="white" stroke="#2d3748" stroke-width="2.5"/>
+  <!-- Asterisk / star -->
+  <line x1="598" y1="270" x2="598" y2="330" stroke="#2d3748" stroke-width="3" stroke-linecap="round"/>
+  <line x1="572" y1="285" x2="624" y2="315" stroke="#2d3748" stroke-width="3" stroke-linecap="round"/>
+  <line x1="572" y1="315" x2="624" y2="285" stroke="#2d3748" stroke-width="3" stroke-linecap="round"/>
+  <!-- Label -->
+  <text x="598" y="363" font-family="Arial, sans-serif" font-size="13" fill="#4a5568" text-anchor="middle">gateway</text>
+
+  <!-- ── Floating icons ── -->
+
+  <!-- Bottom left: orange + circle -->
+  <circle cx="148" cy="430" r="30" fill="#F97316"/>
+  <line x1="148" y1="418" x2="148" y2="442" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="136" y1="430" x2="160" y2="430" stroke="white" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Bottom center-left: checkmark circle -->
+  <circle cx="268" cy="462" r="28" fill="white" stroke="#2d3748" stroke-width="2"/>
+  <polyline points="256,462 264,470 282,452" fill="none" stroke="#2d3748" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Bottom right: analytics chart box -->
+  <rect x="568" y="400" width="72" height="56" rx="8" fill="white" stroke="#2d3748" stroke-width="2"/>
+  <polyline points="580,442 592,428 607,434 622,418 632,422" fill="none" stroke="#F97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Top left: layers/stack icon box -->
+  <rect x="132" y="155" width="72" height="56" rx="8" fill="white" stroke="#2d3748" stroke-width="2"/>
+  <line x1="148" y1="170" x2="188" y2="170" stroke="#2d3748" stroke-width="2" stroke-linecap="round"/>
+  <line x1="148" y1="183" x2="188" y2="183" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+  <line x1="148" y1="196" x2="188" y2="196" stroke="#2d3748" stroke-width="2" stroke-linecap="round"/>
+</svg>

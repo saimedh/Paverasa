@@ -178,3 +178,29 @@
   opacity: 1;
 }
 
+/* ── Link ── */
+.expanding-cards__link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease 300ms, background-color 200ms ease;
+  width: fit-content;
+}
+
+.expanding-cards__link:hover {
+  background-color: #e06612;
+}
+
+.expanding-cards__link--visible {
+  opacity: 1;
+  pointer-events: auto;
+}

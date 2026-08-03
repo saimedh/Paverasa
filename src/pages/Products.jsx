@@ -63,10 +63,9 @@ const expandingItems = [
     title: 'PicsiDrop',
     description:
       'A seamless platform to easily drop, share, and manage pictures and media files securely with clients and stakeholders.',
-    imgSrc:
-      'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1200&q=80',
+    imgSrc: '/assets/picsidrop-screen.png',
     icon: <Globe size={24} />,
-    linkHref: '/contact',
+    linkHref: 'https://picsidrop.in/',
   },
 ];
 

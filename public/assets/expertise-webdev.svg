@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- White background -->
+  <rect width="800" height="600" fill="white"/>
+
+  <!-- Peach background circle -->
+  <circle cx="400" cy="300" r="230" fill="#fde8d8" opacity="0.7"/>
+  <circle cx="400" cy="300" r="185" fill="#fbd5bb" opacity="0.5"/>
+
+  <!-- Bottom separator line -->
+  <line x1="80" y1="555" x2="720" y2="555" stroke="#e0e0e0" stroke-width="2"/>
+
+  <!-- Browser window / monitor -->
+  <rect x="220" y="155" width="360" height="265" rx="14" ry="14" fill="#2d3748" />
+  <!-- Browser top bar -->
+  <rect x="220" y="155" width="360" height="40" rx="14" ry="14" fill="#1a202c"/>
+  <rect x="220" y="175" width="360" height="20" fill="#1a202c"/>
+  <!-- Traffic light dots -->
+  <circle cx="248" cy="175" r="7" fill="#e53e3e"/>
+  <circle cx="270" cy="175" r="7" fill="#ed8936"/>
+  <circle cx="292" cy="175" r="7" fill="#48bb78"/>
+  <!-- URL bar -->
+  <rect x="310" y="165" width="200" height="20" rx="4" fill="#2d3748"/>
+  <text x="320" y="179" font-family="monospace" font-size="11" fill="#a0aec0">paverasa.com</text>
+
+  <!-- Code editor area (white screen) -->
+  <rect x="232" y="196" width="336" height="212" rx="0" fill="#f8f9fa"/>
+
+  <!-- Code lines -->
+  <!-- Line 1: orange tag -->
+  <rect x="248" y="212" width="15" height="10" rx="2" fill="#F97316" opacity="0.2"/>
+  <text x="248" y="221" font-family="monospace" font-size="11" fill="#F97316">&lt;div&gt;</text>
+  <rect x="295" y="214" width="80" height="8" rx="2" fill="#e2e8f0"/>
+
+  <!-- Line 2 -->
+  <text x="258" y="240" font-family="monospace" font-size="11" fill="#718096">  &lt;h1&gt;</text>
+  <text x="300" y="240" font-family="monospace" font-size="11" fill="#2d3748">Hello</text>
+  <text x="340" y="240" font-family="monospace" font-size="11" fill="#718096">&lt;/h1&gt;</text>
+
+  <!-- Line 3: orange accent -->
+  <text x="258" y="259" font-family="monospace" font-size="11" fill="#718096">  &lt;style&gt;</text>
+  <rect x="320" y="252" width="100" height="8" rx="2" fill="#FED7AA"/>
+
+  <!-- Line 4 -->
+  <text x="268" y="278" font-family="monospace" font-size="11" fill="#F97316">    color:</text>
+  <text x="325" y="278" font-family="monospace" font-size="11" fill="#e53e3e">#ff6b35</text>
+  <text x="385" y="278" font-family="monospace" font-size="11" fill="#2d3748">;</text>
+
+  <!-- Line 5 -->
+  <rect x="248" y="288" width="130" height="8" rx="2" fill="#e2e8f0"/>
+  <rect x="388" y="288" width="60" height="8" rx="2" fill="#FED7AA"/>
+
+  <!-- Line 6 -->
+  <text x="258" y="315" font-family="monospace" font-size="11" fill="#718096">  &lt;/style&gt;</text>
+
+  <!-- Line 7 -->
+  <text x="248" y="334" font-family="monospace" font-size="11" fill="#F97316">&lt;/div&gt;</text>
+  <rect x="295" y="327" width="50" height="8" rx="2" fill="#e2e8f0"/>
+
+  <!-- Cursor blinking line -->
+  <rect x="298" y="325" width="2" height="14" rx="1" fill="#F97316"/>
+
+  <!-- Line numbers sidebar -->
+  <rect x="232" y="196" width="16" height="212" fill="#edf2f7"/>
+  <text x="235" y="221" font-family="monospace" font-size="9" fill="#a0aec0">1</text>
+  <text x="235" y="240" font-family="monospace" font-size="9" fill="#a0aec0">2</text>
+  <text x="235" y="259" font-family="monospace" font-size="9" fill="#a0aec0">3</text>
+  <text x="235" y="278" font-family="monospace" font-size="9" fill="#a0aec0">4</text>
+  <text x="235" y="297" font-family="monospace" font-size="9" fill="#a0aec0">5</text>
+  <text x="235" y="315" font-family="monospace" font-size="9" fill="#a0aec0">6</text>
+  <text x="235" y="334" font-family="monospace" font-size="9" fill="#a0aec0">7</text>
+
+  <!-- Orange highlighted active line -->
+  <rect x="248" y="267" width="5" height="22" rx="2" fill="#F97316" opacity="0.6"/>
+
+  <!-- ── Floating icons ── -->
+
+  <!-- Left: </> code bracket icon in circle -->
+  <circle cx="148" cy="230" r="38" fill="white" stroke="#2d3748" stroke-width="2"/>
+  <text x="148" y="237" font-family="monospace" font-size="16" fill="#2d3748" text-anchor="middle">&lt;/&gt;</text>
+
+  <!-- Left bottom: analytics chart box -->
+  <rect x="112" y="390" width="72" height="56" rx="8" fill="white" stroke="#2d3748" stroke-width="2"/>
+  <!-- Chart line -->
+  <polyline points="122,432 135,418 150,424 165,408 175,412" fill="none" stroke="#F97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Right: orange globe/world icon -->
+  <circle cx="650" cy="220" r="38" fill="#F97316"/>
+  <ellipse cx="650" cy="220" rx="15" ry="28" fill="none" stroke="white" stroke-width="2"/>
+  <line x1="622" y1="220" x2="678" y2="220" stroke="white" stroke-width="2"/>
+  <line x1="625" y1="208" x2="675" y2="208" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <line x1="625" y1="232" x2="675" y2="232" stroke="white" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Right bottom: orange + circle (add/new) -->
+  <circle cx="658" cy="430" r="28" fill="#F97316"/>
+  <line x1="658" y1="418" x2="658" y2="442" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="646" y1="430" x2="670" y2="430" stroke="white" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Top right: CSS tag -->
+  <rect x="590" y="140" width="58" height="32" rx="6" fill="white" stroke="#F97316" stroke-width="2"/>
+  <text x="619" y="161" font-family="Arial" font-size="13" fill="#F97316" text-anchor="middle" font-weight="bold">CSS</text>
+
+  <!-- Bottom center: toggle/responsive icon -->
+  <rect x="348" y="448" width="104" height="38" rx="19" fill="white" stroke="#2d3748" stroke-width="2"/>
+  <circle cx="432" cy="467" r="15" fill="#F97316"/>
+  <text x="368" y="472" font-family="Arial" font-size="11" fill="#718096">responsive</text>
+</svg>

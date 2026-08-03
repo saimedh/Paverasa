@@ -14,13 +14,13 @@ const values = [
 ];
 
 const timeline = [
-  { year: '2022', title: 'Paverasa Founded', desc: 'Three engineers with a shared belief: software should be accessible and human. Paverasa is born in Middle town medchal.' },
-  { year: '2022', title: 'First Product Ships', desc: 'Paverasa Suite v1 launches for local SME clients — replacing spreadsheets with a living, breathing business platform.' },
-  { year: '2023', title: 'First Enterprise Client', desc: 'We land our first enterprise contract, validating the market for accessible, affordable enterprise software.' },
-  { year: '2023', title: 'CampusLink Launches', desc: 'Our student innovation platform launches at three universities, connecting 500+ students in its first semester.' },
-  { year: '2024', title: 'Team Reaches 25', desc: 'We grow from a three-person founding team to 25 engineers, designers, and innovators across five disciplines.' },
-  { year: '2025', title: 'IntelliFlow AI Launch', desc: 'Our flagship AI workflow product enters the market, automating thousands of hours of repetitive work for clients.' },
-  { year: '2026', title: 'Pan-African Expansion', desc: 'Paverasa opens regional presence in Lagos and Nairobi, serving clients across sub-Saharan Africa and beyond.' },
+  { year: '2025', title: 'Paverasa Founded', desc: 'Four ambitious students with a shared belief: innovation should never be limited by experience or age. Paverasa is born in Medchal, Hyderabad.' },
+  { year: '2025', title: 'Picsidrop Concept Born', desc: 'The idea for Picsidrop takes shape — a platform designed to make sharing and delivering digital content seamless, fast, and intuitive.' },
+  { year: '2025', title: 'Picsidrop in Development', desc: 'Our team begins building Picsidrop from the ground up, focusing on a clean user experience, speed, and reliability at its core.' },
+  { year: '2025', title: 'Picsidrop Beta Launch', desc: 'Picsidrop enters beta testing with early users, collecting real feedback and refining the product for a polished public release.' },
+  { year: '2026', title: 'Picsidrop Goes Live', desc: 'Picsidrop officially launches to the public — bringing a new standard for effortless content sharing and digital delivery.' },
+  { year: '2026', title: 'Picsidrop User Growth', desc: 'Picsidrop gains rapid traction, onboarding hundreds of users and businesses who rely on it for everyday content workflows.' },
+  { year: '2026', title: 'Picsidrop — Next Chapter', desc: 'With a strong user base and bold new features in the pipeline, Picsidrop evolves into a full-featured platform for modern teams.' },
 ];
 
 const future = [

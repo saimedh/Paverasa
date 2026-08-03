@@ -56,7 +56,7 @@ export const products = [
     description: 'A seamless platform to easily drop, share, and manage pictures and media files securely with clients and stakeholders.',
     status: 'ongoing',
     category: 'Web Application',
-    image: '/assets/product-picsidrop.png',
+    image: '/assets/picsidrop-screen.png',
     gradient: 'linear-gradient(135deg, #14213D 0%, #F97316 100%)',
     accent: '#F97316',
     emoji: '📸',
