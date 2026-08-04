@@ -30,7 +30,11 @@ const iconMap = {
 };
 
 const partners = [
-  'redlix', 'UMA enterprises', 'kumar textiles', 'mayur&capitals', 'abs photography',
+  { name: 'redlix', img: '/redlix-logo.png' },
+  { name: 'UMA enterprises', img: '/uma-logo.jpeg' },
+  { name: 'kumar textiles' },
+  { name: 'mayur&capitals', img: '/mc-logo.jpeg' },
+  { name: 'abs photography' },
 ];
 
 const capabilities = [
@@ -244,8 +248,14 @@ export default function Home() {
         </div>
         <div className="logo-strip">
           <div className="logo-strip__track">
-            {[...partners, ...partners].map((name, i) => (
-              <div key={i} className="logo-strip__item">{name}</div>
+            {[...partners, ...partners].map((partner, i) => (
+              <div key={i} className="logo-strip__item">
+                {partner.img ? (
+                  <img src={partner.img} alt={partner.name} className="partner-logo-img" />
+                ) : (
+                  partner.name
+                )}
+              </div>
             ))}
           </div>
         </div>

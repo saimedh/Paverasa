@@ -7,7 +7,7 @@ const testimonials = [
   {
     id: 1,
     quote:
-      'Paverasa has been a game-changer for us. Their service is top-notch and their team is incredibly responsive.',
+      'Driving vision, innovation, strategic growth, long-term business success.',
     name: 'Pavan',
     title: 'ceo and strategy lead',
     img: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=687&auto=format&fit=crop',
@@ -18,7 +18,7 @@ const testimonials = [
   },
   {
     id: 2,
-    quote: "We've seen incredible results. Their expertise and dedication speak for themselves.",
+    quote: 'Spearheading our technical architecture and product development lifecycle to deliver cutting-edge solutions.',
     name: 'Saimedh',
     title: 'CTO and head of product delivery',
     img: 'https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?q=80&w=687&auto=format&fit=crop',
@@ -30,7 +30,7 @@ const testimonials = [
   {
     id: 3,
     quote:
-      'Their team is highly professional and their innovative solutions have transformed the way we operate.',
+      'Ensuring operational excellence and developing high-performing teams.',
     name: 'Rakesh',
     title: 'COO and CPO(people officer)',
     img: 'https://images.unsplash.com/photo-1566753323558-f4e0952af115?q=80&w=1021&auto=format&fit=crop',
@@ -40,7 +40,7 @@ const testimonials = [
   },
   {
     id: 4,
-    quote: "We're extremely satisfied with Paverasa. Their expertise exceeded our expectations.",
+    quote: 'Managing financial performance while building strong brand and market presence.',
     name: 'Aravindh',
     title: 'CFO and CMO',
     img: 'https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=687&auto=format&fit=crop',
@@ -50,7 +50,7 @@ const testimonials = [
   },
   {
     id: 5,
-    quote: 'Their customer support is absolutely exceptional — always available and incredibly helpful.',
+    quote: 'Building secure, scalable, reliable cloud infrastructure and platforms.',
     name: 'Dhanush',
     title: 'Cloud & Infrastructure Engineer',
     img: 'https://images.unsplash.com/photo-1740102074295-c13fae3e4f8a?q=80&w=687&auto=format&fit=crop',
@@ -60,8 +60,8 @@ const testimonials = [
   },
   {
     id: 6,
-    quote: 'Paverasa has been a key partner in our growth journey. Truly world-class.',
-    name: 'Nandini & Gayatri',
+    quote: 'Supporting operations, data-driven decisions, employee success.',
+    name: 'Nandini',
     title: 'Operations, Analytics and People Associates',
     img: 'https://images.unsplash.com/photo-1563237023-b1e970526dcb?q=80&w=765&auto=format&fit=crop',
     variant: 'blue',
@@ -70,9 +70,20 @@ const testimonials = [
     animationNum: 5,
   },
   {
+    id: 8,
+    quote: 'Supporting operations, data-driven decisions, employee success.',
+    name: 'Gayatri',
+    title: 'Operations, Analytics and People Associates',
+    img: 'https://images.unsplash.com/photo-1563237023-b1e970526dcb?q=80&w=765&auto=format&fit=crop',
+    variant: 'dark',
+    col: 2,
+    flex: 3,
+    animationNum: 5.5,
+  },
+  {
     id: 7,
     quote:
-      'Paverasa has been a true game-changer. Their exceptional service, combined with deep expertise and commitment to excellence, has made a significant impact on our business.',
+      'Innovating next-generation solutions through research and emerging technologies.',
     name: 'Sahil baba',
     title: 'Research and Development Engineer',
     img: 'https://images.unsplash.com/photo-1590086782957-93c06ef21604?q=80&w=687&auto=format&fit=crop',
@@ -146,7 +157,7 @@ export default function ClientTestimonials() {
           customVariants={revealVariants}
           timelineRef={sectionRef}
         >
-          Team of Paverasa
+          <span style={{ color: '#000000' }}>Team of Paverasa</span>
         </TimelineContent>
       </div>
 

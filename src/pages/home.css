@@ -433,17 +433,11 @@
 
 
 .logo-strip__track {
-
   display: flex;
-
-  gap: var(--space-16);
-
-  animation: marquee 28s linear infinite;
-
   white-space: nowrap;
-
   width: max-content;
-
+  will-change: transform;
+  animation: marquee 28s linear infinite;
 }
 
 
@@ -460,12 +454,24 @@
 
   letter-spacing: -0.02em;
 
-  padding: 0 var(--space-4);
+  padding: 0 var(--space-8);
 
   flex-shrink: 0;
 
   transition: color var(--transition-fast);
+}
 
+.partner-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
+  filter: grayscale(100%) opacity(0.7);
+  transition: filter var(--transition-fast);
+}
+
+.logo-strip__item:hover .partner-logo-img {
+  filter: grayscale(0%) opacity(1);
 }
 
 
@@ -479,21 +485,12 @@
 
 
 @keyframes marquee {
-
   0% {
-
-    transform: translateX(0);
-
+    transform: translate3d(0, 0, 0);
   }
-
-
-
   100% {
-
-    transform: translateX(-50%);
-
+    transform: translate3d(-50%, 0, 0);
   }
-
 }
 
 
@@ -4223,7 +4220,7 @@
 @media (max-width: 390px) {
   .who-we-are__team-card { padding: var(--space-5); }
   .who-we-are__core-values { grid-template-columns: 1fr; }
-  .logo-strip__track { gap: var(--space-8); }
+
   .who-we-are__btn { font-size: 0.85rem; padding: 0.65rem 1.25rem; }
 }
 
