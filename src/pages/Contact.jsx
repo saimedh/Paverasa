@@ -1,7 +1,14 @@
-import { useState } from "react";
-import { Mail, Phone, MapPin, Clock, ChevronDown, ChevronUp, CheckCircle2, ArrowRight, Calendar, Send, MessageSquare, Zap } from "lucide-react";
+import { useState, useRef } from "react";
+import { Mail, Phone, MapPin, Clock, ChevronDown, ChevronUp, CheckCircle2, ArrowRight, Calendar, Send, MessageSquare, Zap, Loader } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import ScrollReveal from "../components/ScrollReveal";
 import "./contact.css";
+
+// ── EmailJS Config ──────────────────────────────────────────────
+const EJS_SERVICE  = import.meta.env.VITE_EMAILJS_SERVICE_ID  || "service_paverasa";
+const EJS_TEMPLATE_CONTACT = import.meta.env.VITE_EMAILJS_TEMPLATE_CONTACT || "template_contact";
+const EJS_TEMPLATE_BOOKING = import.meta.env.VITE_EMAILJS_TEMPLATE_BOOKING || "template_booking";
+const EJS_PUBLIC   = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || "";
 
 const faqs = [
   { q: "How quickly can you start on a project?", a: "For most projects, we can begin within 1-2 weeks of contract signing. For urgent engagements, we can often mobilize within 48-72 hours." },
@@ -43,13 +50,69 @@ function FAQ({ q, a }) {
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [formSent, setFormSent] = useState(false);
+  const [formSending, setFormSending] = useState(false);
+  const [formError, setFormError] = useState("");
+
   const [selectedDay, setSelectedDay] = useState(null);
   const [selectedSlot, setSelectedSlot] = useState(null);
   const [meetingBooked, setMeetingBooked] = useState(false);
+  const [meetingSending, setMeetingSending] = useState(false);
+  const [meetingName, setMeetingName] = useState("");
+  const [meetingEmail, setMeetingEmail] = useState("");
+  const [meetingError, setMeetingError] = useState("");
+
   const days = getDays();
 
-  const handleSubmit = (e) => { e.preventDefault(); setFormSent(true); };
-  const handleBookMeeting = (e) => { e.preventDefault(); if (selectedDay && selectedSlot) setMeetingBooked(true); };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setFormSending(true);
+    setFormError("");
+    try {
+      await emailjs.send(
+        EJS_SERVICE,
+        EJS_TEMPLATE_CONTACT,
+        {
+          to_email: "support@paverasa.in",
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        EJS_PUBLIC
+      );
+      setFormSent(true);
+    } catch (err) {
+      setFormError("Something went wrong. Please email us directly at support@paverasa.in");
+    } finally {
+      setFormSending(false);
+    }
+  };
+
+  const handleBookMeeting = async (e) => {
+    e.preventDefault();
+    if (!selectedDay || !selectedSlot) return;
+    setMeetingSending(true);
+    setMeetingError("");
+    try {
+      await emailjs.send(
+        EJS_SERVICE,
+        EJS_TEMPLATE_BOOKING,
+        {
+          to_email: "support@paverasa.in",
+          from_name: meetingName,
+          from_email: meetingEmail,
+          meeting_date: selectedDay.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" }),
+          meeting_time: selectedSlot,
+        },
+        EJS_PUBLIC
+      );
+      setMeetingBooked(true);
+    } catch (err) {
+      setMeetingError("Booking failed. Please email us directly at support@paverasa.in");
+    } finally {
+      setMeetingSending(false);
+    }
+  };
 
   return (
     <div className="contact-page">
@@ -151,8 +214,9 @@ export default function Contact() {
                   <label htmlFor="message" className="form-label">Message</label>
                   <textarea id="message" className="form-input form-textarea" placeholder="Tell us about your project, timeline, and budget..." rows={5} value={formData.message} onChange={e => setFormData({...formData, message: e.target.value})} required />
                 </div>
-                <button type="submit" className="btn btn-primary contact-submit">
-                  Send Message <Send size={15} />
+                {formError && <p style={{ color: 'red', fontSize: '0.85rem', marginTop: '0.5rem' }}>{formError}</p>}
+                <button type="submit" className="btn btn-primary contact-submit" disabled={formSending}>
+                  {formSending ? <><Loader size={15} className="spin" /> Sending...</> : <>Send Message <Send size={15} /></>}
                 </button>
               </form>
             )}
@@ -177,6 +241,16 @@ export default function Contact() {
               </div>
             ) : (
               <form className="meeting-form" onSubmit={handleBookMeeting}>
+                <div className="form-row" style={{ marginBottom: '1rem' }}>
+                  <div className="form-group">
+                    <label className="form-label">Your Name</label>
+                    <input type="text" className="form-input" placeholder="Your name" value={meetingName} onChange={e => setMeetingName(e.target.value)} required />
+                  </div>
+                  <div className="form-group">
+                    <label className="form-label">Your Email</label>
+                    <input type="email" className="form-input" placeholder="your@email.com" value={meetingEmail} onChange={e => setMeetingEmail(e.target.value)} required />
+                  </div>
+                </div>
                 <div className="meeting-section">
                   <h3 className="meeting-section__label"><Calendar size={14} /> Select a Date</h3>
                   <div className="day-picker">
@@ -199,8 +273,9 @@ export default function Contact() {
                     </div>
                   </div>
                 )}
-                <button type="submit" className="btn btn-primary contact-submit mt-6" disabled={!selectedDay || !selectedSlot}>
-                  Confirm Booking <ArrowRight size={15} />
+                {meetingError && <p style={{ color: 'red', fontSize: '0.85rem', marginTop: '0.5rem' }}>{meetingError}</p>}
+                <button type="submit" className="btn btn-primary contact-submit mt-6" disabled={!selectedDay || !selectedSlot || meetingSending}>
+                  {meetingSending ? <><Loader size={15} className="spin" /> Booking...</> : <>Confirm Booking <ArrowRight size={15} /></>}
                 </button>
               </form>
             )}
