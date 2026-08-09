@@ -75,8 +75,8 @@ export default function Contact() {
             </ScrollReveal>
             <ScrollReveal delay={150}>
               <div className="contact-quick-pills">
-                <a href="mailto:hello@paverasa.com" className="contact-quick-pill">
-                  <Mail size={15} /> hello@paverasa.com
+                <a href="mailto:support@paverasa.in" className="contact-quick-pill">
+                  <Mail size={15} /> support@paverasa.in
                 </a>
                 <a href="tel:+918125432177" className="contact-quick-pill">
                   <Phone size={15} /> +91 81254 32177
@@ -88,7 +88,7 @@ export default function Contact() {
           <ScrollReveal delay={200} className="contact-hero__right">
             <div className="contact-info-strip">
               {[
-                { icon: <Mail size={18} />, label: "Email", val: "hello@paverasa.com" },
+                { icon: <Mail size={18} />, label: "Email", val: "support@paverasa.in" },
                 { icon: <Phone size={18} />, label: "Phone", val: "+91 81254 32177" },
                 { icon: <MapPin size={18} />, label: "Office", val: "Middle Town, Medchal" },
                 { icon: <Clock size={18} />, label: "Hours", val: "Mon-Sat, 9 AM - 7 PM" },
