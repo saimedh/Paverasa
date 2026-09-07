@@ -1,14 +1,7 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Mail, Phone, MapPin, Clock, ChevronDown, ChevronUp, CheckCircle2, ArrowRight, Calendar, Send, MessageSquare, Zap, Loader } from "lucide-react";
-import emailjs from "@emailjs/browser";
 import ScrollReveal from "../components/ScrollReveal";
 import "./contact.css";
-
-// ── EmailJS Config ──────────────────────────────────────────────
-const EJS_SERVICE  = import.meta.env.VITE_EMAILJS_SERVICE_ID  || "service_paverasa";
-const EJS_TEMPLATE_CONTACT = import.meta.env.VITE_EMAILJS_TEMPLATE_CONTACT || "template_contact";
-const EJS_TEMPLATE_BOOKING = import.meta.env.VITE_EMAILJS_TEMPLATE_BOOKING || "template_booking";
-const EJS_PUBLIC   = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || "";
 
 const faqs = [
   { q: "How quickly can you start on a project?", a: "For most projects, we can begin within 1-2 weeks of contract signing. For urgent engagements, we can often mobilize within 48-72 hours." },
@@ -68,22 +61,25 @@ export default function Contact() {
     setFormSending(true);
     setFormError("");
     try {
-      await emailjs.send(
-        EJS_SERVICE,
-        EJS_TEMPLATE_CONTACT,
-        {
-          to_email: "support@paverasa.in",
-          from_name: formData.name,
-          from_email: formData.email,
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "contact",
+          name: formData.name,
+          email: formData.email,
           subject: formData.subject,
           message: formData.message,
-        },
-        EJS_PUBLIC
-      );
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Failed to send message");
+      }
       setFormSent(true);
     } catch (err) {
       setFormError(true);
-      window.location.href = "mailto:support@paverasa.in?subject=Contact%20Form%20Enquiry";
+      window.location.href = `mailto:support@paverasa.in?subject=${encodeURIComponent(formData.subject || "Contact Form Enquiry")}&body=${encodeURIComponent(formData.message || "")}`;
     } finally {
       setFormSending(false);
     }
@@ -94,23 +90,27 @@ export default function Contact() {
     if (!selectedDay || !selectedSlot) return;
     setMeetingSending(true);
     setMeetingError("");
+    const formattedDate = selectedDay.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
     try {
-      await emailjs.send(
-        EJS_SERVICE,
-        EJS_TEMPLATE_BOOKING,
-        {
-          to_email: "support@paverasa.in",
-          from_name: meetingName,
-          from_email: meetingEmail,
-          meeting_date: selectedDay.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" }),
-          meeting_time: selectedSlot,
-        },
-        EJS_PUBLIC
-      );
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "booking",
+          name: meetingName,
+          email: meetingEmail,
+          date: formattedDate,
+          time: selectedSlot,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Failed to book meeting");
+      }
       setMeetingBooked(true);
     } catch (err) {
       setMeetingError(true);
-      window.location.href = "mailto:support@paverasa.in?subject=Meeting%20Booking%20Request";
+      window.location.href = `mailto:support@paverasa.in?subject=Meeting%20Booking%20Request&body=${encodeURIComponent(`Name: ${meetingName}\nEmail: ${meetingEmail}\nDate: ${formattedDate}\nTime: ${selectedSlot}`)}`;
     } finally {
       setMeetingSending(false);
     }
