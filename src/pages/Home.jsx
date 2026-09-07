@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { Button } from '../components/ui/button';
 import { DotPattern } from '../components/ui/dot-pattern';
 import { cn } from '../lib/utils';
+import HeroSection from '../components/hero/HeroSection';
 
 import { 
   HoverSlider, 
@@ -186,60 +187,7 @@ export default function Home() {
   return (
     <div className="home">
       {/* ─────────── HERO ─────────── */}
-      <section id="top" className="relative w-full min-h-[100vh] flex flex-col items-center justify-center px-6 py-24 overflow-hidden bg-gradient-to-br from-background to-muted/30">
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.6 }}
-          animate={{ opacity: 0.4, scale: 1 }}
-          transition={{ duration: 1.4 }}
-          className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-primary/30 blur-[120px] rounded-full z-0"
-        />
-        <motion.div
-          initial={{ opacity: 0, scale: 0.6 }}
-          animate={{ opacity: 0.3, scale: 1 }}
-          transition={{ duration: 1.6, delay: 0.3 }}
-          className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-secondary/20 blur-[160px] rounded-full z-0"
-        />
-
-
-
-        <div className="relative z-10 w-full max-w-3xl mx-auto px-4 text-center hero__content">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="hero__headline mx-auto text-center"
-          >
-            Build Software<br />
-            <span className="hero__headline-accent">That Moves</span><br />
-            the World
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="hero__tagline mx-auto text-center"
-          >
-            Paverasa engineers world-class digital products — from AI-powered platforms
-            to student innovation hubs. We build with purpose, ship with precision,
-            and grow with you.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="hero__actions"
-          >
-            <Link to="/services" className="btn btn-primary btn-lg">
-              Explore Services <ArrowRight size={18} />
-            </Link>
-            <Link to="/products" className="btn btn-secondary btn-lg">
-              View Products
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* ─────────── TRUSTED BY ─────────── */}
       <section className="trusted-by">

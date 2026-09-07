@@ -1,0 +1,452 @@
+/* ============================================================
+   HERO — "From Idea to Impact" Software Journey
+   Preserves existing white/orange brand identity.
+   Scoped under .hero-journey
+   ============================================================ */
+
+/* ---------- Hero Container ---------- */
+.hero-journey {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--color-bg, #FFFFFF);
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+/* Subtle dot-grid (very light) */
+.hero-journey::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Soft warm glow — top right */
+.hero-journey__glow--tr {
+  position: absolute;
+  top: -15%;
+  right: -8%;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(249,115,22,0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Soft warm glow — bottom left */
+.hero-journey__glow--bl {
+  position: absolute;
+  bottom: -18%;
+  left: -8%;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(249,115,22,0.04) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---------- Layout ---------- */
+.hero-journey__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-6, 1.5rem);
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* ---------- Content (Left) ---------- */
+.hero-journey__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.hero-journey__headline {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', system-ui, sans-serif);
+  font-size: clamp(2.75rem, 6vw, 5.5rem);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+  color: var(--color-text, #111827);
+  margin-bottom: 1.5rem;
+}
+
+.hero-journey__headline-accent {
+  background: linear-gradient(135deg, #F97316 0%, #FCD086 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-journey__tagline {
+  font-family: var(--font-body, 'Plus Jakarta Sans', system-ui, sans-serif);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: var(--color-text-muted, #4B5563);
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+/* ---------- CTA Buttons ---------- */
+.hero-journey__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-journey__btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', system-ui, sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-primary, #F97316);
+  border: 1.5px solid var(--color-primary, #F97316);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+  box-shadow: 0 4px 20px rgba(249,115,22,0.25);
+}
+
+.hero-journey__btn-primary:hover {
+  background: var(--color-primary-dark, #EA580C);
+  border-color: var(--color-primary-dark, #EA580C);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(249,115,22,0.35);
+}
+
+.hero-journey__btn-primary:active {
+  transform: translateY(0);
+}
+
+.hero-journey__btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', system-ui, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary, #F97316);
+  background: #fff;
+  border: 1.5px solid var(--color-primary, #F97316);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 200ms ease, background 200ms ease, color 200ms ease;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.05));
+}
+
+.hero-journey__btn-secondary:hover {
+  background: rgba(249,115,22,0.04);
+  color: var(--color-primary-dark, #EA580C);
+  transform: translateY(-2px);
+}
+
+.hero-journey__btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* ---------- Network Container (Right) ---------- */
+.hero-journey__network-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- SVG Network ---------- */
+.journey-network-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* ---------- Connection Paths ---------- */
+.journey-path {
+  fill: none;
+  stroke: #E5E7EB;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.journey-path--active {
+  stroke: rgba(249,115,22,0.3);
+}
+
+/* Animated flowing signal on path */
+.journey-path__signal {
+  fill: none;
+  stroke: #F97316;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 10 20;
+  opacity: 0;
+}
+
+.journey-path__signal--active {
+  opacity: 1;
+  animation: signalFlow 1.2s linear infinite;
+}
+
+@keyframes signalFlow {
+  to { stroke-dashoffset: -30; }
+}
+
+/* ---------- Stage Node ---------- */
+.stage-node__bg {
+  fill: #FFFFFF;
+  stroke: #E5E7EB;
+  stroke-width: 1.5;
+  rx: 12;
+  ry: 12;
+  transition: stroke 0.4s ease, fill 0.4s ease, filter 0.4s ease;
+}
+
+.stage-node--active .stage-node__bg {
+  stroke: #F97316;
+  fill: #FFFBF5;
+  filter: drop-shadow(0 2px 12px rgba(249,115,22,0.12));
+}
+
+.stage-node__icon {
+  fill: none;
+  stroke: #9CA3AF;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.4s ease;
+}
+
+.stage-node--active .stage-node__icon {
+  stroke: #F97316;
+}
+
+.stage-node__label {
+  fill: #9CA3AF;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', system-ui, sans-serif);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-anchor: middle;
+  transition: fill 0.4s ease;
+}
+
+.stage-node--active .stage-node__label {
+  fill: #111827;
+}
+
+/* ---------- Person Node ---------- */
+.person-node__ring {
+  fill: none;
+  stroke: #E5E7EB;
+  stroke-width: 1.5;
+  transition: stroke 0.4s ease, filter 0.4s ease;
+}
+
+.person-node--active .person-node__ring {
+  stroke: #F97316;
+  filter: drop-shadow(0 0 8px rgba(249,115,22,0.2));
+}
+
+.person-node__bg {
+  fill: #F9FAFB;
+  transition: fill 0.4s ease;
+}
+
+.person-node--active .person-node__bg {
+  fill: #FFF7ED;
+}
+
+.person-node__icon {
+  fill: none;
+  stroke: #9CA3AF;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.4s ease;
+}
+
+.person-node--active .person-node__icon {
+  stroke: #F97316;
+}
+
+.person-node__label {
+  fill: #9CA3AF;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', system-ui, sans-serif);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-anchor: middle;
+  transition: fill 0.4s ease;
+}
+
+.person-node--active .person-node__label {
+  fill: #111827;
+}
+
+/* ---------- Moving Signal Dot ---------- */
+.signal-dot {
+  transition: opacity 0.3s ease;
+}
+
+.signal-dot__core {
+  fill: #F97316;
+}
+
+.signal-dot__glow {
+  fill: rgba(249,115,22,0.2);
+}
+
+.signal-dot__ring {
+  fill: none;
+  stroke: rgba(249,115,22,0.25);
+  stroke-width: 1;
+}
+
+/* ---------- Paverasa Hub ---------- */
+.paverasa-hub__bg {
+  fill: #FFFBF5;
+  stroke: #F97316;
+  stroke-width: 2;
+  rx: 16;
+  ry: 16;
+  filter: drop-shadow(0 4px 20px rgba(249,115,22,0.12));
+}
+
+.paverasa-hub__label {
+  fill: #F97316;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', system-ui, sans-serif);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-anchor: middle;
+}
+
+/* Subtle rotating ring around Paverasa hub */
+.paverasa-hub__orbit {
+  fill: none;
+  stroke: rgba(249,115,22,0.08);
+  stroke-width: 1;
+  stroke-dasharray: 4 6;
+  transform-origin: center;
+  animation: hubOrbit 25s linear infinite;
+}
+
+@keyframes hubOrbit {
+  to { transform: rotate(360deg); }
+}
+
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .hero-journey__inner {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 2rem;
+  }
+  .hero-journey__headline {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-journey {
+    padding-top: 90px;
+    padding-bottom: 2rem;
+    min-height: auto;
+  }
+  .hero-journey__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+  .hero-journey__content {
+    align-items: center;
+  }
+  .hero-journey__headline {
+    font-size: clamp(2.25rem, 9vw, 3.25rem);
+  }
+  .hero-journey__tagline {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-journey__actions {
+    justify-content: center;
+  }
+  .hero-journey__network-wrap {
+    aspect-ratio: 1 / 1.15;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .hero-journey__headline {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+  }
+  .hero-journey__tagline {
+    font-size: 0.95rem;
+  }
+  .hero-journey__btn-primary,
+  .hero-journey__btn-secondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  .hero-journey__network-wrap {
+    max-width: 340px;
+  }
+}
+
+/* ============================================================
+   ACCESSIBILITY — Reduced Motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .hero-journey *,
+  .hero-journey *::before,
+  .hero-journey *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .journey-path__signal--active {
+    animation: none;
+    opacity: 0.5;
+    stroke-dasharray: none;
+  }
+  .paverasa-hub__orbit {
+    animation: none;
+  }
+  .hero-journey__scroll-pill::after {
+    animation: none;
+  }
+}

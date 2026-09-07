@@ -82,7 +82,8 @@ export default function Contact() {
       );
       setFormSent(true);
     } catch (err) {
-      setFormError("Something went wrong. Please email us directly at support@paverasa.in");
+      setFormError(true);
+      window.location.href = "mailto:support@paverasa.in?subject=Contact%20Form%20Enquiry";
     } finally {
       setFormSending(false);
     }
@@ -108,7 +109,8 @@ export default function Contact() {
       );
       setMeetingBooked(true);
     } catch (err) {
-      setMeetingError("Booking failed. Please email us directly at support@paverasa.in");
+      setMeetingError(true);
+      window.location.href = "mailto:support@paverasa.in?subject=Meeting%20Booking%20Request";
     } finally {
       setMeetingSending(false);
     }
@@ -214,7 +216,12 @@ export default function Contact() {
                   <label htmlFor="message" className="form-label">Message</label>
                   <textarea id="message" className="form-input form-textarea" placeholder="Tell us about your project, timeline, and budget..." rows={5} value={formData.message} onChange={e => setFormData({...formData, message: e.target.value})} required />
                 </div>
-                {formError && <p style={{ color: 'red', fontSize: '0.85rem', marginTop: '0.5rem' }}>{formError}</p>}
+                {formError && (
+                  <div className="contact-error-banner">
+                    Something went wrong. Please email us directly at{" "}
+                    <a href="mailto:support@paverasa.in">support@paverasa.in</a>
+                  </div>
+                )}
                 <button type="submit" className="btn btn-primary contact-submit" disabled={formSending}>
                   {formSending ? <><Loader size={15} className="spin" /> Sending...</> : <>Send Message <Send size={15} /></>}
                 </button>
@@ -273,7 +280,12 @@ export default function Contact() {
                     </div>
                   </div>
                 )}
-                {meetingError && <p style={{ color: 'red', fontSize: '0.85rem', marginTop: '0.5rem' }}>{meetingError}</p>}
+                {meetingError && (
+                  <div className="contact-error-banner">
+                    Booking failed. Please email us directly at{" "}
+                    <a href="mailto:support@paverasa.in">support@paverasa.in</a>
+                  </div>
+                )}
                 <button type="submit" className="btn btn-primary contact-submit mt-6" disabled={!selectedDay || !selectedSlot || meetingSending}>
                   {meetingSending ? <><Loader size={15} className="spin" /> Booking...</> : <>Confirm Booking <ArrowRight size={15} /></>}
                 </button>
